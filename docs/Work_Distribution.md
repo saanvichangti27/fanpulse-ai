@@ -10,7 +10,7 @@ You are one of three build agents. Each owns exactly one workstream.
 
 1. Build **only** inside your owned paths (§2). Never edit another workstream's files.
 2. `docs/API_Contract.md` and `backend/contracts.py` are **frozen law**. If your work seems to need a contract change, STOP and ask the humans.
-3. **This is a hackathon demo built by a small team on a hard time limit — not a production app.** The bar is: every feature works end-to-end and its output looks complete. Prefer the dumbest thing that satisfies the contract. Concretely banned: WebSockets/SSE, Redis, message queues, Docker, Alembic, caching layers, retry frameworks, class hierarchies where a function does, config systems beyond `.env`, and any abstraction "for later."
+3. **This is a hackathon demo built by a small team on a hard time limit — not a production app.** The bar is: every feature works end-to-end and its output looks complete. Prefer the dumbest thing that satisfies the contract. Concretely banned: WebSockets/SSE, Redis, message queues, Docker, Alembic, caching layers (except for the simple in-memory dict cache required for the Gemini client), retry frameworks, class hierarchies where a function does, config systems beyond `.env`, and any abstraction "for later."
 4. **No frontend work.** Swagger UI (`/docs`) + `scripts/smoke_test.py` are the test surface. Do not install Node.
 5. Meet your Definition of Done, then stop. Stretch items only after the smoke test is green on `main`.
 
@@ -66,7 +66,7 @@ fanpulse-ai/
 │   │   │                              #   tone_notes, template = fallback copy)
 │   │   └── gemini_client.py           # one function: brief → copy JSON; debounce, cache,
 │   │                                  #   on failure fill the playbook template (llm_fallback)
-│   ├── ingestion/                     # OWNER: Raksha R
+│   ├── ingestion/                     # OWNER: R S Raksha
 │   │   ├── service.py                 # run_ingestion + moment loop + ReplayController (§E.2)
 │   │   ├── analytics.py               # get_kpis/timeline/heatmap/topics/momentum/
 │   │   │                              #   country_volumes (§E.1) — SQL over messages
@@ -87,7 +87,7 @@ fanpulse-ai/
 │   └── .env.example                   # GEMINI_API_KEY, REDDIT_*, SOURCES=replay,
 │                                      #   AUTO_CAMPAIGN_INDUSTRIES=food_delivery,merch_apparel
 ├── data/
-│   ├── replay/                        # OWNER: Raksha R — replay_dev_fixture.json (+ real capture)
+│   ├── replay/                        # OWNER: R S Raksha — replay_dev_fixture.json (+ real capture)
 │   ├── synthetic/fans.csv             # OWNER: Raksha S
 │   ├── historical/matches_history.csv # OWNER: Raksha S
 │   └── benchmarks/                    # OWNER: Raksha S — benchmarks.csv, emotion_brand_fit.csv
@@ -105,7 +105,7 @@ Local dev = `pip install -r requirements.txt` → `uvicorn app.main:app`. Nothin
 
 **Build order:**
 
-1. **Replay first** (`replay.py` + `data/replay/replay_dev_fixture.json`): hand-write ~200 messages (`source="replay"`) with `goal` / `var_controversy` / `full_time` markers per contract §E.3. `replay_engine` feeds items through the same classify→insert path as live data, at a speed multiplier; `ReplayController.start/stop`. Later, if time: run `capture.py` (same connectors, dump to JSON) during any real match for a real captured file.
+1. **Replay first** (`replay.py` + `data/replay/replay_dev_fixture.json`): hand-write ~200 messages (`source="replay"`) with `goal` / `var_controversy` / `full_time` markers per contract §E.3. `replay_engine` feeds items through the same classify→insert path as live data, at a speed multiplier; `ReplayController.start/stop`. Later, if time: run the capture logic inside `replay.py` (same connectors, dump to JSON) during any real match for a real captured file.
 2. **NLP** (`nlp.py`): the two local pipelines loaded once (`cardiffnlp/twitter-roberta-base-sentiment-latest`, `j-hartmann/emotion-english-distilroberta-base`), batch size 16–32. **Topics = watchlist matching** (team rosters from seed + {var, referee, penalty, red card, goal}) **plus top non-stopword tokens — no KeyBERT, no sentence-transformers.** Arousal always via `contracts.AROUSAL`.
 3. **Analytics** (`analytics.py`): the six §E.1 functions as straightforward SQL/pandas over `messages` (+ `moments` for timeline tags). KPI excitement uses the frozen §A.3 formula. `get_momentum` returns `None` when `volume_5m < MOMENTUM_MIN_MESSAGES_5M`.
 4. **Moment loop + service** (`service.py`): implements contract §E.2 — poll sources, classify, insert; every 10 s check the moment rule (3× volume + 10pp swing, 120 s cooldown), classify the tag (§E.2 heuristics; replay markers force it), insert the `moments` row, `await on_moment(event)` with the callback's errors caught.
@@ -140,7 +140,7 @@ Local dev = `pip install -r requirements.txt` → `uvicorn app.main:app`. Nothin
 
 **Build order:**
 
-1. **Fan CRM** (`data_gen/gen_fans.py` → `data/synthetic/fans.csv`, 5,000 rows, 16 columns: `fan_id, age, gender, country_code, favourite_team, matches_attended, tickets_bought_24m, avg_ticket_spend_usd, merch_purchases_12m, merch_spend_usd_12m, app_sessions_30d, email_open_rate, push_opt_in, days_since_last_engagement, streaming_minutes_30d, social_shares_30d, preferred_channel`). **Persona-first sampling** (document in the docstring — it is the defense against "random numbers"): 5 personas with hardcoded distribution params — Superfan 8% (attendance ~Poisson(6), merch ~LogNormal(μ=5.8), short recency-gap), Traveling Ultra 7% (highest attendance/spend), Casual Streamer 35% (no attendance, high streaming), Deal-Seeker 30% (low spend, push opt-in ~0.9, high sessions), Lapsed Fan 20% (recency-gap ~Exp(200)). Sample persona → sample features → noise → **drop the persona column** so KMeans honestly re-discovers it.
+1. **Fan CRM** (`data_gen/gen_fans.py` → `data/synthetic/fans.csv`, 5,000 rows, 17 columns: `fan_id, age, gender, country_code, favourite_team, matches_attended, tickets_bought_24m, avg_ticket_spend_usd, merch_purchases_12m, merch_spend_usd_12m, app_sessions_30d, email_open_rate, push_opt_in, days_since_last_engagement, streaming_minutes_30d, social_shares_30d, preferred_channel`). **Persona-first sampling** (document in the docstring — it is the defense against "random numbers"): 5 personas with hardcoded distribution params — Superfan 8% (attendance ~Poisson(6), merch ~LogNormal(μ=5.8), short recency-gap), Traveling Ultra 7% (highest attendance/spend), Casual Streamer 35% (no attendance, high streaming), Deal-Seeker 30% (low spend, push opt-in ~0.9, high sessions), Lapsed Fan 20% (recency-gap ~Exp(200)). Sample persona → sample features → noise → **drop the persona column** so KMeans honestly re-discovers it.
 2. **Segments** (`segments.py` + `train_segments.py`): StandardScaler → KMeans k=5 → map clusters to the §A slugs by centroid rules → save pickles + `segment_profiles.json` (incl. silhouette, honestly). Engagement = RFM-D percentiles, weights 0.25×4. NBA per (segment × starred industry): channel (preference ∩ best benchmark ROI), archetype, timing rule, `expected_ctr` = benchmark CTR × affinity, one-line rationale.
 3. **Forecast** (`forecast.py` + `train_forecast.py`): `data/historical/matches_history.csv` from **real public data** (Kaggle FIFA World Cup attendance + Wikipedia tables; URLs in docstring). Features = `MatchFeatures`; target `attendance_pct` (clip 1.05). Training `buzz_index` = documented formula `clip(0.40·stage_norm + 0.25·rivalry + 0.20·(1−rank_gap_norm) + 0.15·host_involved + N(0,0.05), 0, 1)`; inference = `compute_live_buzz(momentum)` (§F.1). Model: sklearn `GradientBoostingRegressor`, 80/20 holdout, MAE → `artifacts/metrics.json`, importances → `feature_importance.json`. `reforecast` must move +5..+20 points on goal-level momentum.
 4. **ROI** (`roi.py`): funnel formulas (spec §6.1) returning every intermediate number; multiplier per §A.3 constants (`MomentStrength = clip(volume_ratio/3, 0, 1)`; SegmentMatch formula documented in the docstring; `momentum=None` ⇒ M=1.0); planner = allocate ∝ `demand_index × expected_M`, greedy, 60% cap, rationale strings; confidence per §F.3. **Datasets:** `benchmarks.csv` (`industry, channel, cpm_usd, ctr, cvr, aov_usd, frequency, source, source_url`) — cited rows for the 5 starred industries, one `source="interpolated"` default row per unstarred industry; `emotion_brand_fit.csv` (`industry, emotion, fit, rationale`), all 15×7.

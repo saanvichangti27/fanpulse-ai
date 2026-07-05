@@ -1,0 +1,1705 @@
+{
+  "meta": {
+    "match_id": "m_001",
+    "captured_at": "2026-07-05T16:19:16.810512+00:00Z",
+    "description": "Hand-written ~200 items fixture for dev replay."
+  },
+  "items": [
+    {
+      "t_offset": 0,
+      "external_id": "rd_pre_0",
+      "source": "reddit",
+      "author": "u/fan_0",
+      "text": "Can't wait for kickoff.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 5,
+      "external_id": "rd_pre_1",
+      "source": "reddit",
+      "author": "u/fan_1",
+      "text": "Who do you guys think will win?",
+      "country": "BR"
+    },
+    {
+      "t_offset": 10,
+      "external_id": "rd_pre_2",
+      "source": "reddit",
+      "author": "u/fan_2",
+      "text": "Excited for the game today!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 15,
+      "external_id": "rd_pre_3",
+      "source": "reddit",
+      "author": "u/fan_3",
+      "text": "Can't wait for kickoff.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 20,
+      "external_id": "rd_pre_4",
+      "source": "reddit",
+      "author": "u/fan_4",
+      "text": "Who do you guys think will win?",
+      "country": "AR"
+    },
+    {
+      "t_offset": 25,
+      "external_id": "rd_pre_5",
+      "source": "reddit",
+      "author": "u/fan_5",
+      "text": "Can't wait for kickoff.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 30,
+      "external_id": "rd_pre_6",
+      "source": "reddit",
+      "author": "u/fan_6",
+      "text": "Can't wait for kickoff.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 35,
+      "external_id": "rd_pre_7",
+      "source": "reddit",
+      "author": "u/fan_7",
+      "text": "Who do you guys think will win?",
+      "country": "BR"
+    },
+    {
+      "t_offset": 40,
+      "external_id": "rd_pre_8",
+      "source": "reddit",
+      "author": "u/fan_8",
+      "text": "Can't wait for kickoff.",
+      "country": "US"
+    },
+    {
+      "t_offset": 45,
+      "external_id": "rd_pre_9",
+      "source": "reddit",
+      "author": "u/fan_9",
+      "text": "Can't wait for kickoff.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 50,
+      "external_id": "rd_pre_10",
+      "source": "reddit",
+      "author": "u/fan_10",
+      "text": "Excited for the game today!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 55,
+      "external_id": "rd_pre_11",
+      "source": "reddit",
+      "author": "u/fan_11",
+      "text": "Excited for the game today!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 60,
+      "external_id": "rd_pre_12",
+      "source": "reddit",
+      "author": "u/fan_12",
+      "text": "Excited for the game today!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 65,
+      "external_id": "rd_pre_13",
+      "source": "reddit",
+      "author": "u/fan_13",
+      "text": "Can't wait for kickoff.",
+      "country": "US"
+    },
+    {
+      "t_offset": 70,
+      "external_id": "rd_pre_14",
+      "source": "reddit",
+      "author": "u/fan_14",
+      "text": "Can't wait for kickoff.",
+      "country": "US"
+    },
+    {
+      "t_offset": 75,
+      "external_id": "rd_pre_15",
+      "source": "reddit",
+      "author": "u/fan_15",
+      "text": "Excited for the game today!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 80,
+      "external_id": "rd_pre_16",
+      "source": "reddit",
+      "author": "u/fan_16",
+      "text": "Who do you guys think will win?",
+      "country": "BR"
+    },
+    {
+      "t_offset": 85,
+      "external_id": "rd_pre_17",
+      "source": "reddit",
+      "author": "u/fan_17",
+      "text": "Who do you guys think will win?",
+      "country": "AR"
+    },
+    {
+      "t_offset": 90,
+      "external_id": "rd_pre_18",
+      "source": "reddit",
+      "author": "u/fan_18",
+      "text": "Who do you guys think will win?",
+      "country": "US"
+    },
+    {
+      "t_offset": 95,
+      "external_id": "rd_pre_19",
+      "source": "reddit",
+      "author": "u/fan_19",
+      "text": "Who do you guys think will win?",
+      "country": "BR"
+    },
+    {
+      "t_offset": 105,
+      "marker": "kickoff"
+    },
+    {
+      "t_offset": 110,
+      "external_id": "rd_early_0",
+      "source": "reddit",
+      "author": "u/early_0",
+      "text": "Nice pass.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 120,
+      "external_id": "rd_early_1",
+      "source": "reddit",
+      "author": "u/early_1",
+      "text": "They are playing well.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 130,
+      "external_id": "rd_early_2",
+      "source": "reddit",
+      "author": "u/early_2",
+      "text": "They are playing well.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 140,
+      "external_id": "rd_early_3",
+      "source": "reddit",
+      "author": "u/early_3",
+      "text": "Nice pass.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 150,
+      "external_id": "rd_early_4",
+      "source": "reddit",
+      "author": "u/early_4",
+      "text": "Nice pass.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 160,
+      "external_id": "rd_early_5",
+      "source": "reddit",
+      "author": "u/early_5",
+      "text": "Nice pass.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 170,
+      "external_id": "rd_early_6",
+      "source": "reddit",
+      "author": "u/early_6",
+      "text": "Good start so far.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 180,
+      "external_id": "rd_early_7",
+      "source": "reddit",
+      "author": "u/early_7",
+      "text": "Good start so far.",
+      "country": "US"
+    },
+    {
+      "t_offset": 190,
+      "external_id": "rd_early_8",
+      "source": "reddit",
+      "author": "u/early_8",
+      "text": "Good start so far.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 200,
+      "external_id": "rd_early_9",
+      "source": "reddit",
+      "author": "u/early_9",
+      "text": "Good start so far.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 210,
+      "external_id": "rd_early_10",
+      "source": "reddit",
+      "author": "u/early_10",
+      "text": "They are playing well.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 220,
+      "external_id": "rd_early_11",
+      "source": "reddit",
+      "author": "u/early_11",
+      "text": "Good start so far.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 230,
+      "external_id": "rd_early_12",
+      "source": "reddit",
+      "author": "u/early_12",
+      "text": "Good start so far.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 240,
+      "external_id": "rd_early_13",
+      "source": "reddit",
+      "author": "u/early_13",
+      "text": "Good start so far.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 250,
+      "external_id": "rd_early_14",
+      "source": "reddit",
+      "author": "u/early_14",
+      "text": "Good start so far.",
+      "country": "US"
+    },
+    {
+      "t_offset": 260,
+      "external_id": "rd_early_15",
+      "source": "reddit",
+      "author": "u/early_15",
+      "text": "Good start so far.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 270,
+      "external_id": "rd_early_16",
+      "source": "reddit",
+      "author": "u/early_16",
+      "text": "Nice pass.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 280,
+      "external_id": "rd_early_17",
+      "source": "reddit",
+      "author": "u/early_17",
+      "text": "They are playing well.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 290,
+      "external_id": "rd_early_18",
+      "source": "reddit",
+      "author": "u/early_18",
+      "text": "Nice pass.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 300,
+      "external_id": "rd_early_19",
+      "source": "reddit",
+      "author": "u/early_19",
+      "text": "Good start so far.",
+      "country": "US"
+    },
+    {
+      "t_offset": 320,
+      "marker": "var_controversy"
+    },
+    {
+      "t_offset": 325,
+      "external_id": "yt_var_0",
+      "source": "youtube",
+      "author": "yt_user_0",
+      "text": "VAR is ruining football.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 326,
+      "external_id": "yt_var_1",
+      "source": "youtube",
+      "author": "yt_user_1",
+      "text": "Worst decision ever.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 328,
+      "external_id": "yt_var_2",
+      "source": "youtube",
+      "author": "yt_user_2",
+      "text": "Are you blind ref??",
+      "country": "AR"
+    },
+    {
+      "t_offset": 329,
+      "external_id": "yt_var_3",
+      "source": "youtube",
+      "author": "yt_user_3",
+      "text": "Ref is paid.",
+      "country": "US"
+    },
+    {
+      "t_offset": 331,
+      "external_id": "yt_var_4",
+      "source": "youtube",
+      "author": "yt_user_4",
+      "text": "Worst decision ever.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 332,
+      "external_id": "yt_var_5",
+      "source": "youtube",
+      "author": "yt_user_5",
+      "text": "VAR is ruining football.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 334,
+      "external_id": "yt_var_6",
+      "source": "youtube",
+      "author": "yt_user_6",
+      "text": "Ref is paid.",
+      "country": "US"
+    },
+    {
+      "t_offset": 335,
+      "external_id": "yt_var_7",
+      "source": "youtube",
+      "author": "yt_user_7",
+      "text": "Worst decision ever.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 337,
+      "external_id": "yt_var_8",
+      "source": "youtube",
+      "author": "yt_user_8",
+      "text": "Are you blind ref??",
+      "country": "BR"
+    },
+    {
+      "t_offset": 338,
+      "external_id": "yt_var_9",
+      "source": "youtube",
+      "author": "yt_user_9",
+      "text": "VAR is ruining football.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 340,
+      "external_id": "yt_var_10",
+      "source": "youtube",
+      "author": "yt_user_10",
+      "text": "VAR is ruining football.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 341,
+      "external_id": "yt_var_11",
+      "source": "youtube",
+      "author": "yt_user_11",
+      "text": "Worst decision ever.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 343,
+      "external_id": "yt_var_12",
+      "source": "youtube",
+      "author": "yt_user_12",
+      "text": "That's clearly not a penalty!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 344,
+      "external_id": "yt_var_13",
+      "source": "youtube",
+      "author": "yt_user_13",
+      "text": "Worst decision ever.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 346,
+      "external_id": "yt_var_14",
+      "source": "youtube",
+      "author": "yt_user_14",
+      "text": "Ref is paid.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 347,
+      "external_id": "yt_var_15",
+      "source": "youtube",
+      "author": "yt_user_15",
+      "text": "Worst decision ever.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 349,
+      "external_id": "yt_var_16",
+      "source": "youtube",
+      "author": "yt_user_16",
+      "text": "VAR is ruining football.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 350,
+      "external_id": "yt_var_17",
+      "source": "youtube",
+      "author": "yt_user_17",
+      "text": "Worst decision ever.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 352,
+      "external_id": "yt_var_18",
+      "source": "youtube",
+      "author": "yt_user_18",
+      "text": "Are you blind ref??",
+      "country": "AR"
+    },
+    {
+      "t_offset": 353,
+      "external_id": "yt_var_19",
+      "source": "youtube",
+      "author": "yt_user_19",
+      "text": "Ref is paid.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 355,
+      "external_id": "yt_var_20",
+      "source": "youtube",
+      "author": "yt_user_20",
+      "text": "Worst decision ever.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 356,
+      "external_id": "yt_var_21",
+      "source": "youtube",
+      "author": "yt_user_21",
+      "text": "Worst decision ever.",
+      "country": "US"
+    },
+    {
+      "t_offset": 358,
+      "external_id": "yt_var_22",
+      "source": "youtube",
+      "author": "yt_user_22",
+      "text": "Are you blind ref??",
+      "country": "US"
+    },
+    {
+      "t_offset": 359,
+      "external_id": "yt_var_23",
+      "source": "youtube",
+      "author": "yt_user_23",
+      "text": "VAR is ruining football.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 361,
+      "external_id": "yt_var_24",
+      "source": "youtube",
+      "author": "yt_user_24",
+      "text": "VAR is ruining football.",
+      "country": "US"
+    },
+    {
+      "t_offset": 362,
+      "external_id": "yt_var_25",
+      "source": "youtube",
+      "author": "yt_user_25",
+      "text": "VAR is ruining football.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 364,
+      "external_id": "yt_var_26",
+      "source": "youtube",
+      "author": "yt_user_26",
+      "text": "Worst decision ever.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 365,
+      "external_id": "yt_var_27",
+      "source": "youtube",
+      "author": "yt_user_27",
+      "text": "VAR is ruining football.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 367,
+      "external_id": "yt_var_28",
+      "source": "youtube",
+      "author": "yt_user_28",
+      "text": "Ref is paid.",
+      "country": "US"
+    },
+    {
+      "t_offset": 368,
+      "external_id": "yt_var_29",
+      "source": "youtube",
+      "author": "yt_user_29",
+      "text": "VAR is ruining football.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 370,
+      "external_id": "yt_var_30",
+      "source": "youtube",
+      "author": "yt_user_30",
+      "text": "Ref is paid.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 371,
+      "external_id": "yt_var_31",
+      "source": "youtube",
+      "author": "yt_user_31",
+      "text": "Worst decision ever.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 373,
+      "external_id": "yt_var_32",
+      "source": "youtube",
+      "author": "yt_user_32",
+      "text": "Worst decision ever.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 374,
+      "external_id": "yt_var_33",
+      "source": "youtube",
+      "author": "yt_user_33",
+      "text": "Ref is paid.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 376,
+      "external_id": "yt_var_34",
+      "source": "youtube",
+      "author": "yt_user_34",
+      "text": "Worst decision ever.",
+      "country": "US"
+    },
+    {
+      "t_offset": 377,
+      "external_id": "yt_var_35",
+      "source": "youtube",
+      "author": "yt_user_35",
+      "text": "VAR is ruining football.",
+      "country": "US"
+    },
+    {
+      "t_offset": 379,
+      "external_id": "yt_var_36",
+      "source": "youtube",
+      "author": "yt_user_36",
+      "text": "Are you blind ref??",
+      "country": "US"
+    },
+    {
+      "t_offset": 380,
+      "external_id": "yt_var_37",
+      "source": "youtube",
+      "author": "yt_user_37",
+      "text": "That's clearly not a penalty!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 382,
+      "external_id": "yt_var_38",
+      "source": "youtube",
+      "author": "yt_user_38",
+      "text": "Are you blind ref??",
+      "country": "BR"
+    },
+    {
+      "t_offset": 383,
+      "external_id": "yt_var_39",
+      "source": "youtube",
+      "author": "yt_user_39",
+      "text": "That's clearly not a penalty!",
+      "country": "US"
+    },
+    {
+      "t_offset": 385,
+      "external_id": "yt_var_40",
+      "source": "youtube",
+      "author": "yt_user_40",
+      "text": "Are you blind ref??",
+      "country": "GB"
+    },
+    {
+      "t_offset": 386,
+      "external_id": "yt_var_41",
+      "source": "youtube",
+      "author": "yt_user_41",
+      "text": "That's clearly not a penalty!",
+      "country": "US"
+    },
+    {
+      "t_offset": 388,
+      "external_id": "yt_var_42",
+      "source": "youtube",
+      "author": "yt_user_42",
+      "text": "Worst decision ever.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 389,
+      "external_id": "yt_var_43",
+      "source": "youtube",
+      "author": "yt_user_43",
+      "text": "Are you blind ref??",
+      "country": "BR"
+    },
+    {
+      "t_offset": 391,
+      "external_id": "yt_var_44",
+      "source": "youtube",
+      "author": "yt_user_44",
+      "text": "Are you blind ref??",
+      "country": "AR"
+    },
+    {
+      "t_offset": 392,
+      "external_id": "yt_var_45",
+      "source": "youtube",
+      "author": "yt_user_45",
+      "text": "That's clearly not a penalty!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 394,
+      "external_id": "yt_var_46",
+      "source": "youtube",
+      "author": "yt_user_46",
+      "text": "Ref is paid.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 395,
+      "external_id": "yt_var_47",
+      "source": "youtube",
+      "author": "yt_user_47",
+      "text": "Worst decision ever.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 397,
+      "external_id": "yt_var_48",
+      "source": "youtube",
+      "author": "yt_user_48",
+      "text": "Are you blind ref??",
+      "country": "AR"
+    },
+    {
+      "t_offset": 398,
+      "external_id": "yt_var_49",
+      "source": "youtube",
+      "author": "yt_user_49",
+      "text": "Worst decision ever.",
+      "country": "US"
+    },
+    {
+      "t_offset": 410,
+      "external_id": "rd_mid_0",
+      "source": "reddit",
+      "author": "u/mid_0",
+      "text": "Game slowed down a bit.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 418,
+      "external_id": "rd_mid_1",
+      "source": "reddit",
+      "author": "u/mid_1",
+      "text": "Game slowed down a bit.",
+      "country": "US"
+    },
+    {
+      "t_offset": 426,
+      "external_id": "rd_mid_2",
+      "source": "reddit",
+      "author": "u/mid_2",
+      "text": "Game slowed down a bit.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 434,
+      "external_id": "rd_mid_3",
+      "source": "reddit",
+      "author": "u/mid_3",
+      "text": "Game slowed down a bit.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 442,
+      "external_id": "rd_mid_4",
+      "source": "reddit",
+      "author": "u/mid_4",
+      "text": "Game slowed down a bit.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 450,
+      "external_id": "rd_mid_5",
+      "source": "reddit",
+      "author": "u/mid_5",
+      "text": "Game slowed down a bit.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 458,
+      "external_id": "rd_mid_6",
+      "source": "reddit",
+      "author": "u/mid_6",
+      "text": "Game slowed down a bit.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 466,
+      "external_id": "rd_mid_7",
+      "source": "reddit",
+      "author": "u/mid_7",
+      "text": "Game slowed down a bit.",
+      "country": "US"
+    },
+    {
+      "t_offset": 474,
+      "external_id": "rd_mid_8",
+      "source": "reddit",
+      "author": "u/mid_8",
+      "text": "Game slowed down a bit.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 482,
+      "external_id": "rd_mid_9",
+      "source": "reddit",
+      "author": "u/mid_9",
+      "text": "Game slowed down a bit.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 490,
+      "external_id": "rd_mid_10",
+      "source": "reddit",
+      "author": "u/mid_10",
+      "text": "Game slowed down a bit.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 498,
+      "external_id": "rd_mid_11",
+      "source": "reddit",
+      "author": "u/mid_11",
+      "text": "Game slowed down a bit.",
+      "country": "US"
+    },
+    {
+      "t_offset": 506,
+      "external_id": "rd_mid_12",
+      "source": "reddit",
+      "author": "u/mid_12",
+      "text": "Game slowed down a bit.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 514,
+      "external_id": "rd_mid_13",
+      "source": "reddit",
+      "author": "u/mid_13",
+      "text": "Game slowed down a bit.",
+      "country": "US"
+    },
+    {
+      "t_offset": 522,
+      "external_id": "rd_mid_14",
+      "source": "reddit",
+      "author": "u/mid_14",
+      "text": "Game slowed down a bit.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 530,
+      "external_id": "rd_mid_15",
+      "source": "reddit",
+      "author": "u/mid_15",
+      "text": "Game slowed down a bit.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 538,
+      "external_id": "rd_mid_16",
+      "source": "reddit",
+      "author": "u/mid_16",
+      "text": "Game slowed down a bit.",
+      "country": "US"
+    },
+    {
+      "t_offset": 546,
+      "external_id": "rd_mid_17",
+      "source": "reddit",
+      "author": "u/mid_17",
+      "text": "Game slowed down a bit.",
+      "country": "US"
+    },
+    {
+      "t_offset": 554,
+      "external_id": "rd_mid_18",
+      "source": "reddit",
+      "author": "u/mid_18",
+      "text": "Game slowed down a bit.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 562,
+      "external_id": "rd_mid_19",
+      "source": "reddit",
+      "author": "u/mid_19",
+      "text": "Game slowed down a bit.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 570,
+      "external_id": "rd_mid_20",
+      "source": "reddit",
+      "author": "u/mid_20",
+      "text": "Game slowed down a bit.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 578,
+      "external_id": "rd_mid_21",
+      "source": "reddit",
+      "author": "u/mid_21",
+      "text": "Game slowed down a bit.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 586,
+      "external_id": "rd_mid_22",
+      "source": "reddit",
+      "author": "u/mid_22",
+      "text": "Game slowed down a bit.",
+      "country": "US"
+    },
+    {
+      "t_offset": 594,
+      "external_id": "rd_mid_23",
+      "source": "reddit",
+      "author": "u/mid_23",
+      "text": "Game slowed down a bit.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 602,
+      "external_id": "rd_mid_24",
+      "source": "reddit",
+      "author": "u/mid_24",
+      "text": "Game slowed down a bit.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 610,
+      "external_id": "rd_mid_25",
+      "source": "reddit",
+      "author": "u/mid_25",
+      "text": "Game slowed down a bit.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 618,
+      "external_id": "rd_mid_26",
+      "source": "reddit",
+      "author": "u/mid_26",
+      "text": "Game slowed down a bit.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 626,
+      "external_id": "rd_mid_27",
+      "source": "reddit",
+      "author": "u/mid_27",
+      "text": "Game slowed down a bit.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 634,
+      "external_id": "rd_mid_28",
+      "source": "reddit",
+      "author": "u/mid_28",
+      "text": "Game slowed down a bit.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 642,
+      "external_id": "rd_mid_29",
+      "source": "reddit",
+      "author": "u/mid_29",
+      "text": "Game slowed down a bit.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 660,
+      "marker": "goal"
+    },
+    {
+      "t_offset": 661,
+      "external_id": "rd_goal_0",
+      "source": "reddit",
+      "author": "u/hype_0",
+      "text": "Wow just wow.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 661,
+      "external_id": "rd_goal_1",
+      "source": "reddit",
+      "author": "u/hype_1",
+      "text": "What a finish!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 662,
+      "external_id": "rd_goal_2",
+      "source": "reddit",
+      "author": "u/hype_2",
+      "text": "What a finish!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 663,
+      "external_id": "rd_goal_3",
+      "source": "reddit",
+      "author": "u/hype_3",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "AR"
+    },
+    {
+      "t_offset": 664,
+      "external_id": "rd_goal_4",
+      "source": "reddit",
+      "author": "u/hype_4",
+      "text": "What a finish!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 665,
+      "external_id": "rd_goal_5",
+      "source": "reddit",
+      "author": "u/hype_5",
+      "text": "What a finish!",
+      "country": "US"
+    },
+    {
+      "t_offset": 665,
+      "external_id": "rd_goal_6",
+      "source": "reddit",
+      "author": "u/hype_6",
+      "text": "Wow just wow.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 666,
+      "external_id": "rd_goal_7",
+      "source": "reddit",
+      "author": "u/hype_7",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "BR"
+    },
+    {
+      "t_offset": 667,
+      "external_id": "rd_goal_8",
+      "source": "reddit",
+      "author": "u/hype_8",
+      "text": "Messi is the GOAT!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 668,
+      "external_id": "rd_goal_9",
+      "source": "reddit",
+      "author": "u/hype_9",
+      "text": "Messi is the GOAT!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 669,
+      "external_id": "rd_goal_10",
+      "source": "reddit",
+      "author": "u/hype_10",
+      "text": "Messi is the GOAT!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 669,
+      "external_id": "rd_goal_11",
+      "source": "reddit",
+      "author": "u/hype_11",
+      "text": "Wow just wow.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 670,
+      "external_id": "rd_goal_12",
+      "source": "reddit",
+      "author": "u/hype_12",
+      "text": "What a finish!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 671,
+      "external_id": "rd_goal_13",
+      "source": "reddit",
+      "author": "u/hype_13",
+      "text": "What a finish!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 672,
+      "external_id": "rd_goal_14",
+      "source": "reddit",
+      "author": "u/hype_14",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "AR"
+    },
+    {
+      "t_offset": 673,
+      "external_id": "rd_goal_15",
+      "source": "reddit",
+      "author": "u/hype_15",
+      "text": "What a finish!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 673,
+      "external_id": "rd_goal_16",
+      "source": "reddit",
+      "author": "u/hype_16",
+      "text": "Messi is the GOAT!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 674,
+      "external_id": "rd_goal_17",
+      "source": "reddit",
+      "author": "u/hype_17",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "AR"
+    },
+    {
+      "t_offset": 675,
+      "external_id": "rd_goal_18",
+      "source": "reddit",
+      "author": "u/hype_18",
+      "text": "Wow just wow.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 676,
+      "external_id": "rd_goal_19",
+      "source": "reddit",
+      "author": "u/hype_19",
+      "text": "What a finish!",
+      "country": "US"
+    },
+    {
+      "t_offset": 677,
+      "external_id": "rd_goal_20",
+      "source": "reddit",
+      "author": "u/hype_20",
+      "text": "Messi is the GOAT!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 677,
+      "external_id": "rd_goal_21",
+      "source": "reddit",
+      "author": "u/hype_21",
+      "text": "Wow just wow.",
+      "country": "US"
+    },
+    {
+      "t_offset": 678,
+      "external_id": "rd_goal_22",
+      "source": "reddit",
+      "author": "u/hype_22",
+      "text": "What a finish!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 679,
+      "external_id": "rd_goal_23",
+      "source": "reddit",
+      "author": "u/hype_23",
+      "text": "Incredible!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 680,
+      "external_id": "rd_goal_24",
+      "source": "reddit",
+      "author": "u/hype_24",
+      "text": "What a finish!",
+      "country": "US"
+    },
+    {
+      "t_offset": 681,
+      "external_id": "rd_goal_25",
+      "source": "reddit",
+      "author": "u/hype_25",
+      "text": "Wow just wow.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 681,
+      "external_id": "rd_goal_26",
+      "source": "reddit",
+      "author": "u/hype_26",
+      "text": "Wow just wow.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 682,
+      "external_id": "rd_goal_27",
+      "source": "reddit",
+      "author": "u/hype_27",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "US"
+    },
+    {
+      "t_offset": 683,
+      "external_id": "rd_goal_28",
+      "source": "reddit",
+      "author": "u/hype_28",
+      "text": "Incredible!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 684,
+      "external_id": "rd_goal_29",
+      "source": "reddit",
+      "author": "u/hype_29",
+      "text": "Incredible!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 685,
+      "external_id": "rd_goal_30",
+      "source": "reddit",
+      "author": "u/hype_30",
+      "text": "What a finish!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 685,
+      "external_id": "rd_goal_31",
+      "source": "reddit",
+      "author": "u/hype_31",
+      "text": "Incredible!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 686,
+      "external_id": "rd_goal_32",
+      "source": "reddit",
+      "author": "u/hype_32",
+      "text": "Wow just wow.",
+      "country": "US"
+    },
+    {
+      "t_offset": 687,
+      "external_id": "rd_goal_33",
+      "source": "reddit",
+      "author": "u/hype_33",
+      "text": "Incredible!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 688,
+      "external_id": "rd_goal_34",
+      "source": "reddit",
+      "author": "u/hype_34",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "US"
+    },
+    {
+      "t_offset": 689,
+      "external_id": "rd_goal_35",
+      "source": "reddit",
+      "author": "u/hype_35",
+      "text": "What a finish!",
+      "country": "US"
+    },
+    {
+      "t_offset": 689,
+      "external_id": "rd_goal_36",
+      "source": "reddit",
+      "author": "u/hype_36",
+      "text": "Messi is the GOAT!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 690,
+      "external_id": "rd_goal_37",
+      "source": "reddit",
+      "author": "u/hype_37",
+      "text": "What a finish!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 691,
+      "external_id": "rd_goal_38",
+      "source": "reddit",
+      "author": "u/hype_38",
+      "text": "Wow just wow.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 692,
+      "external_id": "rd_goal_39",
+      "source": "reddit",
+      "author": "u/hype_39",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "GB"
+    },
+    {
+      "t_offset": 693,
+      "external_id": "rd_goal_40",
+      "source": "reddit",
+      "author": "u/hype_40",
+      "text": "Messi is the GOAT!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 693,
+      "external_id": "rd_goal_41",
+      "source": "reddit",
+      "author": "u/hype_41",
+      "text": "Wow just wow.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 694,
+      "external_id": "rd_goal_42",
+      "source": "reddit",
+      "author": "u/hype_42",
+      "text": "Wow just wow.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 695,
+      "external_id": "rd_goal_43",
+      "source": "reddit",
+      "author": "u/hype_43",
+      "text": "Incredible!",
+      "country": "US"
+    },
+    {
+      "t_offset": 696,
+      "external_id": "rd_goal_44",
+      "source": "reddit",
+      "author": "u/hype_44",
+      "text": "Messi is the GOAT!",
+      "country": "US"
+    },
+    {
+      "t_offset": 697,
+      "external_id": "rd_goal_45",
+      "source": "reddit",
+      "author": "u/hype_45",
+      "text": "Wow just wow.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 697,
+      "external_id": "rd_goal_46",
+      "source": "reddit",
+      "author": "u/hype_46",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "BR"
+    },
+    {
+      "t_offset": 698,
+      "external_id": "rd_goal_47",
+      "source": "reddit",
+      "author": "u/hype_47",
+      "text": "Incredible!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 699,
+      "external_id": "rd_goal_48",
+      "source": "reddit",
+      "author": "u/hype_48",
+      "text": "Wow just wow.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 700,
+      "external_id": "rd_goal_49",
+      "source": "reddit",
+      "author": "u/hype_49",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "GB"
+    },
+    {
+      "t_offset": 701,
+      "external_id": "rd_goal_50",
+      "source": "reddit",
+      "author": "u/hype_50",
+      "text": "Incredible!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 701,
+      "external_id": "rd_goal_51",
+      "source": "reddit",
+      "author": "u/hype_51",
+      "text": "What a finish!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 702,
+      "external_id": "rd_goal_52",
+      "source": "reddit",
+      "author": "u/hype_52",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "AR"
+    },
+    {
+      "t_offset": 703,
+      "external_id": "rd_goal_53",
+      "source": "reddit",
+      "author": "u/hype_53",
+      "text": "Messi is the GOAT!",
+      "country": "US"
+    },
+    {
+      "t_offset": 704,
+      "external_id": "rd_goal_54",
+      "source": "reddit",
+      "author": "u/hype_54",
+      "text": "Incredible!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 705,
+      "external_id": "rd_goal_55",
+      "source": "reddit",
+      "author": "u/hype_55",
+      "text": "What a finish!",
+      "country": "US"
+    },
+    {
+      "t_offset": 705,
+      "external_id": "rd_goal_56",
+      "source": "reddit",
+      "author": "u/hype_56",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "AR"
+    },
+    {
+      "t_offset": 706,
+      "external_id": "rd_goal_57",
+      "source": "reddit",
+      "author": "u/hype_57",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "US"
+    },
+    {
+      "t_offset": 707,
+      "external_id": "rd_goal_58",
+      "source": "reddit",
+      "author": "u/hype_58",
+      "text": "Incredible!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 708,
+      "external_id": "rd_goal_59",
+      "source": "reddit",
+      "author": "u/hype_59",
+      "text": "What a finish!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 709,
+      "external_id": "rd_goal_60",
+      "source": "reddit",
+      "author": "u/hype_60",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "BR"
+    },
+    {
+      "t_offset": 709,
+      "external_id": "rd_goal_61",
+      "source": "reddit",
+      "author": "u/hype_61",
+      "text": "Messi is the GOAT!",
+      "country": "US"
+    },
+    {
+      "t_offset": 710,
+      "external_id": "rd_goal_62",
+      "source": "reddit",
+      "author": "u/hype_62",
+      "text": "What a finish!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 711,
+      "external_id": "rd_goal_63",
+      "source": "reddit",
+      "author": "u/hype_63",
+      "text": "Incredible!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 712,
+      "external_id": "rd_goal_64",
+      "source": "reddit",
+      "author": "u/hype_64",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "GB"
+    },
+    {
+      "t_offset": 713,
+      "external_id": "rd_goal_65",
+      "source": "reddit",
+      "author": "u/hype_65",
+      "text": "Wow just wow.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 713,
+      "external_id": "rd_goal_66",
+      "source": "reddit",
+      "author": "u/hype_66",
+      "text": "Messi is the GOAT!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 714,
+      "external_id": "rd_goal_67",
+      "source": "reddit",
+      "author": "u/hype_67",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "US"
+    },
+    {
+      "t_offset": 715,
+      "external_id": "rd_goal_68",
+      "source": "reddit",
+      "author": "u/hype_68",
+      "text": "Incredible!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 716,
+      "external_id": "rd_goal_69",
+      "source": "reddit",
+      "author": "u/hype_69",
+      "text": "What a finish!",
+      "country": "GB"
+    },
+    {
+      "t_offset": 717,
+      "external_id": "rd_goal_70",
+      "source": "reddit",
+      "author": "u/hype_70",
+      "text": "Messi is the GOAT!",
+      "country": "US"
+    },
+    {
+      "t_offset": 717,
+      "external_id": "rd_goal_71",
+      "source": "reddit",
+      "author": "u/hype_71",
+      "text": "Incredible!",
+      "country": "US"
+    },
+    {
+      "t_offset": 718,
+      "external_id": "rd_goal_72",
+      "source": "reddit",
+      "author": "u/hype_72",
+      "text": "What a finish!",
+      "country": "US"
+    },
+    {
+      "t_offset": 719,
+      "external_id": "rd_goal_73",
+      "source": "reddit",
+      "author": "u/hype_73",
+      "text": "Incredible!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 720,
+      "external_id": "rd_goal_74",
+      "source": "reddit",
+      "author": "u/hype_74",
+      "text": "Messi is the GOAT!",
+      "country": "AR"
+    },
+    {
+      "t_offset": 721,
+      "external_id": "rd_goal_75",
+      "source": "reddit",
+      "author": "u/hype_75",
+      "text": "Incredible!",
+      "country": "BR"
+    },
+    {
+      "t_offset": 721,
+      "external_id": "rd_goal_76",
+      "source": "reddit",
+      "author": "u/hype_76",
+      "text": "Wow just wow.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 722,
+      "external_id": "rd_goal_77",
+      "source": "reddit",
+      "author": "u/hype_77",
+      "text": "GOOOOOL!!! \ud83d\udd25\ud83d\udd25",
+      "country": "US"
+    },
+    {
+      "t_offset": 723,
+      "external_id": "rd_goal_78",
+      "source": "reddit",
+      "author": "u/hype_78",
+      "text": "Wow just wow.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 724,
+      "external_id": "rd_goal_79",
+      "source": "reddit",
+      "author": "u/hype_79",
+      "text": "Wow just wow.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 750,
+      "marker": "full_time"
+    },
+    {
+      "t_offset": 755,
+      "external_id": "rd_post_0",
+      "source": "reddit",
+      "author": "u/post_0",
+      "text": "Great game overall.",
+      "country": "US"
+    },
+    {
+      "t_offset": 760,
+      "external_id": "rd_post_1",
+      "source": "reddit",
+      "author": "u/post_1",
+      "text": "Great game overall.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 765,
+      "external_id": "rd_post_2",
+      "source": "reddit",
+      "author": "u/post_2",
+      "text": "Great game overall.",
+      "country": "AR"
+    },
+    {
+      "t_offset": 770,
+      "external_id": "rd_post_3",
+      "source": "reddit",
+      "author": "u/post_3",
+      "text": "Great game overall.",
+      "country": "US"
+    },
+    {
+      "t_offset": 775,
+      "external_id": "rd_post_4",
+      "source": "reddit",
+      "author": "u/post_4",
+      "text": "Great game overall.",
+      "country": "US"
+    },
+    {
+      "t_offset": 780,
+      "external_id": "rd_post_5",
+      "source": "reddit",
+      "author": "u/post_5",
+      "text": "Great game overall.",
+      "country": "GB"
+    },
+    {
+      "t_offset": 785,
+      "external_id": "rd_post_6",
+      "source": "reddit",
+      "author": "u/post_6",
+      "text": "Great game overall.",
+      "country": "US"
+    },
+    {
+      "t_offset": 790,
+      "external_id": "rd_post_7",
+      "source": "reddit",
+      "author": "u/post_7",
+      "text": "Great game overall.",
+      "country": "US"
+    },
+    {
+      "t_offset": 795,
+      "external_id": "rd_post_8",
+      "source": "reddit",
+      "author": "u/post_8",
+      "text": "Great game overall.",
+      "country": "BR"
+    },
+    {
+      "t_offset": 800,
+      "external_id": "rd_post_9",
+      "source": "reddit",
+      "author": "u/post_9",
+      "text": "Great game overall.",
+      "country": "BR"
+    }
+  ]
+}

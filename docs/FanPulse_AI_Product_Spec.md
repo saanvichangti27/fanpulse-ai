@@ -27,7 +27,7 @@ Every output must have that shape: **decision + target + timing + predicted retu
 
 - **Marketing only.** No logistics, crowd control, venue staffing, or physical event operations, ever. The demand forecast (Feature 3) exists as an *audience/attention signal for media planning*, not for crowd planning.
 - **Primary users are brands, advertisers, agencies, and content creators** — not FIFA operations. FIFA's commercial team is just one possible advertiser.
-- **No channel integrations.** Channels (push, instagram, youtube, email) are *labels on recommendation cards* and keys in `benchmarks.csv`. The system never sends a push notification, never posts anywhere. See contract §A.4 note.
+- **No channel integrations.** Channels (push, instagram, youtube, email) are *labels on recommendation cards* and keys in `benchmarks.csv`. The system never sends a push notification, never posts anywhere. See contract §A.1 note.
 - **No frontend in the current phase.** Swagger UI (`/docs`) and `scripts/smoke_test.py` are the only test surfaces (Work Distribution §0). There is also **no WebSocket** — anything "live" is served by REST endpoints that clients poll every 2–3 seconds (contract §C).
 - **The only external APIs in the entire system:** Reddit (PRAW), YouTube Data API v3, NewsAPI/GNews, and Google Gemini. Adding any other external dependency is out of scope.
 
@@ -204,7 +204,7 @@ Trained on real public historical data (Kaggle FIFA World Cup matches + Wikipedi
 Food-delivery, push, **$100,000**, benchmark row `CPM=6, freq=2.5, CTR=0.009, CVR=0.03, AOV=30`:
 
 - **Baseline (`M=1.0`):** 16.67M impressions → 6.67M reach → 150k clicks → 4,500 conversions → $135,000 revenue → **ROAS 1.35**.
-- **Goal moment (`M≈1.92`** from Arousal 0.90, Fit 0.85, MomentStrength 0.80, SegmentMatch 0.70, K 2.0): CTR_eff 1.73%, CVR_eff 4.38% → ≈288k clicks → ≈12,600 conversions → ≈$378k revenue → **ROAS ≈ 3.7**.
+- **Goal moment (`M≈1.86`** from Arousal 0.90, Fit 0.85, MomentStrength 0.80, SegmentMatch 0.70, K 2.0): CTR_eff 1.67%, CVR_eff 4.28% → ≈279k clicks → ≈11,900 conversions → ≈$358k revenue → **ROAS ≈ 3.6**.
 
 `intelligence/roi` must reproduce these within rounding (W3 Definition of Done). The baseline-vs-moment contrast — same budget, timing roughly triples the return — is the quantified product thesis.
 
@@ -225,7 +225,7 @@ Input: a `MomentEvent` (auto) or a manual generate request. Output: a `CampaignB
 1. **WHO** — rank segments by `industry_affinity × country_overlap_with_active_regions × avg_engagement_score`; honor an explicitly requested segment.
 2. **WHEN** — window from the playbook archetype, anchored at the moment timestamp.
 3. **WHERE** — best benchmark-ROI channel for (industry × segment preference) via `intelligence.roi.best_channel`.
-4. **WHAT-TYPE** — archetype from the **playbook**: a hand-curated `(emotion × industry) → archetype` table in `app/strategy/playbook.py` covering all 15 industries × 7 emotions (weak fits fall back to `brand_awareness`). Representative rows: joy × food_delivery → `celebration_flash_offer` (15-min window); sadness/anger × food_delivery → `consolation_offer`; joy × merch_apparel → `commemorative_drop`; pre-match anticipation × streaming_ott → `tune_in_push`; joy × travel_hospitality → `fan_trip_promo`.
+4. **WHAT-TYPE** — archetype from the **playbook**: a hand-curated `(emotion × industry) → archetype` table in `app/strategy/playbook.py` covering the 5 starred industries × 7 emotions, with every other industry getting a single ("*", industry) → brand_awareness fallback row. Representative rows: joy × food_delivery → `celebration_flash_offer` (15-min window); sadness/anger × food_delivery → `consolation_offer`; joy × merch_apparel → `commemorative_drop`; joy × streaming_ott → `tune_in_push`; joy × travel_hospitality → `fan_trip_promo`.
 5. Attach `ROIResult` (live + baseline) and assemble the evidence block from the momentum snapshot, segment stats, and multiplier breakdown.
 
 ### 7.2 Layer 2 — Copy engine (grounded Gemini)
@@ -252,7 +252,7 @@ Starred (★) industries are the demo focus and must have complete playbook rows
 | `streaming_ott` | Streaming / OTT | ★ | Tune-in and sign-up windows → pre-match pushes by segment |
 | `content_creator` | Content Creators | ★ | Attention monetisation → real-time content-idea recommendations (§7.3) |
 | `sportswear_fashion` | Sportswear & Fashion | | Peak brand attention → segment+moment brand campaigns |
-| `betting_igaming` | Betting / iGaming | | Major sports-ad category → **`compliance_flag: true`, region-gated**; the flag must surface on every card |
+| `betting_igaming` | Betting / iGaming | | Major sports-ad category → **`compliance_flag: true`, region-gated** (applications read this from the /industries endpoint) |
 | `gaming_esports` | Gaming & Esports | | Hype → install/engagement campaigns |
 | `retail_ecommerce` | Retail & E-commerce | | Big-moment flash-sale culture → emotion-triggered promos |
 | `telecom` | Telecom & Mobile | | Event sponsors, data upsell → audience-targeted offers |

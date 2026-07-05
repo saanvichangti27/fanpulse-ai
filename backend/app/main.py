@@ -1,14 +1,24 @@
 from fastapi import FastAPI
 import os
+import asyncio
 from .routers import matches, fans, campaigns, predictions, roi, replay
 from .seed import seed_db
+from .db import engine, SessionLocal
+from .models_db import Base
+from .automation import on_moment
+from ..ingestion.service import run_ingestion
+from dotenv import load_dotenv
+load_dotenv("backend/.env")
 
 app = FastAPI(title="FanPulse AI API", version="3.0.0")
 
 @app.on_event("startup")
 async def startup_event():
+    Base.metadata.create_all(bind=engine)
     seed_db()
-    # In full integration, we'll start run_ingestion here.
+    # Start ingestion loop
+    sources = os.environ.get("SOURCES", "replay").split(",")
+    asyncio.create_task(run_ingestion(SessionLocal, sources, on_moment))
 
 @app.get("/api/v1/health")
 def health():

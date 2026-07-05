@@ -189,7 +189,7 @@ Response = `CampaignCard` (also the GET list item):
     "moment": "joy surge +26pp, volume 4.1x baseline (mo_0007, goal)",
     "segment": "deal_seekers: 1,480 fans in sample (29.6%), avg engagement 71, prefers push",
     "regional": "top regions BR (12,000 mentions), AR (8,400)",
-    "multiplier": { "M": 1.92, "arousal": 0.90, "emotion_brand_fit": 0.85,
+    "multiplier": { "M": 1.86, "arousal": 0.90, "emotion_brand_fit": 0.85,
                     "moment_strength": 0.80, "segment_match": 0.70, "k": 2.0 },
     "benchmark_source": "WordStream Google Ads benchmarks 2025 — food_delivery/push" },
   "confidence": 0.88, "llm_fallback": false, "created_at": "..." }
@@ -210,7 +210,7 @@ Response = `CampaignCard` (also the GET list item):
 - `POST /api/v1/roi/simulate` — `{ "match_id", "industry", "channel", "budget_usd", "timing": "now"|"baseline" }` → `ROIResult`:
 ```json
 { "industry": "food_delivery", "channel": "push", "budget_usd": 100000,
-  "multiplier": { "M": 1.92, "arousal": 0.90, "emotion_brand_fit": 0.85,
+  "multiplier": { "M": 1.86, "arousal": 0.90, "emotion_brand_fit": 0.85,
                   "moment_strength": 0.80, "segment_match": 0.70, "k": 2.0 },
   "funnel": { "cpm_usd": 6.0, "frequency": 2.5, "impressions": 16666667, "reach": 6666667,
               "ctr_baseline": 0.009, "ctr_effective": 0.0173, "clicks": 288000,
@@ -402,7 +402,7 @@ Math per spec §6 with §A.3 constants; `MomentStrength = clip(volume_ratio / 3,
 
 **Confidence:** `clip(0.4*volume_support + 0.3*moment_recency + 0.3*segment_support, 0, 1)`; `volume_support = clip(volume_5m/500, 0, 1)`, `moment_recency = clip(1 − age_min/30, 0, 1)` (1.0 when no moment involved), `segment_support = clip(segment_size/500, 0, 1)`. Baseline mode: fixed 0.75.
 
-**Acceptance case (must reproduce within rounding):** food_delivery/push, $100k, benchmark row `CPM=6, freq=2.5, CTR=0.009, CVR=0.03, AOV=30` → baseline ROAS **1.35**; `M≈1.92` (arousal .90, fit .85, strength .80, match .70) → ROAS **≈ 3.7**.
+**Acceptance case (must reproduce within rounding):** food_delivery/push, $100k, benchmark row `CPM=6, freq=2.5, CTR=0.009, CVR=0.03, AOV=30` → baseline ROAS **1.35**; `M≈1.86` (arousal .90, fit .85, strength .80, match .70) → ROAS **≈ 3.6**.
 
 ---
 
