@@ -1,0 +1,54 @@
+# -------------------------
+# Common & OS
+# -------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# -------------------------
+# Secrets & Environments
+# -------------------------
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+ENV/
+
+# -------------------------
+# Python (W1 & W2)
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# -------------------------
+# Data & Notebooks (W1)
+# -------------------------
+*.ipynb_checkpoints/
+*.csv
+*.parquet
+*.sqlite
+*.sqlite3
+*.db
+
+# -------------------------
+# Node.js & Frontend (W3)
+# -------------------------
+node_modules/
+dist/
+build/
+.next/
+out/
+.nuxt/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
