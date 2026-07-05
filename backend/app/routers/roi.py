@@ -2,7 +2,7 @@ from fastapi import APIRouter
 from pydantic import BaseModel
 from typing import List
 from ...contracts import ROIResult, MediaPlan, Industry, Channel
-from ..stubs_intelligence import get_roi_stub
+from ...intelligence import roi as roi_engine
 
 router = APIRouter()
 
@@ -20,14 +20,20 @@ class MediaPlanRequest(BaseModel):
 
 @router.post("/roi/simulate", response_model=ROIResult)
 def simulate_roi(req: SimulateROIRequest):
-    return get_roi_stub(req.industry, req.channel, req.budget_usd)
+    roi_dict = roi_engine.simulate_roi(
+        industry=req.industry.value,
+        channel=req.channel.value,
+        budget_usd=req.budget_usd,
+        is_baseline=True
+    )
+    return ROIResult(**roi_dict)
 
 @router.post("/roi/media-plan", response_model=MediaPlan)
 def generate_media_plan(req: MediaPlanRequest):
-    # returning empty for now
-    return MediaPlan(
-        total_budget_usd=req.budget_usd,
-        industry=req.industry,
-        allocations=[],
-        expected_total_roas=0.0
+    forecasts = [{"match_id": m, "demand_index": 50.0} for m in req.match_ids]
+    plan_dict = roi_engine.plan_media(
+        budget_usd=req.budget_usd,
+        industry=req.industry.value,
+        forecasts=forecasts
     )
+    return MediaPlan(**plan_dict)

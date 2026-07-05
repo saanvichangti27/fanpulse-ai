@@ -1,7 +1,7 @@
 from typing import Optional
-from ..stubs_intelligence import get_roi_stub
 from ...intelligence import segments
-from ...contracts import SegmentReport
+from ...intelligence import roi as roi_engine
+from ...contracts import SegmentReport, ROIResult
 from .playbook import PLAYBOOK
 from ...contracts import CampaignBrief, MomentEvent, Emotion, Industry, SegmentId, Channel
 
@@ -50,7 +50,17 @@ def generate_campaign_brief(
     channel = requested_channel if requested_channel else playbook_entry["channel_default"]
 
     # 5. ROI
-    roi_result = get_roi_stub(industry, channel, budget_usd)
+    roi_dict = roi_engine.simulate_roi(
+        industry=industry.value,
+        channel=channel.value,
+        budget_usd=budget_usd,
+        dominant_emotion=emotion.value,
+        volume_ratio=moment.momentum.volume_ratio if moment else 1.0,
+        segment_id=target_segment_obj.segment_id.value if target_segment_obj else None,
+        demand_index=None,
+        is_baseline=not bool(moment)
+    )
+    roi_result = ROIResult(**roi_dict)
 
     return CampaignBrief(
         match_id=match_id,
