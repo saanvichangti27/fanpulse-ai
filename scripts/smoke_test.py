@@ -59,8 +59,8 @@ def run_smoke_test():
         })
         print(f"Replay started: {res.json()}")
         
-        # Poll endpoints
-        timeout = time.time() + 90
+        # Poll endpoints (increased timeout for HF model download)
+        timeout = time.time() + 300
         goal_found = False
         
         # Check for moment directly in DB
@@ -78,9 +78,15 @@ def run_smoke_test():
                     tags = [m.event_tag for m in moments]
                     if "goal" in tags:
                         print("✅ Goal moment detected!")
-                        
-                        # Check campaigns
-                        campaigns = conn.execute(text("SELECT * FROM campaigns")).fetchall()
+                        # Wait up to 10 seconds for the async LLM call to finish and save campaigns
+                        print("Waiting for background AI campaign generation...")
+                        campaigns = []
+                        for _ in range(10):
+                            campaigns = conn.execute(text("SELECT * FROM campaigns")).fetchall()
+                            if campaigns:
+                                break
+                            time.sleep(1)
+
                         if campaigns:
                             print(f"✅ Auto-campaign generated! Found {len(campaigns)} campaigns.")
                             for c in campaigns:

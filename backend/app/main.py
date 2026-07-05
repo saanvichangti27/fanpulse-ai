@@ -7,8 +7,9 @@ from .db import engine, SessionLocal
 from .models_db import Base
 from .automation import on_moment
 from ..ingestion.service import run_ingestion
+from ..ingestion.nlp import get_sentiment_pipeline, get_emotion_pipeline
 from dotenv import load_dotenv
-load_dotenv("backend/.env")
+load_dotenv()
 
 app = FastAPI(title="FanPulse AI API", version="3.0.0")
 
@@ -16,6 +17,13 @@ app = FastAPI(title="FanPulse AI API", version="3.0.0")
 async def startup_event():
     Base.metadata.create_all(bind=engine)
     seed_db()
+    
+    # Preload NLP models so they don't block the first ingestion batch
+    print("Preloading NLP models...")
+    get_sentiment_pipeline()
+    get_emotion_pipeline()
+    print("NLP models loaded.")
+    
     # Start ingestion loop
     sources = os.environ.get("SOURCES", "replay").split(",")
     asyncio.create_task(run_ingestion(SessionLocal, sources, on_moment))

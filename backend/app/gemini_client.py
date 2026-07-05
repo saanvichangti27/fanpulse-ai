@@ -6,7 +6,6 @@ from .strategy.playbook import PLAYBOOK
 
 def generate_copy(brief: CampaignBrief) -> tuple[Copy, bool]:
     """Returns (Copy, llm_fallback)"""
-    client = genai.Client()
     
     playbook_entry = PLAYBOOK.get((brief.emotion.value, brief.industry.value))
     if not playbook_entry:
@@ -51,6 +50,7 @@ def generate_copy(brief: CampaignBrief) -> tuple[Copy, bool]:
     }
     
     try:
+        client = genai.Client()
         response = client.models.generate_content(
             model='gemini-2.5-flash',
             contents=prompt,
