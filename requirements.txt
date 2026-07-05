@@ -5,3 +5,5 @@ pydantic
 pydantic-settings
 google-genai
 python-dotenv
+pandas
+scikit-learn==1.8.0

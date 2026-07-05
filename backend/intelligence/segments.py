@@ -29,6 +29,16 @@ def get_segments() -> dict:
     Shape matches SegmentReport contract.
     """
     _load_artifacts()
+    
+    # Inject missing fields to satisfy the Pydantic contract
+    for seg in _PROFILES.get("segments", []):
+        if "display_name" not in seg:
+            seg["display_name"] = seg["segment_id"].replace("_", " ").title()
+        if "defining_traits" not in seg:
+            seg["defining_traits"] = []
+        if "activity_share_pct" not in seg:
+            seg["activity_share_pct"] = seg.get("share_pct", 0.0)
+            
     return _PROFILES
 
 def get_active_overlay(country_volumes: Dict[str, int]) -> Dict[str, float]:

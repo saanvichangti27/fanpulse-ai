@@ -1,5 +1,7 @@
 from typing import Optional
-from ..stubs_intelligence import get_segments_stub, get_roi_stub
+from ..stubs_intelligence import get_roi_stub
+from ...intelligence import segments
+from ...contracts import SegmentReport
 from .playbook import PLAYBOOK
 from ...contracts import CampaignBrief, MomentEvent, Emotion, Industry, SegmentId, Channel
 
@@ -20,7 +22,7 @@ def generate_campaign_brief(
     requested_channel: Optional[Channel] = None
 ) -> CampaignBrief:
     # 1. WHO
-    segments_report = get_segments_stub()
+    segments_report = SegmentReport(**segments.get_segments())
     if requested_segment:
         target_segment_obj = next((s for s in segments_report.segments if s.segment_id == requested_segment), segments_report.segments[0])
     else:
