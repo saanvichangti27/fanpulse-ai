@@ -1,0 +1,70 @@
+[
+  {
+    "feature": "buzz_index_train",
+    "importance": 0.8045071320478638
+  },
+  {
+    "feature": "stage",
+    "importance": 0.08856800235221589
+  },
+  {
+    "feature": "rivalry_flag",
+    "importance": 0.0506103057255814
+  },
+  {
+    "feature": "host_involved",
+    "importance": 0.03295299479704113
+  },
+  {
+    "feature": "rank_gap",
+    "importance": 0.010997632579039978
+  },
+  {
+    "feature": "city_population_m",
+    "importance": 0.00382146274577584
+  },
+  {
+    "feature": "home_rank",
+    "importance": 0.0032509755970426897
+  },
+  {
+    "feature": "kickoff_hour_local",
+    "importance": 0.0015902865373749265
+  },
+  {
+    "feature": "venue_capacity",
+    "importance": 0.0011206329493560427
+  },
+  {
+    "feature": "day_of_week_6",
+    "importance": 0.001026052542369357
+  },
+  {
+    "feature": "away_rank",
+    "importance": 0.0007721020317576729
+  },
+  {
+    "feature": "day_of_week_2",
+    "importance": 0.00034031160497938586
+  },
+  {
+    "feature": "day_of_week_1",
+    "importance": 0.00015835292863777245
+  },
+  {
+    "feature": "day_of_week_0",
+    "importance": 0.00015622758050320092
+  },
+  {
+    "feature": "day_of_week_3",
+    "importance": 0.000127527980460937
+  },
+  {
+    "feature": "day_of_week_4",
+    "importance": 0.0
+  },
+  {
+    "feature": "day_of_week_5",
+    "importance": 0.0
+  }
+]

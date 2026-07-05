@@ -1,0 +1,146 @@
+{
+  "silhouette_score": 0.3402867114518179,
+  "n_fans": 50000,
+  "segments": [
+    {
+      "segment_id": "superfans",
+      "size": 3884,
+      "share_pct": 7.768,
+      "avg_engagement_score": 77.21859300978373,
+      "avg_annual_value_usd": 634.5669747682801,
+      "top_countries": [
+        "IT",
+        "UK",
+        "MX"
+      ],
+      "preferred_channel": "push",
+      "churn_risk_pct": 0.8712244120593089,
+      "centroid": {
+        "age": 43.088568486096804,
+        "matches_attended": 3.9951081359423273,
+        "tickets_bought_24m": 4.99794026776519,
+        "avg_ticket_spend_usd": 160.8419979402678,
+        "merch_purchases_12m": 3.122811534500515,
+        "merch_spend_usd_12m": 227.9000411946447,
+        "app_sessions_30d": 23.103244078269825,
+        "email_open_rate": 0.6962559649054495,
+        "push_opt_in": 0.838053553038105,
+        "days_since_last_engagement": 3.179969104016478,
+        "streaming_minutes_30d": 302.74768280123584,
+        "social_shares_30d": 8.031668383110196
+      }
+    },
+    {
+      "segment_id": "traveling_ultras",
+      "size": 3525,
+      "share_pct": 7.049999999999999,
+      "avg_engagement_score": 70.14990730496454,
+      "avg_annual_value_usd": 1942.5526638297872,
+      "top_countries": [
+        "IN",
+        "US",
+        "BR"
+      ],
+      "preferred_channel": "email",
+      "churn_risk_pct": 1.3267269017779073,
+      "centroid": {
+        "age": 42.86241134751773,
+        "matches_attended": 8.007659574468086,
+        "tickets_bought_24m": 11.89645390070922,
+        "avg_ticket_spend_usd": 310.09917730496454,
+        "merch_purchases_12m": 1.9750354609929077,
+        "merch_spend_usd_12m": 95.0153815602837,
+        "app_sessions_30d": 11.997163120567375,
+        "email_open_rate": 0.503878286732928,
+        "push_opt_in": 0.7063829787234043,
+        "days_since_last_engagement": 4.842553191489362,
+        "streaming_minutes_30d": 42.15177304964539,
+        "social_shares_30d": 2.054468085106383
+      }
+    },
+    {
+      "segment_id": "casual_streamers",
+      "size": 17470,
+      "share_pct": 34.94,
+      "avg_engagement_score": 47.751823354321694,
+      "avg_annual_value_usd": 27.221899828277046,
+      "top_countries": [
+        "US",
+        "BR",
+        "MX"
+      ],
+      "preferred_channel": "youtube",
+      "churn_risk_pct": 4.143165191208412,
+      "centroid": {
+        "age": 43.00492272467086,
+        "matches_attended": 0.20795649685174586,
+        "tickets_bought_24m": 0.20297653119633657,
+        "avg_ticket_spend_usd": 10.116302804808242,
+        "merch_purchases_12m": 0.5033772180881512,
+        "merch_spend_usd_12m": 21.433303949627934,
+        "app_sessions_30d": 7.010646823125358,
+        "email_open_rate": 0.300020631966978,
+        "push_opt_in": 0.400858614768174,
+        "days_since_last_engagement": 15.122552947910703,
+        "streaming_minutes_30d": 599.104522037779,
+        "social_shares_30d": 3.0064682312535775
+      }
+    },
+    {
+      "segment_id": "deal_seekers",
+      "size": 15189,
+      "share_pct": 30.378,
+      "avg_engagement_score": 58.885330074395945,
+      "avg_annual_value_usd": 63.427154190532626,
+      "top_countries": [
+        "DE",
+        "IT",
+        "MX"
+      ],
+      "preferred_channel": "push",
+      "churn_risk_pct": 0.5609683287382632,
+      "centroid": {
+        "age": 43.01257488972283,
+        "matches_attended": 1.0273224043715847,
+        "tickets_bought_24m": 1.0366712752649945,
+        "avg_ticket_spend_usd": 40.45303114095728,
+        "merch_purchases_12m": 1.489696490881559,
+        "merch_spend_usd_12m": 29.555656066890514,
+        "app_sessions_30d": 22.48508789255382,
+        "email_open_rate": 0.8002572903570419,
+        "push_opt_in": 0.9502271380604385,
+        "days_since_last_engagement": 2.0475343998946607,
+        "streaming_minutes_30d": 82.427677924814,
+        "social_shares_30d": 1.0345644874580289
+      }
+    },
+    {
+      "segment_id": "lapsed_fans",
+      "size": 9932,
+      "share_pct": 19.864,
+      "avg_engagement_score": 22.575607027788966,
+      "avg_annual_value_usd": 25.911603403141363,
+      "top_countries": [
+        "IT",
+        "BR",
+        "UK"
+      ],
+      "preferred_channel": "email",
+      "churn_risk_pct": 45.89598309601178,
+      "centroid": {
+        "age": 43.120016109544906,
+        "matches_attended": 0.4989931534434152,
+        "tickets_bought_24m": 0.5058397100281917,
+        "avg_ticket_spend_usd": 36.190840716874746,
+        "merch_purchases_12m": 0.1022956101490133,
+        "merch_spend_usd_12m": 2.987982279500604,
+        "app_sessions_30d": 0.2688280306081353,
+        "email_open_rate": 0.1997216104053108,
+        "push_opt_in": 0.09857027788964962,
+        "days_since_last_engagement": 200.1193113169553,
+        "streaming_minutes_30d": 10.11437776882803,
+        "social_shares_30d": 0.09887233185662506
+      }
+    }
+  ]
+}
