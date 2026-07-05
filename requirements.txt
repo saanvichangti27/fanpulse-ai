@@ -1,9 +1,27 @@
+# FanPulse AI — single consolidated requirements file (install from repo root):
+#   python -m venv backend/venv
+#   backend/venv/Scripts/pip install -r requirements.txt
+
+# API
 fastapi
 uvicorn[standard]
-sqlalchemy
-pydantic
-pydantic-settings
-google-genai
+sqlalchemy>=2.0
+pydantic>=2.6
 python-dotenv
+requests
+
+# LLM (Gemini)
+google-genai
+
+# Data / ML (W3)
 pandas
-scikit-learn==1.8.0
+numpy
+scikit-learn
+scipy
+
+# Local NLP (W1)
+transformers
+torch
+
+# YouTube live-chat capture (live + finished streams, no API quota)
+chat-downloader

@@ -1,38 +1,71 @@
-from fastapi import FastAPI
 import os
 import asyncio
+from datetime import datetime, timezone, timedelta
+
+from fastapi import FastAPI
+from sqlalchemy import text
+from dotenv import load_dotenv
+
+# Load backend/.env regardless of the current working directory
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env"))
+
 from .routers import matches, fans, campaigns, predictions, roi, replay
 from .seed import seed_db
 from .db import engine, SessionLocal
 from .models_db import Base
 from .automation import on_moment
 from ..ingestion.service import run_ingestion
-from dotenv import load_dotenv
-load_dotenv("backend/.env")
+from ..contracts import Industry
 
 app = FastAPI(title="FanPulse AI API", version="3.0.0")
+
+STARRED = {"food_delivery", "merch_apparel", "beverages", "streaming_ott", "content_creator"}
+DISPLAY = {
+    "food_delivery": "Food Delivery & QSR", "merch_apparel": "Sports Merch & Apparel",
+    "beverages": "Beverages", "streaming_ott": "Streaming / OTT",
+    "content_creator": "Content Creators", "sportswear_fashion": "Sportswear & Fashion",
+    "betting_igaming": "Betting / iGaming", "gaming_esports": "Gaming & Esports",
+    "retail_ecommerce": "Retail & E-commerce", "telecom": "Telecom & Mobile",
+    "consumer_electronics": "Consumer Electronics", "fintech": "Financial / Fintech",
+    "travel_hospitality": "Travel & Hospitality", "pubs_venues": "Bars, Pubs & Venues",
+    "automotive": "Automotive",
+}
+
 
 @app.on_event("startup")
 async def startup_event():
     Base.metadata.create_all(bind=engine)
     seed_db()
-    # Start ingestion loop
-    sources = os.environ.get("SOURCES", "replay").split(",")
+    sources = [s.strip() for s in os.environ.get("SOURCES", "replay").split(",") if s.strip()]
     asyncio.create_task(run_ingestion(SessionLocal, sources, on_moment))
+
 
 @app.get("/api/v1/health")
 def health():
-    return {"status": "ok", "db": True, "ingestion_alive": True, "version": "3.0.0"}
+    db_ok = ingestion_alive = False
+    try:
+        with SessionLocal() as session:
+            db_ok = True
+            latest = session.execute(text("SELECT MAX(created_at) AS m FROM messages")).fetchone()
+            if latest and latest.m:
+                last = datetime.fromisoformat(latest.m.replace("Z", "+00:00"))
+                ingestion_alive = datetime.now(timezone.utc) - last < timedelta(seconds=60)
+    except Exception:
+        pass
+    return {"status": "ok" if db_ok else "degraded", "db": db_ok,
+            "ingestion_alive": ingestion_alive, "version": "3.0.0"}
+
 
 @app.get("/api/v1/industries")
 def get_industries():
     return {"industries": [
-        {"slug": "food_delivery", "display_name": "Food Delivery", "starred": True, "compliance_flag": False},
-        {"slug": "merch_apparel", "display_name": "Merch & Apparel", "starred": True, "compliance_flag": False},
-        {"slug": "beverages", "display_name": "Beverages", "starred": True, "compliance_flag": False},
-        {"slug": "streaming_ott", "display_name": "Streaming OTT", "starred": True, "compliance_flag": False},
-        {"slug": "content_creator", "display_name": "Content Creator", "starred": True, "compliance_flag": False}
+        {"slug": ind.value,
+         "display_name": DISPLAY[ind.value],
+         "starred": ind.value in STARRED,
+         "compliance_flag": ind.value == "betting_igaming"}
+        for ind in Industry
     ]}
+
 
 app.include_router(matches.router, prefix="/api/v1")
 app.include_router(fans.router, prefix="/api/v1")

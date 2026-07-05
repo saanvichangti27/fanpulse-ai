@@ -1,0 +1,61 @@
+industry,channel,cpm_usd,ctr,cvr,aov_usd,frequency,source,source_url
+food_delivery,push,6.0,0.009,0.03,30.0,2.5,"Airship mobile push engagement benchmarks 2024 (food & drink direct-open rates) calibrated with LocaliQ/WordStream restaurants category",https://www.airship.com/resources/benchmark-report/
+food_delivery,instagram,10.0,0.008,0.024,30.0,2.8,"WordStream/LocaliQ Facebook & Instagram Ads benchmarks 2024 — restaurants & food",https://www.wordstream.com/blog/facebook-ads-benchmarks
+food_delivery,youtube,9.0,0.006,0.02,30.0,2.2,"Google Ads video campaign benchmarks (WordStream/LocaliQ 2024) — restaurants & food",https://www.wordstream.com/blog/google-ads-benchmarks
+food_delivery,email,2.0,0.02,0.05,30.0,1.5,"Mailchimp email marketing benchmarks 2024 — restaurants (click rate; CPM modeled from ESP send costs)",https://mailchimp.com/resources/email-marketing-benchmarks/
+merch_apparel,push,7.0,0.008,0.02,75.0,2.5,"Airship push benchmarks 2024 (retail) calibrated with LocaliQ apparel category",https://www.airship.com/resources/benchmark-report/
+merch_apparel,instagram,12.0,0.007,0.018,75.0,2.8,"WordStream/LocaliQ Facebook & Instagram Ads benchmarks 2024 — apparel & fashion",https://www.wordstream.com/blog/facebook-ads-benchmarks
+merch_apparel,youtube,10.0,0.005,0.012,75.0,2.2,"Google Ads video benchmarks (WordStream/LocaliQ 2024) — apparel/retail",https://www.wordstream.com/blog/google-ads-benchmarks
+merch_apparel,email,2.0,0.025,0.04,75.0,1.5,"Mailchimp email benchmarks 2024 — e-commerce/apparel",https://mailchimp.com/resources/email-marketing-benchmarks/
+beverages,push,5.0,0.007,0.015,15.0,2.5,"Airship push benchmarks 2024 (CPG/FMCG) calibrated",https://www.airship.com/resources/benchmark-report/
+beverages,instagram,8.0,0.006,0.012,15.0,3.0,"WordStream/LocaliQ Facebook & Instagram Ads benchmarks 2024 — CPG/beverages",https://www.wordstream.com/blog/facebook-ads-benchmarks
+beverages,youtube,8.0,0.008,0.01,15.0,2.5,"Google Ads video benchmarks (WordStream/LocaliQ 2024) — CPG",https://www.wordstream.com/blog/google-ads-benchmarks
+beverages,email,2.0,0.02,0.02,15.0,1.5,"Mailchimp email benchmarks 2024 — food & beverage",https://mailchimp.com/resources/email-marketing-benchmarks/
+streaming_ott,push,6.0,0.01,0.06,12.0,2.5,"Airship push benchmarks 2024 (media & entertainment)",https://www.airship.com/resources/benchmark-report/
+streaming_ott,instagram,11.0,0.009,0.045,12.0,2.8,"WordStream/LocaliQ Facebook & Instagram Ads benchmarks 2024 — media/entertainment (sub signup CVR)",https://www.wordstream.com/blog/facebook-ads-benchmarks
+streaming_ott,youtube,9.0,0.011,0.05,12.0,2.2,"Google Ads video benchmarks (WordStream/LocaliQ 2024) — media/entertainment",https://www.wordstream.com/blog/google-ads-benchmarks
+streaming_ott,email,2.0,0.03,0.07,12.0,1.5,"Mailchimp email benchmarks 2024 — media & entertainment",https://mailchimp.com/resources/email-marketing-benchmarks/
+content_creator,push,5.0,0.012,0.08,4.0,2.0,"modeled: creator community notification engagement; value per conversion = engaged-view RPM equivalent",interpolated
+content_creator,instagram,8.0,0.015,0.08,4.0,2.0,"modeled: creator promo engagement (IG reels avg engagement); value per conversion = RPM-equivalent",interpolated
+content_creator,youtube,8.0,0.015,0.09,4.0,2.0,"modeled: YouTube creator promo engagement; value per conversion = RPM-equivalent",interpolated
+content_creator,email,1.5,0.03,0.06,4.0,1.2,"modeled from Mailchimp media benchmarks; creator newsletter",interpolated
+sportswear_fashion,push,7.0,0.008,0.018,90.0,2.5,interpolated (nearest starred category: merch_apparel),interpolated
+sportswear_fashion,instagram,12.0,0.007,0.016,90.0,2.8,interpolated (nearest starred category: merch_apparel),interpolated
+sportswear_fashion,youtube,10.0,0.005,0.011,90.0,2.2,interpolated (nearest starred category: merch_apparel),interpolated
+sportswear_fashion,email,2.0,0.024,0.035,90.0,1.5,interpolated (nearest starred category: merch_apparel),interpolated
+betting_igaming,push,8.0,0.012,0.05,60.0,2.5,interpolated (nearest starred category: streaming_ott; higher CPM/CVR typical of category),interpolated
+betting_igaming,instagram,13.0,0.01,0.04,60.0,2.8,interpolated (nearest starred category: streaming_ott),interpolated
+betting_igaming,youtube,11.0,0.011,0.045,60.0,2.2,interpolated (nearest starred category: streaming_ott),interpolated
+betting_igaming,email,2.5,0.028,0.05,60.0,1.5,interpolated (nearest starred category: streaming_ott),interpolated
+gaming_esports,push,6.0,0.011,0.055,20.0,2.5,interpolated (nearest starred category: streaming_ott),interpolated
+gaming_esports,instagram,10.0,0.009,0.04,20.0,2.8,interpolated (nearest starred category: streaming_ott),interpolated
+gaming_esports,youtube,9.0,0.012,0.05,20.0,2.2,interpolated (nearest starred category: streaming_ott),interpolated
+gaming_esports,email,2.0,0.028,0.06,20.0,1.5,interpolated (nearest starred category: streaming_ott),interpolated
+retail_ecommerce,push,6.5,0.008,0.022,55.0,2.5,interpolated (nearest starred category: merch_apparel),interpolated
+retail_ecommerce,instagram,11.0,0.007,0.02,55.0,2.8,interpolated (nearest starred category: merch_apparel),interpolated
+retail_ecommerce,youtube,9.5,0.005,0.014,55.0,2.2,interpolated (nearest starred category: merch_apparel),interpolated
+retail_ecommerce,email,2.0,0.025,0.045,55.0,1.5,interpolated (nearest starred category: merch_apparel),interpolated
+telecom,push,7.0,0.006,0.02,45.0,2.5,interpolated (nearest starred category: beverages/broad-reach; plan-upsell AOV),interpolated
+telecom,instagram,10.0,0.005,0.015,45.0,2.8,interpolated (nearest starred category: beverages/broad-reach),interpolated
+telecom,youtube,9.0,0.006,0.015,45.0,2.2,interpolated (nearest starred category: beverages/broad-reach),interpolated
+telecom,email,2.0,0.02,0.03,45.0,1.5,interpolated (nearest starred category: beverages/broad-reach),interpolated
+consumer_electronics,push,8.0,0.006,0.01,400.0,2.5,interpolated (nearest starred category: merch_apparel; big-ticket AOV with low CVR),interpolated
+consumer_electronics,instagram,12.0,0.006,0.008,400.0,2.8,interpolated (nearest starred category: merch_apparel),interpolated
+consumer_electronics,youtube,10.0,0.006,0.008,400.0,2.2,interpolated (nearest starred category: merch_apparel),interpolated
+consumer_electronics,email,2.0,0.022,0.015,400.0,1.5,interpolated (nearest starred category: merch_apparel),interpolated
+fintech,push,9.0,0.007,0.03,120.0,2.5,interpolated (nearest starred category: streaming_ott; account-open value),interpolated
+fintech,instagram,14.0,0.006,0.025,120.0,2.8,interpolated (nearest starred category: streaming_ott),interpolated
+fintech,youtube,12.0,0.007,0.025,120.0,2.2,interpolated (nearest starred category: streaming_ott),interpolated
+fintech,email,2.5,0.025,0.035,120.0,1.5,interpolated (nearest starred category: streaming_ott),interpolated
+travel_hospitality,push,8.0,0.007,0.012,350.0,2.5,interpolated (nearest starred category: merch_apparel; booking AOV with low CVR),interpolated
+travel_hospitality,instagram,12.0,0.007,0.01,350.0,2.8,interpolated (nearest starred category: merch_apparel),interpolated
+travel_hospitality,youtube,10.0,0.006,0.008,350.0,2.2,interpolated (nearest starred category: merch_apparel),interpolated
+travel_hospitality,email,2.0,0.024,0.02,350.0,1.5,interpolated (nearest starred category: merch_apparel),interpolated
+pubs_venues,push,5.0,0.01,0.03,40.0,2.0,interpolated (nearest starred category: food_delivery; local venue promo),interpolated
+pubs_venues,instagram,8.0,0.009,0.025,40.0,2.5,interpolated (nearest starred category: food_delivery),interpolated
+pubs_venues,youtube,8.0,0.007,0.02,40.0,2.0,interpolated (nearest starred category: food_delivery),interpolated
+pubs_venues,email,1.5,0.025,0.04,40.0,1.5,interpolated (nearest starred category: food_delivery),interpolated
+automotive,push,9.0,0.005,0.008,500.0,2.5,interpolated (nearest starred category: merch_apparel; qualified-lead value),interpolated
+automotive,instagram,13.0,0.005,0.006,500.0,2.8,interpolated (nearest starred category: merch_apparel),interpolated
+automotive,youtube,11.0,0.006,0.006,500.0,2.2,interpolated (nearest starred category: merch_apparel),interpolated
+automotive,email,2.5,0.02,0.012,500.0,1.5,interpolated (nearest starred category: merch_apparel),interpolated

@@ -31,9 +31,9 @@ htmlcov/
 # -------------------------
 # Data & Notebooks (W1)
 # -------------------------
+# NOTE: data/*.csv files (synthetic, historical, benchmarks) are intentionally
+# committed — do NOT blanket-ignore *.csv or new datasets silently vanish.
 *.ipynb_checkpoints/
-*.csv
-*.parquet
 *.sqlite
 *.sqlite3
 *.db
