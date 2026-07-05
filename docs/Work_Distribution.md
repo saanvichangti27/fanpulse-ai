@@ -20,7 +20,7 @@ You are one of three build agents. Each agent owns **exactly one workstream** be
 
 ## 1. The three workstreams at a glance
 
-| Workstream | Owner | Scope (spec §5 feature numbers) | Primary output boundary |
+| Workstream | Owner | Scope (spec §4 feature numbers) | Primary output boundary |
 |---|---|---|---|
 | **W1 · Ingestion & Live Intelligence** | **R S Raksha** | Feature 1 entirely (connectors, NLP, aggregation, moment detection) + Replay Engine + the data behind Feature 2's heatmap | Writes to Postgres tables + Redis keys per contract §D/§E. Never exposes an API. |
 | **W2 · Backend, Database & Recommendation Engine** | **Saanvi C** | FastAPI app, DB schema/migrations/seeds, WebSocket, all REST endpoints + Feature 5 entirely (strategy engine, playbook, RAG knowledge base, Gemini copy generation) | Serves the REST/WS contract §B/§C. Reads what W1 writes; imports what W3 delivers. |

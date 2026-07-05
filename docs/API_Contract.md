@@ -1,5 +1,6 @@
 # FanPulse AI — API & Integration Contract
-### Version 1.0.0 — FROZEN
+### Version 1.0.1 — FROZEN
+*(1.0.1: Channel enum trimmed to `push | instagram | youtube | email`; `tiktok`/`display` removed; Channel-vs-Source note added.)*
 *The single source of truth for every seam between the three workstreams. Code conforms to this document, never the other way around. Changes require human approval + a version bump + a simultaneous update of `backend/contracts/`.*
 
 **The three contract surfaces:**
@@ -32,7 +33,9 @@
 `reddit | youtube | news | replay`
 
 ### A.4 Channel
-`push | instagram | youtube | tiktok | email | display`
+`push | instagram | youtube | email`
+
+> **Channel ≠ Source.** A *Source* (§A.3) is where we ingest fan messages FROM (real API integrations, W1's job). A *Channel* is where a recommended campaign WOULD be delivered BY the brand — it is purely a **label on recommendation cards** and a key in `benchmarks.csv`. FanPulse never integrates with, posts to, or sends anything on any channel. No channel APIs exist anywhere in this system.
 
 ### A.5 Segment slugs (fixed persona names — KMeans clusters are mapped onto these)
 `superfans | traveling_ultras | casual_streamers | deal_seekers | lapsed_fans`
@@ -250,9 +253,9 @@ Match = {
 }
 ```
 - `GET /api/v1/matches/{match_id}/campaigns` → `{ "campaigns": [CampaignCard, ...] }` (newest first)
-- `POST /api/v1/content/generate` body `{ "match_id", "platform": "instagram"|"youtube"|"tiktok", "creator_niche": "football_reactions" }` → `ContentIdeaCard`:
+- `POST /api/v1/content/generate` body `{ "match_id", "platform": "instagram"|"youtube", "creator_niche": "football_reactions" }` → `ContentIdeaCard`:
 ```json
-{ "content_id": "ci_0012", "match_id": "m_001", "platform": "tiktok",
+{ "content_id": "ci_0012", "match_id": "m_001", "platform": "instagram",
   "archetype": "content_idea",
   "idea": { "format": "15s vertical reel", "hook": "React in the first 2 seconds to Messi's goal",
             "concept": "...", "hashtags": ["..."], "post_within_minutes": 20 },
