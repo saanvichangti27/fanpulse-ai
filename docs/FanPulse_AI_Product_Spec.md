@@ -28,7 +28,7 @@ Every output must have that shape: **decision + target + timing + predicted retu
 - **Marketing only.** No logistics, crowd control, venue staffing, or physical event operations, ever. The demand forecast (Feature 3) exists as an *audience/attention signal for media planning*, not for crowd planning.
 - **Primary users are brands, advertisers, agencies, and content creators** — not FIFA operations. FIFA's commercial team is just one possible advertiser.
 - **No channel integrations.** Channels (push, instagram, youtube, email) are *labels on recommendation cards* and keys in `benchmarks.csv`. The system never sends a push notification, never posts anywhere. See contract §A.4 note.
-- **No frontend in the current phase.** Swagger UI, `scripts/dev_console.html`, and smoke tests are the only UI-adjacent artifacts (Work Distribution §0.4).
+- **No frontend in the current phase.** Swagger UI (`/docs`) and `scripts/smoke_test.py` are the only test surfaces (Work Distribution §0). There is also **no WebSocket** — anything "live" is served by REST endpoints that clients poll every 2–3 seconds (contract §C).
 - **The only external APIs in the entire system:** Reddit (PRAW), YouTube Data API v3, NewsAPI/GNews, and Google Gemini. Adding any other external dependency is out of scope.
 
 ### 1.3 Users
@@ -49,11 +49,11 @@ This split is deliberate and must be preserved exactly. Do not "improve" it by f
 | Layer | Source | Rationale |
 |---|---|---|
 | Live social/engagement text | **Real, live** — Reddit, YouTube live chat, news APIs | The credibility core: the NLP pipeline must demonstrably handle real, messy, multilingual fan text. Reddit is always active, so a genuinely live feed is always demoable. |
-| The demo "goal moment" | **Real, captured, time-shifted** — the Replay Engine streams fan messages captured earlier from the same real APIs during an actual match, on a controlled clock | Solves *timing*, not authenticity: live sport won't score on cue during a 2-minute demo, and venue wifi can die. This is a DVR of real reactions, **not** invented data. Replayed messages keep their true source (`reddit`/`youtube`) — the `replay` source value is reserved for the hand-written dev fixture only (contract §E.6). |
+| The demo "goal moment" | **Real, captured, time-shifted** — the Replay Engine streams fan messages captured earlier from the same real APIs during an actual match, on a controlled clock | Solves *timing*, not authenticity: live sport won't score on cue during a 2-minute demo, and venue wifi can die. This is a DVR of real reactions, **not** invented data. Replayed messages keep their true source (`reddit`/`youtube`) — the `replay` source value is reserved for the hand-written dev fixture only (contract §E.3). |
 | Historical attendance/audience stats | **Real, public** — Kaggle FIFA World Cup datasets, Wikipedia attendance tables | Grounds the demand model (§6.4) in real observed outcomes. |
 | Ad-performance baselines (CPM/CTR/CVR/AOV) | **Real, published** — industry benchmark reports, cited per row in `data/benchmarks/benchmarks.csv` | Makes every ROI figure defensible (§6.2). |
 | Ticket-sales curves | **Synthetic** (documented generation formulas) | Real data is FIFA-private with no public API. Legitimately simulated. |
-| Fan CRM profiles | **Synthetic** — 50k rows, persona-first generation (Work Distribution §5.2) | Personal data, no public source. The generation technique is documented and seeded; the persona label is dropped before clustering so segmentation honestly re-discovers structure. |
+| Fan CRM profiles | **Synthetic** — 5,000 rows, persona-first generation (Work Distribution §5) | Personal data, no public source. The generation technique is documented and seeded; the persona label is dropped before clustering so segmentation honestly re-discovers structure. |
 
 **Rule for agents:** never generate fake data for a layer marked *real*, and never call live APIs for a layer marked *synthetic*. If a real source is unavailable at runtime, degrade gracefully (log + continue) — do not substitute fabricated values.
 
@@ -62,26 +62,25 @@ This split is deliberate and must be preserved exactly. Do not "improve" it by f
 ## 3. System pipeline — stage-by-stage inputs and outputs
 
 ```
-STAGE 0  SOURCES            STAGE 1  INGEST         STAGE 2  NLP ENRICH        STAGE 3  AGGREGATE        STAGE 4  DECIDE           STAGE 5  SERVE
-─────────────────           ──────────────          ──────────────────         ─────────────────         ────────────────         ──────────────
-Reddit / YouTube  ─┐        fetch → clean →         sentiment (RoBERTa)        roll up per: match,       audience forecast (ML)   REST + WebSocket
-News APIs          ├──────► dedupe → geo-tag ─────► emotion (DistilRoBERTa)──► minute, country,     ───► segment activation  ───► (Swagger / dev
-Replay engine     ─┤        → normalise →           topics/entities (KeyBERT)  segment, topic            campaign generation       console / smoke
-(real, captured)   │        queue                   → geo inference            → snapshots + KPIs        ROI / media planning      tests; frontend
-Synthetic CRM /   ─┘                                                           → momentum + moments      (§6, §7)                  comes later)
-benchmarks (batch)
+STAGE 0  SOURCES           STAGE 1-2  INGEST + CLASSIFY        STAGE 3  ANALYZE (on read)      STAGE 4  DECIDE              STAGE 5  SERVE
+────────────────           ────────────────────────────        ──────────────────────────      ─────────────────            ─────────────
+Reddit (live)    ─┐        fetch → dedupe → geo-tag →          SQL over messages table:        audience forecast (ML)       REST only
+Replay engine     ├──────► sentiment (RoBERTa) →       ──────► KPIs · timeline · heatmap  ───► segment activation      ───► (Swagger /
+(real, captured) ─┘        emotion (DistilRoBERTa) →           topics · momentum               campaign generation          smoke test;
+Synthetic CRM /            topics (watchlist) →                + 10s moment-check loop         ROI / media planning         clients poll;
+benchmarks (batch)         INSERT messages row                 → moments + on_moment()         (§6, §7)                     frontend later)
 ```
 
 | Stage | Input | Processing | Output (storage) | Owner |
 |---|---|---|---|---|
-| **0 Sources** | — | Poll Reddit/YouTube/news every 15–30s; replay engine streams captured JSON on its clock; synthetic CRM + benchmark tables loaded at startup | `RawMessageIn` objects; static reference tables | W1 (live/replay), W3 (datasets) |
-| **1 Ingest** | Raw payloads | Clean, dedupe by `(source, external_id)`, infer country (contract-priority heuristics), attach `match_id` | `raw_messages` rows (contract §D) | W1 |
-| **2 NLP** | Cleaned messages | Local CPU models, loaded once at startup, batch inference: sentiment (`cardiffnlp/twitter-roberta-base-sentiment-latest`), emotion (`j-hartmann/emotion-english-distilroberta-base`, 7 labels per contract §A.2), topics/entities (KeyBERT + roster watchlist) | `nlp_results` rows; `ClassifiedMessage` objects | W1 |
-| **3 Aggregate** | Classified stream | 15s tick: sentiment %s, dominant emotion, volume & **velocity**, per country/topic; **momentum snapshot**; **moment detection** (velocity z-score ≥ 2.5 + sentiment swing ≥ 10pp, rule locked in contract §E.4) | `sentiment_snapshots`, `country_sentiment`, `moments` rows; Redis keys §E.1; `moment_detected` pub/sub events | W1 |
-| **4 Decide** | Aggregates + synthetic CRM + benchmarks + match features | Four engines: audience forecast incl. live re-forecast (§6.4); segmentation + engagement scoring + NBA (Feature 4); deterministic strategy engine + RAG copy generation (§7); ROI funnel + multiplier + media planner (§6) | `campaigns`, `content_ideas`, `forecasts` rows; `campaign_alert`/`forecast_update` events | W3 (math/models), W2 (strategy/RAG/orchestration) |
-| **5 Serve** | Aggregates + decisions | REST endpoints (contract §B) + WebSocket fanout (contract §C) | JSON over HTTP/WS | W2 |
+| **0 Sources** | — | Poll Reddit every ~20s (the core live connector; YouTube/news are stretch goals); replay engine streams captured JSON on its clock; synthetic CRM + benchmark tables loaded at startup | `RawMessageIn` objects; static reference tables | W1 (live/replay), W3 (datasets) |
+| **1 Ingest** | Raw payloads | Clean, dedupe by `(source, external_id)`, infer country (contract-priority heuristics), attach `match_id` | feeds the NLP stage | W1 |
+| **2 Classify** | Cleaned messages | Local CPU models, loaded once at startup, batch inference: sentiment (`cardiffnlp/twitter-roberta-base-sentiment-latest`), emotion (`j-hartmann/emotion-english-distilroberta-base`, 7 labels per contract §A); topics = roster/keyword watchlist + word frequency (**no KeyBERT**) | `messages` rows (raw + classification merged, contract §D) — ingestion's ONLY job is inserting these rows | W1 |
+| **3 Analyze** | The `messages` table | **Computed by SQL at request time** (contract §E.1 functions): KPIs, timeline (30s buckets), heatmap, topics, momentum. Plus one **10s background loop** checking the moment rule (volume ≥ 3× trailing 5-min average + sentiment swing ≥ 10pp, contract §A.3) | `moments` rows; `on_moment()` callback fired | W1 |
+| **4 Decide** | Analytics + synthetic CRM + benchmarks + match features | Four engines: audience forecast incl. live re-forecast (§6.4); segmentation + engagement scoring + NBA (Feature 4); deterministic strategy engine + grounded copy generation (§7); ROI funnel + multiplier + media planner (§6) | `campaigns`, `content_ideas`, `forecasts` rows | W3 (math/models), W2 (strategy/copy/orchestration) |
+| **5 Serve** | Analytics + decisions | REST endpoints only (contract §B); clients poll the hot ones every 2–3s (contract §C) | JSON over HTTP | W2 |
 
-**Architecture invariant:** ingestion writes only to Postgres/Redis; the intelligence package is pure functions; the API is the only reader that assembles everything. No component ever imports another workstream's internals (Work Distribution §1).
+**Architecture invariant:** everything runs in **one process** — the FastAPI app starts ingestion as a background asyncio task; persistence is a single SQLite file; all "live" values are computed by SQL over the `messages` table at request time. Ingestion only inserts rows; the intelligence package is pure functions over committed data; the API is the only assembler. No component imports another workstream's internals (Work Distribution §1). There is **no Redis, no WebSocket, no message broker, no second process, no Docker, no migrations** — do not introduce any of them.
 
 ---
 
@@ -92,33 +91,33 @@ Each feature is specified as **Input → Analysis → Output → Decision produc
 ### Feature 1 · Live Fan Sentiment, Emotion & Moment Detection — *owner W1*
 
 - **Input:** live + replayed fan messages, continuously.
-- **Analysis:** per-message sentiment/emotion/topic classification (local models); rolling aggregation of %s, dominant emotion, volume and velocity; **moment detector** — a spike in volume combined with an emotion swing is classified as a match event (goal, var_controversy, red_card, full_time, surge_other) using the locked rule in contract §E.4. Moments are detected *from the data*; there is no manual trigger button.
-- **Output:** KPI snapshot (mentions, sentiment %s, top emotion, excitement score per the frozen formula in contract §A.6, most-active region), sentiment timeline, trending topics, live classified feed, `MomentumSnapshot` (contract §A.8 — the most-consumed payload in the system), `MomentEvent`s.
+- **Analysis:** per-message sentiment/emotion/topic classification (local models); rolling aggregation of %s, dominant emotion, volume and velocity; **moment detector** — a spike in volume combined with an emotion swing is classified as a match event (goal, var_controversy, red_card, full_time, surge_other) using the locked rule in contract §A.3/§E.2 (volume ≥ 3× the trailing 5-minute average AND a sentiment swing ≥ 10pp), checked by a 10-second background loop. Moments are detected *from the data*; there is no manual trigger button.
+- **Output:** KPI snapshot (mentions, sentiment %s, top emotion, excitement score per the frozen formula in contract §A.3, most-active region), sentiment timeline, trending topics, live classified feed, `MomentumSnapshot` (contract §A.4 — the most-consumed payload in the system), `MomentEvent`s.
 - **Decision produced:** *"a high-emotion moment is happening now"* — the trigger for Features 5 and 6 and for re-forecasting in Feature 3.
-- **Evidence shown:** the raw classified messages themselves (feed endpoint + WS), so every aggregate is traceable to real text.
+- **Evidence shown:** the raw classified messages themselves (the polled feed endpoint), so every aggregate is traceable to real text.
 
 ### Feature 2 · Global Fan Emotion Heatmap (data layer) — *owner W1 (data), W2 (serving)*
 
-- **Input:** geo-tagged classified messages (country inference heuristics per Work Distribution §3.2c).
-- **Analysis:** per-country average sentiment ∈ [−1, 1], dominant emotion, mention volume, refreshed each aggregation tick.
+- **Input:** geo-tagged classified messages (country inference heuristics per Work Distribution §3).
+- **Analysis:** per-country average sentiment ∈ [−1, 1], dominant emotion, mention volume — computed by SQL at request time.
 - **Output:** the heatmap payload (contract §B.4). The map rendering itself is future frontend work; this phase delivers the data and endpoint only.
 - **Decision produced:** *where* fan energy is concentrated → regional targeting input for Feature 5 (`top_countries`, `SegmentMatch`) and audience sizing for §6.
 - **Evidence shown:** per-country drill-down numbers.
 
 ### Feature 3 · Audience & Demand Forecasting with a live feedback loop — *owner W3*
 
-- **Input (static):** match features per contract §A.8 `MatchFeatures` — stage, team ranks, rank gap, rivalry flag, host involvement, city population, venue capacity, day/time — trained against **real** historical attendance (target: `attendance_pct`).
+- **Input (static):** match features per contract §A.4 `MatchFeatures` — stage, team ranks, rank gap, rivalry flag, host involvement, city population, venue capacity, day/time — trained against **real** historical attendance (target: `attendance_pct`).
 - **Input (dynamic — the differentiator):** `buzz_index` ∈ [0,1]. At training time it is synthesized by the documented formula (Work Distribution §5.3) because historical rows have no social data; at inference time it is computed from the **real live** `MomentumSnapshot` (`compute_live_buzz`, contract §F.1). Both formulas live in docstrings — this transparency is deliberate and must be preserved.
-- **Model:** XGBoost regressor (sklearn GBR fallback), 5-fold CV, metrics committed to `artifacts/metrics.json`. Feature importances are part of the API response — real ones from the model, never hardcoded.
+- **Model:** sklearn `GradientBoostingRegressor` (sklearn only — no xgboost dependency), simple 80/20 holdout split, MAE committed to `artifacts/metrics.json`. Feature importances are part of the API response — real ones from the model, never hardcoded.
 - **Output:** `AudienceForecast` (contract §B.6): demand index 0–100, sell-out probability, feature importances, and on re-forecast the `delta_vs_baseline_pct` + `trigger_description`.
 - **Decision produced:** *which matches get the ad budget* (feeds the media planner, §6), and the live story: a dramatic result measurably raises projected knockout-fixture demand.
 - **Evidence shown:** feature-importance panel + before/after delta with the triggering moment named.
-- **Acceptance behaviour:** a goal-level momentum snapshot must move the reforecast by **+5 to +20 demand points** (Work Distribution §5.6). If the model is insensitive to buzz, that is a bug.
+- **Acceptance behaviour:** a goal-level momentum snapshot must move the reforecast by **+5 to +20 demand points** (Work Distribution §5). If the model is insensitive to buzz, that is a bug.
 
 ### Feature 4 · Fan Segmentation & Engagement Scoring — *owner W3*
 
-- **Input:** the synthetic 50k-row fan CRM (`data/synthetic/fans.csv`, schema and persona-first generation technique locked in Work Distribution §5.2) + live country-volume data for the activity overlay.
-- **Analysis:** StandardScaler → KMeans (k chosen by silhouette from 3–8; expected 5) → clusters mapped by centroid rules onto the five fixed persona slugs (contract §A.5: `superfans`, `traveling_ultras`, `casual_streamers`, `deal_seekers`, `lapsed_fans`). Per-fan **engagement score**: RFM-D, four 0–100 percentile subscores weighted 0.25 each (contract §F.2).
+- **Input:** the synthetic 5,000-row fan CRM (`data/synthetic/fans.csv`, schema and persona-first generation technique locked in Work Distribution §5) + live country-volume data for the activity overlay.
+- **Analysis:** StandardScaler → KMeans (fixed k=5; silhouette score reported honestly) → clusters mapped by centroid rules onto the five fixed persona slugs (contract §A.1: `superfans`, `traveling_ultras`, `casual_streamers`, `deal_seekers`, `lapsed_fans`). Per-fan **engagement score**: RFM-D, four 0–100 percentile subscores weighted 0.25 each (contract §F.2).
 - **Output:** `Segment` objects (size, share, avg engagement, avg value, top countries, preferred channel, churn risk, defining traits); **Next-Best-Action matrix** per (segment × industry); **active-now overlay** computed from live country volumes.
 - **Decision produced:** *who* every campaign targets and who to contact first.
 - **Evidence shown:** segment cards carry defining traits + score composition; the overlay names its basis ("country-volume overlap with segment geography").
@@ -128,11 +127,11 @@ Each feature is specified as **Input → Analysis → Output → Decision produc
 The core of the product. Two strictly separated layers (full architecture in §7):
 
 - **Input:** match context + a `MomentEvent` (auto path) or manual request + target industry (§8) + segment data (F4) + regional signal (F2) + ROI math (F6).
-- **Analysis:** **Layer 1, the deterministic strategy engine**, decides WHO / WHEN / WHERE / WHAT-TYPE from data + the playbook — no LLM involvement. **Layer 2, the retrieval-augmented copy engine (Gemini)**, writes only the words, grounded in retrieved marketing knowledge + live trending topics, under a strict JSON schema.
+- **Analysis:** **Layer 1, the deterministic strategy engine**, decides WHO / WHEN / WHERE / WHAT-TYPE from data + the playbook — no LLM involvement. **Layer 2, the grounded copy engine (Gemini)**, writes only the words, conditioned on the selected playbook entry (tone + example template) + the live trending topics, under a strict JSON schema.
 - **Output:** `CampaignCard` (contract §B.7) — segment, channel, window, generated copy with A/B variant, full `ROIResult`, confidence, and the complete evidence block. Second flavour: `ContentIdeaCard` for creators (`content_idea` archetype, contract §B.7).
 - **Decision produced:** the complete, ready-to-execute marketing action.
 - **Evidence shown:** the `evidence` block is a required, non-empty field — moment stats, segment stats, regional stats, multiplier breakdown, benchmark citation.
-- **Auto path:** `moment_detected` → strategy engine for the configured industries → persist → `campaign_alert` on WS. Debounced per contract §A.6 constants; on any LLM failure, serve a KB template with `llm_fallback: true` — never an unresolved error in the recommendation path.
+- **Auto path:** the moment loop's `on_moment` callback → strategy engine for the configured industries → persist campaign rows; the demo catches them by polling `GET .../campaigns`. Debounced per contract §A.3 constants; on any LLM failure, serve the playbook row's filled template with `llm_fallback: true` — never an unresolved error in the recommendation path.
 
 ### Feature 6 · ROI Prediction & Media-Spend Planner — *owner W3 (math), W2 (endpoints)*
 
@@ -171,7 +170,7 @@ Definitions: **CPM** cost per 1,000 impressions; **Frequency** average exposures
 
 ### 6.2 Parameters — `data/benchmarks/benchmarks.csv`
 
-Keyed by `(industry, channel)`, columns per Work Distribution §5.4: `industry, channel, cpm_usd, ctr, cvr, aov_usd, frequency, source, source_url`. Values come from published benchmark reports (WordStream/LocaliQ Google Ads benchmarks, Meta/YouTube ad benchmark reports, Statista/eMarketer CPM data, industry AOV studies). **Every row must carry a real citation**; where a niche pair has no published figure, interpolate from the nearest category and mark `source="interpolated"`. An unknown pair at runtime raises `BenchmarkNotFound` (contract §F.3) — never a silent default.
+Keyed by `(industry, channel)`, columns per Work Distribution §5: `industry, channel, cpm_usd, ctr, cvr, aov_usd, frequency, source, source_url`. Values come from published benchmark reports (WordStream/LocaliQ Google Ads benchmarks, Meta/YouTube ad benchmark reports, Statista/eMarketer CPM data, industry AOV studies). **Starred-industry rows carry real citations**; every unstarred industry gets one default row interpolated from the nearest starred category, marked `source="interpolated"`. An unknown pair at runtime raises `BenchmarkNotFound` (contract §F.3) — never a silent default.
 
 ### 6.3 The engagement multiplier `M` (the "hype dial")
 
@@ -183,14 +182,14 @@ CTR_eff = CTR_baseline × M
 CVR_eff = CVR_baseline × (1 + (M − 1) × 0.5)      # hype lifts clicks more than purchase intent
 ```
 
-Constants live in `contracts/constants.py` (§A.6) — import them, never re-declare. All four factors are **measured**, each ∈ [0,1]:
+Constants live in `contracts.py` (contract §A.3) — import them, never re-declare. All four factors are **measured**, each ∈ [0,1]:
 
 | Factor | Source |
 |---|---|
 | `Arousal` | `AROUSAL[momentum.dominant_emotion]` from the shared constant table (same table W1 uses for the excitement score — they must never diverge) |
 | `EmotionBrandFit` | `data/benchmarks/emotion_brand_fit.csv` lookup (industry × emotion → 0–1, hand-built matrix with rationale column, all 15 × 7 populated) |
-| `MomentStrength` | `clip(momentum.velocity_zscore / 4, 0, 1)` |
-| `SegmentMatch` | overlap of live-active countries with the target segment's geography/affinity (formula documented in `multiplier.py`) |
+| `MomentStrength` | `clip(momentum.volume_ratio / 3, 0, 1)` |
+| `SegmentMatch` | overlap of live-active countries with the target segment's geography/affinity (formula documented in `intelligence/roi.py`) |
 
 Interpretation anchors: quiet moment → `M ≈ 1` (benchmark performance); peak goal moment → `M ≈ 1.8–2.2`; hard bounds [0.7, 2.5] guarantee no absurd outputs. Baseline mode (`timing="baseline"` or missing/stale momentum) forces `M = 1.0`.
 
@@ -198,7 +197,7 @@ Interpretation anchors: quiet moment → `M ≈ 1` (benchmark performance); peak
 
 ### 6.4 Audience/demand model
 
-Trained on real public historical data (Kaggle FIFA World Cup matches + Wikipedia attendance), target `attendance_pct`, features per contract §A.8 `MatchFeatures`. The `buzz_index` feature: synthesized at training time via the documented formula (`0.40·stage_norm + 0.25·rivalry + 0.20·(1 − rank_gap_norm) + 0.15·host_involved + N(0, 0.05)`, clipped [0,1]); computed at inference time from real live momentum (`0.6·volume_percentile + 0.4·norm_velocity`, clipped). CV metrics committed and exposed via the API (`model_cv_mae`).
+Trained on real public historical data (Kaggle FIFA World Cup matches + Wikipedia attendance), target `attendance_pct`, features per contract §A.4 `MatchFeatures`. The `buzz_index` feature: synthesized at training time via the documented formula (`0.40·stage_norm + 0.25·rivalry + 0.20·(1 − rank_gap_norm) + 0.15·host_involved + N(0, 0.05)`, clipped [0,1]); computed at inference time from real live momentum (`0.6·volume_percentile + 0.4·clip(volume_ratio/3, 0, 1)`, clipped — contract §F.1). Holdout MAE committed and exposed via the API (`model_mae`).
 
 ### 6.5 Numeric acceptance case (treat as a test fixture)
 
@@ -221,29 +220,29 @@ Data-support scores, never random: `confidence = clip(0.4·volume_support + 0.3�
 
 ### 7.1 Layer 1 — Strategy Engine (deterministic, auditable)
 
-Input: a `MomentEvent` (auto) or a manual generate request. Output: a `CampaignBrief` (contract §G.1). Steps (Work Distribution §4.3c):
+Input: a `MomentEvent` (auto) or a manual generate request. Output: a `CampaignBrief` (contract §G.2). Steps (Work Distribution §4):
 
 1. **WHO** — rank segments by `industry_affinity × country_overlap_with_active_regions × avg_engagement_score`; honor an explicitly requested segment.
 2. **WHEN** — window from the playbook archetype, anchored at the moment timestamp.
-3. **WHERE** — best benchmark-ROI channel for (industry × segment preference) via `intelligence.roi.api.best_channel`.
+3. **WHERE** — best benchmark-ROI channel for (industry × segment preference) via `intelligence.roi.best_channel`.
 4. **WHAT-TYPE** — archetype from the **playbook**: a hand-curated `(emotion × industry) → archetype` table in `app/strategy/playbook.py` covering all 15 industries × 7 emotions (weak fits fall back to `brand_awareness`). Representative rows: joy × food_delivery → `celebration_flash_offer` (15-min window); sadness/anger × food_delivery → `consolation_offer`; joy × merch_apparel → `commemorative_drop`; pre-match anticipation × streaming_ott → `tune_in_push`; joy × travel_hospitality → `fan_trip_promo`.
 5. Attach `ROIResult` (live + baseline) and assemble the evidence block from the momentum snapshot, segment stats, and multiplier breakdown.
 
-### 7.2 Layer 2 — Copy engine (retrieval-augmented Gemini)
+### 7.2 Layer 2 — Copy engine (grounded Gemini)
 
-1. **Retrieve** from the curated knowledge base (`app/rag/knowledge_base/`, 25–40 markdown entries with YAML frontmatter `{archetype, industry, channel, type}`): the archetype's copywriting framework (AIDA/PAS), the industry tone guide, 2–3 example templates — plus the **live** trending topics/entities so copy references the actual moment and players. Baseline retrieval = deterministic frontmatter filtering (top-k 4); optional upgrade = local `all-MiniLM-L6-v2` vector similarity (only after everything else works).
-2. **Generate** with Gemini (`gemini-2.5-flash`, strict JSON mode, schema in contract §G.2): headline, body ≤140 chars, CTA, hashtags, one B-variant. The prompt (contract §G.3) instructs: *use only the numbers provided; never invent statistics.*
-3. **Guardrails:** server-side debounce (≥12s between calls, contract §A.6); response cache keyed `(match, archetype, industry, segment)`; on any failure → filled KB template with `llm_fallback: true`. The recommendation path must never surface an unresolved LLM error.
+1. **Look up** the playbook entry for `(emotion, industry)` — the `PLAYBOOK` dict in `app/strategy/playbook.py` (contract §G.1): archetype, window, default channel, `tone_notes` (1–2 sentences of copywriting guidance), and an example `template` with slots. Add the **live** trending topics/entities so the copy references the actual moment and players. This deterministic lookup is the entire "retrieval" step — there is no knowledge-base directory, no embeddings, no vector store.
+2. **Generate** with Gemini (`gemini-2.5-flash`, strict JSON mode, schema in contract §G.3): headline, body ≤140 chars, CTA, hashtags, one B-variant. The prompt instructs: *use only the numbers provided; never invent statistics.*
+3. **Guardrails:** server-side debounce (≥12s between calls, contract §A.3); response cache keyed `(match, archetype, industry, segment)`; on any failure → the playbook `template` with its slots filled, flagged `llm_fallback: true`. The recommendation path must never surface an unresolved LLM error.
 
 ### 7.3 Content flavour (creators)
 
-Same two layers with `archetype="content_idea"` and platform `instagram | youtube`: retrieval pulls the top trending topic + format best-practices; output is a concrete concept (format, hook, concept, hashtags, `post_within_minutes`) grounded in the live trend data. Serves `POST /content/generate`.
+Same two layers with `archetype="content_idea"` and platform `instagram | youtube`: the prompt uses the content-idea playbook entry + the top live trending topic; output is a concrete concept (format, hook, concept, hashtags, `post_within_minutes`) grounded in the live trend data. Serves `POST /content/generate`.
 
 ---
 
-## 8. Industries (final list — slugs are contract §A.7, do not rename)
+## 8. Industries (final list — slugs are contract §A.2, do not rename)
 
-Starred (★) industries are the demo focus and must have complete playbook rows, KB templates, and benchmark rows first; the rest need at least benchmark + playbook coverage.
+Starred (★) industries are the demo focus and must have complete playbook rows (with templates) and cited benchmark rows; the rest need one interpolated benchmark row + the `brand_awareness` playbook fallback.
 
 | slug | display | ★ | Event relevance → what FanPulse gives them |
 |---|---|---|---|
@@ -270,7 +269,7 @@ Starred (★) industries are the demo focus and must have complete playbook rows
 1. **Glass-box:** every `CampaignCard`, `ContentIdeaCard`, `ROIResult`, `AudienceForecast`, and `NextBestAction` carries a populated evidence/rationale field tracing to measured data, a citation, or a model artifact. An output without evidence is a contract violation.
 2. **No invented numbers:** every numeric output derives from the funnel math, a cited benchmark, a trained model artifact, or a measured live signal — through the documented formulas. `random()` appears nowhere outside seeded synthetic-data generation.
 3. **LLM boundary:** Gemini writes copy/ideas only. It never selects segments, channels, windows, or numbers, and its outputs are schema-validated before use.
-4. **Enum discipline:** all sentiments, emotions, sources, channels, segments, industries, archetypes, event tags come from `contracts/enums.py`. Out-of-enum values fail loudly.
+4. **Enum discipline:** all sentiments, emotions, sources, channels, segments, industries, archetypes, event tags come from `backend/contracts.py`. Out-of-enum values fail loudly.
 5. **Determinism:** `RANDOM_SEED = 42` for all stochastic steps; model artifacts and datasets are committed; any agent can reproduce any other's outputs.
 6. **Graceful degradation, never fabrication:** dead connector → log and continue; missing momentum → baseline mode; Gemini down → template fallback flagged `llm_fallback: true`; missing benchmark → explicit error. The system degrades honestly; it never fills gaps with made-up data.
 7. **Scope:** no logistics/ops features, no channel integrations, no extra external APIs, no frontend this phase (§1.2).
@@ -281,9 +280,9 @@ Starred (★) industries are the demo focus and must have complete playbook rows
 
 Tier order from Work Distribution §6 applies; within it, protect value in this order:
 
-1. **The demo spine:** replay → NLP → aggregates → moment fires → auto campaign card with evidence + real Gemini copy. If this chain works end-to-end, the product exists.
+1. **The demo spine:** replay → NLP → analytics → moment fires → auto campaign card with evidence + real Gemini copy. If this chain works end-to-end, the product exists.
 2. **The differentiators (§5):** live re-forecast loop, grounded ROI with baseline contrast, deterministic strategy layer, evidence trails.
-3. **Coverage:** all endpoints contract-valid, all 15 industries minimally covered, content-creator flavour.
-4. **Polish:** vector-RAG upgrade, extra connectors, richer KB.
+3. **Coverage:** all endpoints contract-valid, all 15 industries minimally covered, content-creator flavour, live Reddit source.
+4. **Stretch (only after the smoke test is green):** YouTube/news connectors, a real captured replay file, richer playbook rows.
 
-Simplicity rules under pressure: KMeans over anything fancier; XGBoost/GBR over deep models; keyed retrieval before vectors; pre-trained NLP only (zero training). The impressive complexity here is *orchestration* — the loop, the evidence, the moment automation — not model sophistication.
+Simplicity rules under pressure: KMeans over anything fancier; sklearn GBR over anything heavier; playbook dict lookup over any retrieval infrastructure; pre-trained NLP only (zero training); polling over push. The impressive part of this product is *orchestration* — the loop, the evidence, the moment automation — not any individual component's sophistication.
