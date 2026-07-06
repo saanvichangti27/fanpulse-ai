@@ -1,17 +1,23 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, Activity, Zap, Layers, Ticket } from "lucide-react";
 import Football3D from "@/components/Football3D";
 import Reveal from "@/components/Reveal";
 import GlassCard from "@/components/GlassCard";
 import { FEATURES, BRAND } from "@/data/mock";
+
+const FEATURE_META = [
+  { icon: Activity, tint: "from-[#a3e635]/25 to-[#22c55e]/5", color: "#a3e635" },
+  { icon: Zap,      tint: "from-[#ec4899]/25 to-[#8b5cf6]/5", color: "#ec4899" },
+  { icon: Layers,   tint: "from-[#3b82f6]/25 to-[#38bdf8]/5", color: "#3b82f6" },
+  { icon: Ticket,   tint: "from-[#f59e0b]/25 to-[#ef4444]/5", color: "#f59e0b" },
+];
 
 export default function Landing() {
   return (
     <div data-testid="landing-page" className="relative">
       {/* HERO — stadium background */}
       <section className="relative overflow-hidden min-h-[92vh] flex items-center">
-        {/* Stadium image */}
         <div
           aria-hidden
           className="absolute inset-0"
@@ -22,7 +28,6 @@ export default function Landing() {
             backgroundPosition: "center",
           }}
         />
-        {/* Color wash + darken for legibility */}
         <div
           aria-hidden
           className="absolute inset-0"
@@ -42,17 +47,9 @@ export default function Landing() {
         <div className="grain absolute inset-0" />
 
         <div className="relative max-w-[1400px] mx-auto px-6 md:px-10 pt-14 pb-16 grid grid-cols-12 gap-6 items-center w-full">
-          {/* LEFT: copy */}
           <div className="col-span-12 lg:col-span-6 z-10">
             <Reveal>
-              <span className="inline-flex items-center gap-2 chip-lime px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-widest uppercase">
-                <Zap className="w-3.5 h-3.5" />
-                Live · Kick-off signal
-              </span>
-            </Reveal>
-
-            <Reveal delay={0.1}>
-              <h1 className="display text-white leading-[0.9] text-[56px] md:text-[92px] lg:text-[108px] mt-6">
+              <h1 className="display text-white leading-[0.9] text-[56px] md:text-[92px] lg:text-[108px]">
                 THE PULSE<br />
                 OF THE <span className="gradient-lime">PITCH</span>,<br />
                 <span className="gradient-fire">MONETISED.</span>
@@ -80,7 +77,6 @@ export default function Landing() {
             </Reveal>
           </div>
 
-          {/* RIGHT: 3D football */}
           <div className="col-span-12 lg:col-span-6 relative h-[440px] md:h-[560px] lg:h-[640px]">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -90,8 +86,6 @@ export default function Landing() {
             >
               <Football3D />
             </motion.div>
-
-            {/* Glow behind ball */}
             <div
               aria-hidden
               className="absolute inset-0 -z-10"
@@ -103,7 +97,6 @@ export default function Landing() {
           </div>
         </div>
 
-        {/* Bottom crowd/spectators gradient bar */}
         <div
           aria-hidden
           className="absolute inset-x-0 bottom-0 h-24"
@@ -114,7 +107,7 @@ export default function Landing() {
         />
       </section>
 
-      {/* SIGNAL LOOP (feature strip) */}
+      {/* SIGNAL LOOP */}
       <section className="relative">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-28">
           <Reveal>
@@ -133,25 +126,28 @@ export default function Landing() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {FEATURES.map((f, i) => {
-              const tints = [
-                "from-[#a3e635]/25 to-[#22c55e]/5",
-                "from-[#ec4899]/25 to-[#8b5cf6]/5",
-                "from-[#3b82f6]/25 to-[#38bdf8]/5",
-                "from-[#f59e0b]/25 to-[#ef4444]/5",
-              ];
-              const dots = ["#a3e635", "#ec4899", "#3b82f6", "#f59e0b"];
+              const meta = FEATURE_META[i] || FEATURE_META[0];
+              const Icon = meta.icon;
               return (
                 <Reveal key={f.code} delay={i * 0.08}>
                   <GlassCard
-                    className={`relative p-6 h-full flex flex-col justify-between min-h-[240px] overflow-hidden rounded-2xl bg-gradient-to-br ${tints[i]}`}
+                    className={`relative p-6 h-full flex flex-col min-h-[240px] overflow-hidden rounded-2xl bg-gradient-to-br ${meta.tint}`}
                     hover
                   >
                     <div className="flex items-start justify-between">
+                      <div
+                        className="w-11 h-11 rounded-xl flex items-center justify-center"
+                        style={{
+                          background: `${meta.color}22`,
+                          border: `1px solid ${meta.color}44`,
+                        }}
+                      >
+                        <Icon size={22} style={{ color: meta.color }} />
+                      </div>
                       <div className="overline">{f.code}</div>
-                      <div className="w-2 h-2 rounded-full pulse-dot" style={{ background: dots[i] }} />
                     </div>
-                    <div>
-                      <div className="display text-white text-2xl mt-8">{f.title}</div>
+                    <div className="mt-8">
+                      <div className="display text-white text-2xl">{f.title}</div>
                       <div className="text-[13px] text-white/70 mt-3 leading-relaxed">{f.body}</div>
                     </div>
                   </GlassCard>
