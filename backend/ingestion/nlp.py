@@ -45,7 +45,12 @@ def get_emotion_pipeline():
 def extract_topics(text: str) -> List[str]:
     text_lower = text.lower()
     found_topics = []
-    
+
+    # 0. Hashtags are first-class topics (tweet-style sources)
+    for tag in re.findall(r"#([a-z0-9_]{3,})", text_lower):
+        if tag not in found_topics:
+            found_topics.append(tag)
+
     # 1. Watchlist matching
     for term in WATCHLIST:
         if re.search(r'\b' + re.escape(term) + r'\b', text_lower):

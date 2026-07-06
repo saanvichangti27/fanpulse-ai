@@ -23,6 +23,7 @@ class Source(str, Enum):
     youtube = "youtube"
     news = "news"
     replay = "replay"
+    twitter_sim = "twitter_sim"   # SIMULATED tweet stream (X API has no free tier) — always labeled as such
 
 class Channel(str, Enum):
     push = "push"

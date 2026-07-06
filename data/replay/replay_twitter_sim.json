@@ -1,0 +1,4810 @@
+{
+ "meta": {
+  "match_id": "m_001",
+  "captured_at": "2026-07-06T12:12:49.622607Z",
+  "description": "SIMULATED Twitter/X stream for Brazil vs Argentina (600 tweets; X API has no free tier — synthetic text, real downstream NLP). Seeded, reproducible.",
+  "simulated": true
+ },
+ "items": [
+  {
+   "t_offset": 1.0,
+   "external_id": "tw_sim_m_001_00031",
+   "source": "twitter_sim",
+   "author": "@kop_gol40",
+   "text": "Can't wait for Brazil vs Argentina tonight!! #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 3.0,
+   "external_id": "tw_sim_m_001_00059",
+   "source": "twitter_sim",
+   "author": "@elclasico_footy67",
+   "text": "predicting 2-1 Brazil, Alvarez to score first #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 3.1,
+   "external_id": "tw_sim_m_001_00002",
+   "source": "twitter_sim",
+   "author": "@elclasico_footy98",
+   "text": "Lineups are out and Vinicius starts. Big call. #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 5.3,
+   "external_id": "tw_sim_m_001_00024",
+   "source": "twitter_sim",
+   "author": "@hincha_916",
+   "text": "RT @casa71: Can't wait for Brazil vs Argentina tonight!! #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 10.2,
+   "external_id": "tw_sim_m_001_00004",
+   "source": "twitter_sim",
+   "author": "@fan_matchday81",
+   "text": "The atmosphere in the city is unreal right now 🇮🇹 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 16.6,
+   "external_id": "tw_sim_m_001_00028",
+   "source": "twitter_sim",
+   "author": "@kop_elclasico37",
+   "text": "Match day!!! 🇩🇪 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 20.8,
+   "external_id": "tw_sim_m_001_00055",
+   "source": "twitter_sim",
+   "author": "@ultra_gol45",
+   "text": "Match day!!! 🇦🇷 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 20.9,
+   "external_id": "tw_sim_m_001_00053",
+   "source": "twitter_sim",
+   "author": "@torcida_keeper90",
+   "text": "Lineups are out and Rodrygo starts. Big call. #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 23.0,
+   "external_id": "tw_sim_m_001_00044",
+   "source": "twitter_sim",
+   "author": "@tiki_keeper79",
+   "text": "Lineups are out and Messi starts. Big call. #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 23.0,
+   "external_id": "tw_sim_m_001_00049",
+   "source": "twitter_sim",
+   "author": "@casa_keeper17",
+   "text": "nervous about this one ngl #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 23.1,
+   "external_id": "tw_sim_m_001_00017",
+   "source": "twitter_sim",
+   "author": "@fan_hincha36",
+   "text": "Lineups are out and Vinicius starts. Big call. #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 23.4,
+   "external_id": "tw_sim_m_001_00035",
+   "source": "twitter_sim",
+   "author": "@elclasico_taka83",
+   "text": "predicting 2-1 Brazil, Enzo to score first #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 24.3,
+   "external_id": "tw_sim_m_001_00047",
+   "source": "twitter_sim",
+   "author": "@10_gol27",
+   "text": "Match day!!! 🇦🇷 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 24.7,
+   "external_id": "tw_sim_m_001_00042",
+   "source": "twitter_sim",
+   "author": "@fan_keeper54",
+   "text": "RT @vamos626: Who's winning this? Brazil or Argentina? #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 25.1,
+   "external_id": "tw_sim_m_001_00046",
+   "source": "twitter_sim",
+   "author": "@fan_kop20",
+   "text": "Lineups are out and Raphinha starts. Big call. #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 25.3,
+   "external_id": "tw_sim_m_001_00014",
+   "source": "twitter_sim",
+   "author": "@kop_kop85",
+   "text": "Match day!!! 🇦🇷 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 26.9,
+   "external_id": "tw_sim_m_001_00054",
+   "source": "twitter_sim",
+   "author": "@9_992",
+   "text": "RT @footy952: Who's winning this? Brazil or Argentina? #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 27.3,
+   "external_id": "tw_sim_m_001_00051",
+   "source": "twitter_sim",
+   "author": "@10_elclasico11",
+   "text": "predicting 2-1 Brazil, Endrick to score first #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 29.2,
+   "external_id": "tw_sim_m_001_00006",
+   "source": "twitter_sim",
+   "author": "@fan_casa69",
+   "text": "Who's winning this? Brazil or Argentina? #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 32.5,
+   "external_id": "tw_sim_m_001_00039",
+   "source": "twitter_sim",
+   "author": "@9_casa79",
+   "text": "Bar is packed already, everyone here for Brazil Argentina 🇧🇷",
+   "country": null
+  },
+  {
+   "t_offset": 38.3,
+   "external_id": "tw_sim_m_001_00032",
+   "source": "twitter_sim",
+   "author": "@10_kop31",
+   "text": "Lineups are out and Alvarez starts. Big call. #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 39.3,
+   "external_id": "tw_sim_m_001_00013",
+   "source": "twitter_sim",
+   "author": "@matchday_hincha8",
+   "text": "RT @taka900: predicting 2-1 Brazil, Vinicius to score first #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 40.1,
+   "external_id": "tw_sim_m_001_00011",
+   "source": "twitter_sim",
+   "author": "@tiki_ultra38",
+   "text": "Match day!!! 🇪🇸 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 44.4,
+   "external_id": "tw_sim_m_001_00023",
+   "source": "twitter_sim",
+   "author": "@gol_tiki8",
+   "text": "Lineups are out and Alvarez starts. Big call. #WorldCup2026",
+   "country": "ES"
+  },
+  {
+   "t_offset": 44.5,
+   "external_id": "tw_sim_m_001_00030",
+   "source": "twitter_sim",
+   "author": "@keeper_1072",
+   "text": "predicting 2-1 Brazil, Vinicius to score first #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 45.7,
+   "external_id": "tw_sim_m_001_00012",
+   "source": "twitter_sim",
+   "author": "@matchday_torcida20",
+   "text": "Who's winning this? Brazil or Argentina? #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 46.4,
+   "external_id": "tw_sim_m_001_00041",
+   "source": "twitter_sim",
+   "author": "@tiki_fan97",
+   "text": "Who's winning this? Brazil or Argentina? #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 48.1,
+   "external_id": "tw_sim_m_001_00027",
+   "source": "twitter_sim",
+   "author": "@hincha_taka37",
+   "text": "Bar is packed already, everyone here for Brazil Argentina 🇬🇧",
+   "country": null
+  },
+  {
+   "t_offset": 48.2,
+   "external_id": "tw_sim_m_001_00009",
+   "source": "twitter_sim",
+   "author": "@taka_hincha18",
+   "text": "Bar is packed already, everyone here for Brazil Argentina 🇧🇷",
+   "country": null
+  },
+  {
+   "t_offset": 49.4,
+   "external_id": "tw_sim_m_001_00052",
+   "source": "twitter_sim",
+   "author": "@gol_footy32",
+   "text": "predicting 2-1 Brazil, Messi to score first #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 49.9,
+   "external_id": "tw_sim_m_001_00015",
+   "source": "twitter_sim",
+   "author": "@torcida_matchday52",
+   "text": "nervous about this one ngl #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 51.0,
+   "external_id": "tw_sim_m_001_00022",
+   "source": "twitter_sim",
+   "author": "@elclasico_keeper37",
+   "text": "Can't wait for Brazil vs Argentina tonight!! #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 53.5,
+   "external_id": "tw_sim_m_001_00010",
+   "source": "twitter_sim",
+   "author": "@10_fan50",
+   "text": "Match day!!! 🇧🇷 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 53.5,
+   "external_id": "tw_sim_m_001_00036",
+   "source": "twitter_sim",
+   "author": "@elclasico_gol14",
+   "text": "Can't wait for Brazil vs Argentina tonight!! #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 55.9,
+   "external_id": "tw_sim_m_001_00056",
+   "source": "twitter_sim",
+   "author": "@ultra_1047",
+   "text": "predicting 2-1 Brazil, Messi to score first #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 59.8,
+   "external_id": "tw_sim_m_001_00040",
+   "source": "twitter_sim",
+   "author": "@tiki_keeper57",
+   "text": "Bar is packed already, everyone here for Brazil Argentina 🇧🇷",
+   "country": null
+  },
+  {
+   "t_offset": 62.6,
+   "external_id": "tw_sim_m_001_00037",
+   "source": "twitter_sim",
+   "author": "@torcida_elclasico6",
+   "text": "nervous about this one ngl #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 63.5,
+   "external_id": "tw_sim_m_001_00029",
+   "source": "twitter_sim",
+   "author": "@gol_fan82",
+   "text": "Bar is packed already, everyone here for Brazil Argentina 🇦🇷",
+   "country": null
+  },
+  {
+   "t_offset": 64.9,
+   "external_id": "tw_sim_m_001_00005",
+   "source": "twitter_sim",
+   "author": "@hincha_ultra49",
+   "text": "Can't wait for Brazil vs Argentina tonight!! #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 66.7,
+   "external_id": "tw_sim_m_001_00057",
+   "source": "twitter_sim",
+   "author": "@vamos_keeper56",
+   "text": "Bar is packed already, everyone here for Brazil Argentina 🇮🇳",
+   "country": null
+  },
+  {
+   "t_offset": 67.1,
+   "external_id": "tw_sim_m_001_00001",
+   "source": "twitter_sim",
+   "author": "@fan_105",
+   "text": "Lineups are out and Raphinha starts. Big call. #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 69.2,
+   "external_id": "tw_sim_m_001_00019",
+   "source": "twitter_sim",
+   "author": "@ultra_gol52",
+   "text": "The atmosphere in the city is unreal right now 🇧🇷 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 70.2,
+   "external_id": "tw_sim_m_001_00018",
+   "source": "twitter_sim",
+   "author": "@torcida_ultra13",
+   "text": "The atmosphere in the city is unreal right now 🇧🇷 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 70.3,
+   "external_id": "tw_sim_m_001_00026",
+   "source": "twitter_sim",
+   "author": "@tiki_fan2",
+   "text": "nervous about this one ngl #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 74.4,
+   "external_id": "tw_sim_m_001_00038",
+   "source": "twitter_sim",
+   "author": "@ultra_matchday65",
+   "text": "RT @tiki639: predicting 2-1 Brazil, Rodrygo to score first #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 76.5,
+   "external_id": "tw_sim_m_001_00020",
+   "source": "twitter_sim",
+   "author": "@elclasico_keeper32",
+   "text": "Lineups are out and Rodrygo starts. Big call. #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 76.6,
+   "external_id": "tw_sim_m_001_00007",
+   "source": "twitter_sim",
+   "author": "@gol_hincha5",
+   "text": "Bar is packed already, everyone here for Brazil Argentina 🇧🇷",
+   "country": "BR"
+  },
+  {
+   "t_offset": 82.7,
+   "external_id": "tw_sim_m_001_00034",
+   "source": "twitter_sim",
+   "author": "@taka_matchday30",
+   "text": "The atmosphere in the city is unreal right now 🇧🇷 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 84.5,
+   "external_id": "tw_sim_m_001_00008",
+   "source": "twitter_sim",
+   "author": "@vamos_983",
+   "text": "Lineups are out and Vinicius starts. Big call. #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 84.6,
+   "external_id": "tw_sim_m_001_00003",
+   "source": "twitter_sim",
+   "author": "@ultra_fan49",
+   "text": "Bar is packed already, everyone here for Brazil Argentina 🇦🇷",
+   "country": null
+  },
+  {
+   "t_offset": 85.6,
+   "external_id": "tw_sim_m_001_00045",
+   "source": "twitter_sim",
+   "author": "@elclasico_vamos81",
+   "text": "The atmosphere in the city is unreal right now 🇯🇵 #Brazil",
+   "country": "JP"
+  },
+  {
+   "t_offset": 86.7,
+   "external_id": "tw_sim_m_001_00058",
+   "source": "twitter_sim",
+   "author": "@keeper_944",
+   "text": "Lineups are out and Lautaro starts. Big call. #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 87.5,
+   "external_id": "tw_sim_m_001_00048",
+   "source": "twitter_sim",
+   "author": "@10_hincha63",
+   "text": "RT @taka306: nervous about this one ngl #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 90.8,
+   "external_id": "tw_sim_m_001_00033",
+   "source": "twitter_sim",
+   "author": "@hincha_elclasico21",
+   "text": "Who's winning this? Brazil or Argentina? #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 91.8,
+   "external_id": "tw_sim_m_001_00021",
+   "source": "twitter_sim",
+   "author": "@hincha_casa53",
+   "text": "Can't wait for Brazil vs Argentina tonight!! #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 93.0,
+   "external_id": "tw_sim_m_001_00043",
+   "source": "twitter_sim",
+   "author": "@footy_ultra55",
+   "text": "The atmosphere in the city is unreal right now 🇦🇷 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 98.9,
+   "external_id": "tw_sim_m_001_00025",
+   "source": "twitter_sim",
+   "author": "@tiki_elclasico27",
+   "text": "Match day!!! 🇦🇷 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 99.5,
+   "external_id": "tw_sim_m_001_00060",
+   "source": "twitter_sim",
+   "author": "@vamos_keeper3",
+   "text": "The atmosphere in the city is unreal right now 🇧🇷 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 103.0,
+   "external_id": "tw_sim_m_001_00050",
+   "source": "twitter_sim",
+   "author": "@keeper_casa7",
+   "text": "Can't wait for Brazil vs Argentina tonight!! #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 104.5,
+   "external_id": "tw_sim_m_001_00016",
+   "source": "twitter_sim",
+   "author": "@footy_hincha76",
+   "text": "The atmosphere in the city is unreal right now 🇦🇷 #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 106.1,
+   "external_id": "tw_sim_m_001_00140",
+   "source": "twitter_sim",
+   "author": "@10_ultra37",
+   "text": "Raphinha with a great run! so close #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 106.7,
+   "external_id": "tw_sim_m_001_00119",
+   "source": "twitter_sim",
+   "author": "@taka_fan51",
+   "text": "we need to press higher, too passive #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 114.1,
+   "external_id": "tw_sim_m_001_00150",
+   "source": "twitter_sim",
+   "author": "@casa_footy19",
+   "text": "Lautaro is everywhere today, what a game so far #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 117.1,
+   "external_id": "tw_sim_m_001_00126",
+   "source": "twitter_sim",
+   "author": "@fan_960",
+   "text": "RT @taka852: great save!! heart attack material #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 122.2,
+   "external_id": "tw_sim_m_001_00149",
+   "source": "twitter_sim",
+   "author": "@keeper_taka58",
+   "text": "great save!! heart attack material #Argentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 122.3,
+   "external_id": "tw_sim_m_001_00086",
+   "source": "twitter_sim",
+   "author": "@fan_hincha81",
+   "text": "possession stats crazy for Brazil rn #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 123.0,
+   "external_id": "tw_sim_m_001_00137",
+   "source": "twitter_sim",
+   "author": "@hincha_keeper45",
+   "text": "half chances everywhere, one goal changes this #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 124.4,
+   "external_id": "tw_sim_m_001_00167",
+   "source": "twitter_sim",
+   "author": "@matchday_vamos77",
+   "text": "Endrick with a great run! so close #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 125.0,
+   "external_id": "tw_sim_m_001_00061",
+   "source": "twitter_sim",
+   "author": "@taka_1096",
+   "text": "this ref is letting a lot go #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 126.4,
+   "external_id": "tw_sim_m_001_00085",
+   "source": "twitter_sim",
+   "author": "@tiki_984",
+   "text": "we need to press higher, too passive #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 127.1,
+   "external_id": "tw_sim_m_001_00124",
+   "source": "twitter_sim",
+   "author": "@vamos_keeper97",
+   "text": "we need to press higher, too passive #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 129.8,
+   "external_id": "tw_sim_m_001_00121",
+   "source": "twitter_sim",
+   "author": "@taka_fan56",
+   "text": "we need to press higher, too passive #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 131.8,
+   "external_id": "tw_sim_m_001_00147",
+   "source": "twitter_sim",
+   "author": "@vamos_taka67",
+   "text": "great save!! heart attack material #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 135.1,
+   "external_id": "tw_sim_m_001_00099",
+   "source": "twitter_sim",
+   "author": "@keeper_taka86",
+   "text": "midfield battle is intense #BrazilvsArgentina",
+   "country": "DE"
+  },
+  {
+   "t_offset": 140.4,
+   "external_id": "tw_sim_m_001_00159",
+   "source": "twitter_sim",
+   "author": "@elclasico_torcida82",
+   "text": "possession stats crazy for Brazil rn #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 140.7,
+   "external_id": "tw_sim_m_001_00072",
+   "source": "twitter_sim",
+   "author": "@9_elclasico65",
+   "text": "great save!! heart attack material #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 142.5,
+   "external_id": "tw_sim_m_001_00105",
+   "source": "twitter_sim",
+   "author": "@taka_ultra58",
+   "text": "half chances everywhere, one goal changes this #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 142.6,
+   "external_id": "tw_sim_m_001_00089",
+   "source": "twitter_sim",
+   "author": "@keeper_elclasico59",
+   "text": "Enzo with a great run! so close #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 143.8,
+   "external_id": "tw_sim_m_001_00114",
+   "source": "twitter_sim",
+   "author": "@fan_kop95",
+   "text": "RT @kop580: possession stats crazy for Brazil rn #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 144.2,
+   "external_id": "tw_sim_m_001_00145",
+   "source": "twitter_sim",
+   "author": "@gol_tiki40",
+   "text": "Endrick is everywhere today, what a game so far #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 150.4,
+   "external_id": "tw_sim_m_001_00069",
+   "source": "twitter_sim",
+   "author": "@10_keeper89",
+   "text": "Alvarez with a great run! so close #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 151.3,
+   "external_id": "tw_sim_m_001_00117",
+   "source": "twitter_sim",
+   "author": "@vamos_matchday6",
+   "text": "someone mark Lautaro PLEASE #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 152.4,
+   "external_id": "tw_sim_m_001_00118",
+   "source": "twitter_sim",
+   "author": "@matchday_tiki16",
+   "text": "this ref is letting a lot go #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 153.2,
+   "external_id": "tw_sim_m_001_00156",
+   "source": "twitter_sim",
+   "author": "@kop_fan9",
+   "text": "Endrick is everywhere today, what a game so far #WorldCup2026",
+   "country": "IN"
+  },
+  {
+   "t_offset": 156.1,
+   "external_id": "tw_sim_m_001_00141",
+   "source": "twitter_sim",
+   "author": "@vamos_footy81",
+   "text": "someone mark Rodrygo PLEASE #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 156.4,
+   "external_id": "tw_sim_m_001_00135",
+   "source": "twitter_sim",
+   "author": "@10_casa26",
+   "text": "great save!! heart attack material #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 159.9,
+   "external_id": "tw_sim_m_001_00090",
+   "source": "twitter_sim",
+   "author": "@taka_matchday82",
+   "text": "this ref is letting a lot go #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 162.3,
+   "external_id": "tw_sim_m_001_00148",
+   "source": "twitter_sim",
+   "author": "@matchday_tiki14",
+   "text": "midfield battle is intense #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 162.4,
+   "external_id": "tw_sim_m_001_00082",
+   "source": "twitter_sim",
+   "author": "@tiki_959",
+   "text": "great save!! heart attack material #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 164.3,
+   "external_id": "tw_sim_m_001_00102",
+   "source": "twitter_sim",
+   "author": "@kop_torcida9",
+   "text": "Rodrygo is everywhere today, what a game so far #BrazilArgentina",
+   "country": "NG"
+  },
+  {
+   "t_offset": 164.9,
+   "external_id": "tw_sim_m_001_00113",
+   "source": "twitter_sim",
+   "author": "@footy_elclasico4",
+   "text": "half chances everywhere, one goal changes this #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 168.7,
+   "external_id": "tw_sim_m_001_00064",
+   "source": "twitter_sim",
+   "author": "@gol_matchday90",
+   "text": "Raphinha is everywhere today, what a game so far #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 171.5,
+   "external_id": "tw_sim_m_001_00157",
+   "source": "twitter_sim",
+   "author": "@keeper_keeper88",
+   "text": "midfield battle is intense #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 173.5,
+   "external_id": "tw_sim_m_001_00139",
+   "source": "twitter_sim",
+   "author": "@vamos_keeper79",
+   "text": "RT @vamos713: we need to press higher, too passive #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 179.1,
+   "external_id": "tw_sim_m_001_00144",
+   "source": "twitter_sim",
+   "author": "@keeper_vamos81",
+   "text": "RT @tiki834: possession stats crazy for Brazil rn #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 191.9,
+   "external_id": "tw_sim_m_001_00077",
+   "source": "twitter_sim",
+   "author": "@taka_vamos81",
+   "text": "half chances everywhere, one goal changes this #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 192.3,
+   "external_id": "tw_sim_m_001_00163",
+   "source": "twitter_sim",
+   "author": "@tiki_kop41",
+   "text": "we need to press higher, too passive #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 193.3,
+   "external_id": "tw_sim_m_001_00134",
+   "source": "twitter_sim",
+   "author": "@keeper_hincha69",
+   "text": "great save!! heart attack material #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 194.3,
+   "external_id": "tw_sim_m_001_00095",
+   "source": "twitter_sim",
+   "author": "@elclasico_vamos38",
+   "text": "half chances everywhere, one goal changes this #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 198.7,
+   "external_id": "tw_sim_m_001_00075",
+   "source": "twitter_sim",
+   "author": "@casa_tiki53",
+   "text": "someone mark Lautaro PLEASE #WorldCup2026",
+   "country": "GB"
+  },
+  {
+   "t_offset": 200.0,
+   "external_id": "tw_sim_m_001_00078",
+   "source": "twitter_sim",
+   "author": "@vamos_ultra4",
+   "text": "half chances everywhere, one goal changes this #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 200.9,
+   "external_id": "tw_sim_m_001_00154",
+   "source": "twitter_sim",
+   "author": "@keeper_fan88",
+   "text": "midfield battle is intense #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 201.7,
+   "external_id": "tw_sim_m_001_00152",
+   "source": "twitter_sim",
+   "author": "@tiki_elclasico32",
+   "text": "midfield battle is intense #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 203.2,
+   "external_id": "tw_sim_m_001_00081",
+   "source": "twitter_sim",
+   "author": "@10_tiki65",
+   "text": "half chances everywhere, one goal changes this #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 204.2,
+   "external_id": "tw_sim_m_001_00080",
+   "source": "twitter_sim",
+   "author": "@vamos_vamos32",
+   "text": "great save!! heart attack material #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 205.3,
+   "external_id": "tw_sim_m_001_00165",
+   "source": "twitter_sim",
+   "author": "@hincha_casa42",
+   "text": "RT @9885: we need to press higher, too passive #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 213.3,
+   "external_id": "tw_sim_m_001_00106",
+   "source": "twitter_sim",
+   "author": "@10_ultra63",
+   "text": "Enzo is everywhere today, what a game so far #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 215.8,
+   "external_id": "tw_sim_m_001_00142",
+   "source": "twitter_sim",
+   "author": "@casa_fan68",
+   "text": "RT @taka247: this ref is letting a lot go #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 215.8,
+   "external_id": "tw_sim_m_001_00146",
+   "source": "twitter_sim",
+   "author": "@gol_tiki35",
+   "text": "Lautaro is everywhere today, what a game so far #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 216.2,
+   "external_id": "tw_sim_m_001_00158",
+   "source": "twitter_sim",
+   "author": "@ultra_kop39",
+   "text": "we need to press higher, too passive #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 219.1,
+   "external_id": "tw_sim_m_001_00108",
+   "source": "twitter_sim",
+   "author": "@torcida_1058",
+   "text": "midfield battle is intense #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 221.1,
+   "external_id": "tw_sim_m_001_00073",
+   "source": "twitter_sim",
+   "author": "@hincha_footy98",
+   "text": "someone mark Vinicius PLEASE #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 223.3,
+   "external_id": "tw_sim_m_001_00062",
+   "source": "twitter_sim",
+   "author": "@torcida_tiki16",
+   "text": "this ref is letting a lot go #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 224.6,
+   "external_id": "tw_sim_m_001_00111",
+   "source": "twitter_sim",
+   "author": "@10_gol37",
+   "text": "midfield battle is intense #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 226.2,
+   "external_id": "tw_sim_m_001_00125",
+   "source": "twitter_sim",
+   "author": "@matchday_elclasico76",
+   "text": "possession stats crazy for Brazil rn #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 228.0,
+   "external_id": "tw_sim_m_001_00092",
+   "source": "twitter_sim",
+   "author": "@gol_vamos37",
+   "text": "Lautaro is everywhere today, what a game so far #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 228.0,
+   "external_id": "tw_sim_m_001_00162",
+   "source": "twitter_sim",
+   "author": "@vamos_hincha88",
+   "text": "great save!! heart attack material #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 229.8,
+   "external_id": "tw_sim_m_001_00127",
+   "source": "twitter_sim",
+   "author": "@gol_keeper14",
+   "text": "possession stats crazy for Brazil rn #Argentina",
+   "country": "US"
+  },
+  {
+   "t_offset": 231.8,
+   "external_id": "tw_sim_m_001_00071",
+   "source": "twitter_sim",
+   "author": "@kop_fan8",
+   "text": "half chances everywhere, one goal changes this #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 232.7,
+   "external_id": "tw_sim_m_001_00070",
+   "source": "twitter_sim",
+   "author": "@hincha_elclasico81",
+   "text": "this ref is letting a lot go #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 232.9,
+   "external_id": "tw_sim_m_001_00131",
+   "source": "twitter_sim",
+   "author": "@taka_matchday24",
+   "text": "RT @10521: we need to press higher, too passive #Argentina",
+   "country": "DE"
+  },
+  {
+   "t_offset": 233.2,
+   "external_id": "tw_sim_m_001_00116",
+   "source": "twitter_sim",
+   "author": "@keeper_1035",
+   "text": "midfield battle is intense #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 234.1,
+   "external_id": "tw_sim_m_001_00112",
+   "source": "twitter_sim",
+   "author": "@taka_ultra98",
+   "text": "we need to press higher, too passive #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 239.3,
+   "external_id": "tw_sim_m_001_00161",
+   "source": "twitter_sim",
+   "author": "@elclasico_torcida99",
+   "text": "midfield battle is intense #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 241.1,
+   "external_id": "tw_sim_m_001_00115",
+   "source": "twitter_sim",
+   "author": "@matchday_tiki73",
+   "text": "someone mark Rodrygo PLEASE #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 244.0,
+   "external_id": "tw_sim_m_001_00094",
+   "source": "twitter_sim",
+   "author": "@matchday_tiki96",
+   "text": "Endrick is everywhere today, what a game so far #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 249.5,
+   "external_id": "tw_sim_m_001_00074",
+   "source": "twitter_sim",
+   "author": "@elclasico_casa75",
+   "text": "we need to press higher, too passive #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 250.1,
+   "external_id": "tw_sim_m_001_00098",
+   "source": "twitter_sim",
+   "author": "@matchday_1015",
+   "text": "Lautaro with a great run! so close #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 252.1,
+   "external_id": "tw_sim_m_001_00087",
+   "source": "twitter_sim",
+   "author": "@ultra_keeper22",
+   "text": "midfield battle is intense #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 253.4,
+   "external_id": "tw_sim_m_001_00101",
+   "source": "twitter_sim",
+   "author": "@taka_gol51",
+   "text": "RT @taka558: Endrick with a great run! so close #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 254.1,
+   "external_id": "tw_sim_m_001_00076",
+   "source": "twitter_sim",
+   "author": "@tiki_ultra99",
+   "text": "half chances everywhere, one goal changes this #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 254.2,
+   "external_id": "tw_sim_m_001_00088",
+   "source": "twitter_sim",
+   "author": "@10_casa22",
+   "text": "this ref is letting a lot go #WorldCup2026",
+   "country": "US"
+  },
+  {
+   "t_offset": 258.2,
+   "external_id": "tw_sim_m_001_00107",
+   "source": "twitter_sim",
+   "author": "@tiki_977",
+   "text": "possession stats crazy for Brazil rn #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 264.7,
+   "external_id": "tw_sim_m_001_00063",
+   "source": "twitter_sim",
+   "author": "@matchday_ultra25",
+   "text": "great save!! heart attack material #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 265.5,
+   "external_id": "tw_sim_m_001_00096",
+   "source": "twitter_sim",
+   "author": "@9_taka12",
+   "text": "great save!! heart attack material #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 270.7,
+   "external_id": "tw_sim_m_001_00133",
+   "source": "twitter_sim",
+   "author": "@casa_keeper6",
+   "text": "we need to press higher, too passive #Argentina",
+   "country": "ES"
+  },
+  {
+   "t_offset": 271.8,
+   "external_id": "tw_sim_m_001_00093",
+   "source": "twitter_sim",
+   "author": "@kop_ultra81",
+   "text": "Raphinha with a great run! so close #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 272.5,
+   "external_id": "tw_sim_m_001_00123",
+   "source": "twitter_sim",
+   "author": "@taka_kop31",
+   "text": "half chances everywhere, one goal changes this #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 275.0,
+   "external_id": "tw_sim_m_001_00097",
+   "source": "twitter_sim",
+   "author": "@9_taka14",
+   "text": "great save!! heart attack material #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 275.4,
+   "external_id": "tw_sim_m_001_00084",
+   "source": "twitter_sim",
+   "author": "@tiki_ultra57",
+   "text": "great save!! heart attack material #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 277.3,
+   "external_id": "tw_sim_m_001_00136",
+   "source": "twitter_sim",
+   "author": "@ultra_ultra37",
+   "text": "Raphinha is everywhere today, what a game so far #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 279.4,
+   "external_id": "tw_sim_m_001_00067",
+   "source": "twitter_sim",
+   "author": "@hincha_958",
+   "text": "half chances everywhere, one goal changes this #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 279.4,
+   "external_id": "tw_sim_m_001_00128",
+   "source": "twitter_sim",
+   "author": "@casa_taka48",
+   "text": "Vinicius with a great run! so close #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 283.4,
+   "external_id": "tw_sim_m_001_00103",
+   "source": "twitter_sim",
+   "author": "@footy_elclasico19",
+   "text": "Alvarez with a great run! so close #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 286.6,
+   "external_id": "tw_sim_m_001_00122",
+   "source": "twitter_sim",
+   "author": "@tiki_hincha43",
+   "text": "half chances everywhere, one goal changes this #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 287.5,
+   "external_id": "tw_sim_m_001_00151",
+   "source": "twitter_sim",
+   "author": "@gol_kop87",
+   "text": "RT @taka371: Enzo is everywhere today, what a game so far #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 288.1,
+   "external_id": "tw_sim_m_001_00130",
+   "source": "twitter_sim",
+   "author": "@matchday_917",
+   "text": "midfield battle is intense #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 290.2,
+   "external_id": "tw_sim_m_001_00164",
+   "source": "twitter_sim",
+   "author": "@ultra_tiki31",
+   "text": "someone mark Raphinha PLEASE #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 290.3,
+   "external_id": "tw_sim_m_001_00120",
+   "source": "twitter_sim",
+   "author": "@9_1038",
+   "text": "great save!! heart attack material #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 294.7,
+   "external_id": "tw_sim_m_001_00168",
+   "source": "twitter_sim",
+   "author": "@elclasico_taka98",
+   "text": "RT @ultra442: this ref is letting a lot go #Argentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 295.9,
+   "external_id": "tw_sim_m_001_00109",
+   "source": "twitter_sim",
+   "author": "@tiki_elclasico48",
+   "text": "someone mark Endrick PLEASE #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 300.3,
+   "external_id": "tw_sim_m_001_00068",
+   "source": "twitter_sim",
+   "author": "@ultra_torcida81",
+   "text": "this ref is letting a lot go #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 302.4,
+   "external_id": "tw_sim_m_001_00129",
+   "source": "twitter_sim",
+   "author": "@matchday_elclasico93",
+   "text": "RT @ultra572: Raphinha is everywhere today, what a game so far #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 305.1,
+   "external_id": "tw_sim_m_001_00138",
+   "source": "twitter_sim",
+   "author": "@taka_hincha4",
+   "text": "half chances everywhere, one goal changes this #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 305.6,
+   "external_id": "tw_sim_m_001_00083",
+   "source": "twitter_sim",
+   "author": "@9_985",
+   "text": "someone mark Alvarez PLEASE #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 305.8,
+   "external_id": "tw_sim_m_001_00166",
+   "source": "twitter_sim",
+   "author": "@matchday_vamos3",
+   "text": "we need to press higher, too passive #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 308.0,
+   "external_id": "tw_sim_m_001_00065",
+   "source": "twitter_sim",
+   "author": "@keeper_tiki24",
+   "text": "midfield battle is intense #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 309.1,
+   "external_id": "tw_sim_m_001_00100",
+   "source": "twitter_sim",
+   "author": "@10_elclasico5",
+   "text": "we need to press higher, too passive #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 309.5,
+   "external_id": "tw_sim_m_001_00132",
+   "source": "twitter_sim",
+   "author": "@matchday_ultra65",
+   "text": "Endrick with a great run! so close #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 310.0,
+   "external_id": "tw_sim_m_001_00110",
+   "source": "twitter_sim",
+   "author": "@ultra_taka17",
+   "text": "midfield battle is intense #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 310.6,
+   "external_id": "tw_sim_m_001_00160",
+   "source": "twitter_sim",
+   "author": "@kop_casa85",
+   "text": "half chances everywhere, one goal changes this #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 311.5,
+   "external_id": "tw_sim_m_001_00153",
+   "source": "twitter_sim",
+   "author": "@elclasico_elclasico91",
+   "text": "great save!! heart attack material #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 311.8,
+   "external_id": "tw_sim_m_001_00091",
+   "source": "twitter_sim",
+   "author": "@ultra_hincha49",
+   "text": "this ref is letting a lot go #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 312.6,
+   "external_id": "tw_sim_m_001_00066",
+   "source": "twitter_sim",
+   "author": "@gol_kop20",
+   "text": "midfield battle is intense #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 313.0,
+   "external_id": "tw_sim_m_001_00155",
+   "source": "twitter_sim",
+   "author": "@casa_taka66",
+   "text": "this ref is letting a lot go #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 314.2,
+   "external_id": "tw_sim_m_001_00079",
+   "source": "twitter_sim",
+   "author": "@fan_hincha15",
+   "text": "we need to press higher, too passive #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 314.6,
+   "external_id": "tw_sim_m_001_00143",
+   "source": "twitter_sim",
+   "author": "@footy_taka9",
+   "text": "RT @9383: someone mark Vinicius PLEASE #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 317.3,
+   "external_id": "tw_sim_m_001_00104",
+   "source": "twitter_sim",
+   "author": "@hincha_tiki3",
+   "text": "midfield battle is intense #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 320.4,
+   "external_id": "tw_sim_m_001_00229",
+   "source": "twitter_sim",
+   "author": "@kop_matchday42",
+   "text": "screaming at my TV, terrible terrible call #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 320.9,
+   "external_id": "tw_sim_m_001_00220",
+   "source": "twitter_sim",
+   "author": "@hincha_987",
+   "text": "screaming at my TV, terrible terrible call #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 322.7,
+   "external_id": "tw_sim_m_001_00200",
+   "source": "twitter_sim",
+   "author": "@hincha_tiki74",
+   "text": "screaming at my TV, terrible terrible call #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 324.2,
+   "external_id": "tw_sim_m_001_00262",
+   "source": "twitter_sim",
+   "author": "@9_kop83",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 324.4,
+   "external_id": "tw_sim_m_001_00224",
+   "source": "twitter_sim",
+   "author": "@ultra_fan1",
+   "text": "VAR strikes again... this is why fans hate it #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 325.4,
+   "external_id": "tw_sim_m_001_00226",
+   "source": "twitter_sim",
+   "author": "@hincha_casa88",
+   "text": "RT @10398: screaming at my TV, terrible terrible call #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 325.9,
+   "external_id": "tw_sim_m_001_00236",
+   "source": "twitter_sim",
+   "author": "@kop_taka4",
+   "text": "the ref just ruined this match, I'm fuming 😡 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 326.6,
+   "external_id": "tw_sim_m_001_00181",
+   "source": "twitter_sim",
+   "author": "@hincha_gol13",
+   "text": "absolute robbery by the referee, disgraceful #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 326.8,
+   "external_id": "tw_sim_m_001_00267",
+   "source": "twitter_sim",
+   "author": "@kop_973",
+   "text": "how is that not a red card?! shocking officiating #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 328.0,
+   "external_id": "tw_sim_m_001_00244",
+   "source": "twitter_sim",
+   "author": "@9_1077",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 328.3,
+   "external_id": "tw_sim_m_001_00245",
+   "source": "twitter_sim",
+   "author": "@casa_casa63",
+   "text": "the ref just ruined this match, I'm fuming 😡 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 328.7,
+   "external_id": "tw_sim_m_001_00171",
+   "source": "twitter_sim",
+   "author": "@vamos_keeper20",
+   "text": "RT @kop731: how is that not a red card?! shocking officiating #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 329.6,
+   "external_id": "tw_sim_m_001_00190",
+   "source": "twitter_sim",
+   "author": "@taka_hincha29",
+   "text": "VAR strikes again... this is why fans hate it #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 330.3,
+   "external_id": "tw_sim_m_001_00218",
+   "source": "twitter_sim",
+   "author": "@ultra_gol30",
+   "text": "VAR strikes again... this is why fans hate it #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 331.2,
+   "external_id": "tw_sim_m_001_00242",
+   "source": "twitter_sim",
+   "author": "@tiki_979",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 332.0,
+   "external_id": "tw_sim_m_001_00183",
+   "source": "twitter_sim",
+   "author": "@gol_casa54",
+   "text": "screaming at my TV, terrible terrible call #BrazilArgentina",
+   "country": "FR"
+  },
+  {
+   "t_offset": 332.7,
+   "external_id": "tw_sim_m_001_00219",
+   "source": "twitter_sim",
+   "author": "@gol_casa41",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #BrazilArgentina",
+   "country": "IT"
+  },
+  {
+   "t_offset": 333.1,
+   "external_id": "tw_sim_m_001_00250",
+   "source": "twitter_sim",
+   "author": "@fan_keeper16",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 333.9,
+   "external_id": "tw_sim_m_001_00222",
+   "source": "twitter_sim",
+   "author": "@vamos_hincha46",
+   "text": "RT @elclasico803: screaming at my TV, terrible terrible call #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 333.9,
+   "external_id": "tw_sim_m_001_00240",
+   "source": "twitter_sim",
+   "author": "@torcida_keeper76",
+   "text": "absolute robbery by the referee, disgraceful #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 334.8,
+   "external_id": "tw_sim_m_001_00192",
+   "source": "twitter_sim",
+   "author": "@casa_tiki67",
+   "text": "RT @torcida587: NO WAY that's not a penalty?? VAR is a joke #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 334.9,
+   "external_id": "tw_sim_m_001_00235",
+   "source": "twitter_sim",
+   "author": "@10_ultra2",
+   "text": "RT @9991: VAR strikes again... this is why fans hate it #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 334.9,
+   "external_id": "tw_sim_m_001_00265",
+   "source": "twitter_sim",
+   "author": "@footy_matchday27",
+   "text": "how is that not a red card?! shocking officiating #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 335.3,
+   "external_id": "tw_sim_m_001_00205",
+   "source": "twitter_sim",
+   "author": "@gol_fan25",
+   "text": "RT @torcida53: the ref just ruined this match, I'm fuming 😡 #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 335.7,
+   "external_id": "tw_sim_m_001_00269",
+   "source": "twitter_sim",
+   "author": "@10_1090",
+   "text": "screaming at my TV, terrible terrible call #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 336.0,
+   "external_id": "tw_sim_m_001_00216",
+   "source": "twitter_sim",
+   "author": "@hincha_matchday88",
+   "text": "the ref just ruined this match, I'm fuming 😡 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 336.0,
+   "external_id": "tw_sim_m_001_00253",
+   "source": "twitter_sim",
+   "author": "@kop_hincha19",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #WorldCup2026",
+   "country": "GB"
+  },
+  {
+   "t_offset": 336.5,
+   "external_id": "tw_sim_m_001_00202",
+   "source": "twitter_sim",
+   "author": "@taka_968",
+   "text": "VAR strikes again... this is why fans hate it #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 337.3,
+   "external_id": "tw_sim_m_001_00246",
+   "source": "twitter_sim",
+   "author": "@vamos_kop25",
+   "text": "how is that not a red card?! shocking officiating #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 337.9,
+   "external_id": "tw_sim_m_001_00178",
+   "source": "twitter_sim",
+   "author": "@elclasico_matchday16",
+   "text": "VAR strikes again... this is why fans hate it #Brazil",
+   "country": "DE"
+  },
+  {
+   "t_offset": 337.9,
+   "external_id": "tw_sim_m_001_00185",
+   "source": "twitter_sim",
+   "author": "@vamos_kop65",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 338.3,
+   "external_id": "tw_sim_m_001_00260",
+   "source": "twitter_sim",
+   "author": "@vamos_fan17",
+   "text": "the ref just ruined this match, I'm fuming 😡 #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 339.1,
+   "external_id": "tw_sim_m_001_00203",
+   "source": "twitter_sim",
+   "author": "@hincha_hincha39",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 339.4,
+   "external_id": "tw_sim_m_001_00257",
+   "source": "twitter_sim",
+   "author": "@gol_gol13",
+   "text": "how is that not a red card?! shocking officiating #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 340.2,
+   "external_id": "tw_sim_m_001_00187",
+   "source": "twitter_sim",
+   "author": "@10_tiki12",
+   "text": "absolute robbery by the referee, disgraceful #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 342.6,
+   "external_id": "tw_sim_m_001_00177",
+   "source": "twitter_sim",
+   "author": "@hincha_elclasico72",
+   "text": "VAR strikes again... this is why fans hate it #WorldCup2026",
+   "country": "NG"
+  },
+  {
+   "t_offset": 342.8,
+   "external_id": "tw_sim_m_001_00198",
+   "source": "twitter_sim",
+   "author": "@ultra_gol85",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 342.8,
+   "external_id": "tw_sim_m_001_00208",
+   "source": "twitter_sim",
+   "author": "@keeper_ultra93",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 342.8,
+   "external_id": "tw_sim_m_001_00227",
+   "source": "twitter_sim",
+   "author": "@elclasico_1039",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 343.6,
+   "external_id": "tw_sim_m_001_00197",
+   "source": "twitter_sim",
+   "author": "@keeper_1069",
+   "text": "screaming at my TV, terrible terrible call #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 343.6,
+   "external_id": "tw_sim_m_001_00243",
+   "source": "twitter_sim",
+   "author": "@matchday_fan87",
+   "text": "screaming at my TV, terrible terrible call #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 344.0,
+   "external_id": "tw_sim_m_001_00188",
+   "source": "twitter_sim",
+   "author": "@9_hincha58",
+   "text": "the ref just ruined this match, I'm fuming 😡 #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 344.1,
+   "external_id": "tw_sim_m_001_00270",
+   "source": "twitter_sim",
+   "author": "@torcida_kop69",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 344.2,
+   "external_id": "tw_sim_m_001_00169",
+   "source": "twitter_sim",
+   "author": "@fan_965",
+   "text": "how is that not a red card?! shocking officiating #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 344.8,
+   "external_id": "tw_sim_m_001_00176",
+   "source": "twitter_sim",
+   "author": "@tiki_vamos68",
+   "text": "screaming at my TV, terrible terrible call #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 344.8,
+   "external_id": "tw_sim_m_001_00182",
+   "source": "twitter_sim",
+   "author": "@vamos_vamos84",
+   "text": "RT @casa417: VAR strikes again... this is why fans hate it #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 345.2,
+   "external_id": "tw_sim_m_001_00199",
+   "source": "twitter_sim",
+   "author": "@gol_hincha95",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 345.3,
+   "external_id": "tw_sim_m_001_00268",
+   "source": "twitter_sim",
+   "author": "@footy_fan2",
+   "text": "screaming at my TV, terrible terrible call #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 345.4,
+   "external_id": "tw_sim_m_001_00195",
+   "source": "twitter_sim",
+   "author": "@10_taka49",
+   "text": "RT @10185: NO WAY that's not a penalty?? VAR is a joke #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 345.8,
+   "external_id": "tw_sim_m_001_00241",
+   "source": "twitter_sim",
+   "author": "@fan_ultra69",
+   "text": "absolute robbery by the referee, disgraceful #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 346.5,
+   "external_id": "tw_sim_m_001_00193",
+   "source": "twitter_sim",
+   "author": "@kop_1059",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #Argentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 346.9,
+   "external_id": "tw_sim_m_001_00196",
+   "source": "twitter_sim",
+   "author": "@ultra_casa69",
+   "text": "VAR strikes again... this is why fans hate it #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 347.0,
+   "external_id": "tw_sim_m_001_00170",
+   "source": "twitter_sim",
+   "author": "@tiki_taka97",
+   "text": "absolute robbery by the referee, disgraceful #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 348.1,
+   "external_id": "tw_sim_m_001_00186",
+   "source": "twitter_sim",
+   "author": "@casa_footy95",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 348.2,
+   "external_id": "tw_sim_m_001_00209",
+   "source": "twitter_sim",
+   "author": "@kop_footy34",
+   "text": "the ref just ruined this match, I'm fuming 😡 #BrazilArgentina",
+   "country": "MX"
+  },
+  {
+   "t_offset": 348.6,
+   "external_id": "tw_sim_m_001_00238",
+   "source": "twitter_sim",
+   "author": "@ultra_footy44",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 348.8,
+   "external_id": "tw_sim_m_001_00234",
+   "source": "twitter_sim",
+   "author": "@fan_ultra99",
+   "text": "how is that not a red card?! shocking officiating #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 349.0,
+   "external_id": "tw_sim_m_001_00237",
+   "source": "twitter_sim",
+   "author": "@torcida_vamos45",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 349.1,
+   "external_id": "tw_sim_m_001_00228",
+   "source": "twitter_sim",
+   "author": "@ultra_kop39",
+   "text": "absolute robbery by the referee, disgraceful #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 350.0,
+   "external_id": "tw_sim_m_001_00233",
+   "source": "twitter_sim",
+   "author": "@fan_keeper77",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 350.1,
+   "external_id": "tw_sim_m_001_00215",
+   "source": "twitter_sim",
+   "author": "@torcida_elclasico46",
+   "text": "RT @ultra537: screaming at my TV, terrible terrible call #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 350.3,
+   "external_id": "tw_sim_m_001_00214",
+   "source": "twitter_sim",
+   "author": "@elclasico_matchday3",
+   "text": "RT @1013: VAR strikes again... this is why fans hate it #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 350.6,
+   "external_id": "tw_sim_m_001_00249",
+   "source": "twitter_sim",
+   "author": "@gol_keeper70",
+   "text": "screaming at my TV, terrible terrible call #Argentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 350.9,
+   "external_id": "tw_sim_m_001_00255",
+   "source": "twitter_sim",
+   "author": "@fan_keeper82",
+   "text": "the ref just ruined this match, I'm fuming 😡 #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 351.1,
+   "external_id": "tw_sim_m_001_00266",
+   "source": "twitter_sim",
+   "author": "@hincha_vamos50",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 353.2,
+   "external_id": "tw_sim_m_001_00210",
+   "source": "twitter_sim",
+   "author": "@hincha_vamos71",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 353.2,
+   "external_id": "tw_sim_m_001_00223",
+   "source": "twitter_sim",
+   "author": "@matchday_hincha92",
+   "text": "VAR strikes again... this is why fans hate it #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 353.8,
+   "external_id": "tw_sim_m_001_00194",
+   "source": "twitter_sim",
+   "author": "@torcida_fan6",
+   "text": "VAR strikes again... this is why fans hate it #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 353.9,
+   "external_id": "tw_sim_m_001_00248",
+   "source": "twitter_sim",
+   "author": "@keeper_vamos71",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #BrazilvsArgentina",
+   "country": "MX"
+  },
+  {
+   "t_offset": 354.4,
+   "external_id": "tw_sim_m_001_00179",
+   "source": "twitter_sim",
+   "author": "@matchday_gol37",
+   "text": "screaming at my TV, terrible terrible call #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 355.6,
+   "external_id": "tw_sim_m_001_00261",
+   "source": "twitter_sim",
+   "author": "@10_kop62",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 355.9,
+   "external_id": "tw_sim_m_001_00201",
+   "source": "twitter_sim",
+   "author": "@hincha_1039",
+   "text": "absolute robbery by the referee, disgraceful #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 356.2,
+   "external_id": "tw_sim_m_001_00230",
+   "source": "twitter_sim",
+   "author": "@matchday_vamos74",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 356.4,
+   "external_id": "tw_sim_m_001_00172",
+   "source": "twitter_sim",
+   "author": "@matchday_tiki65",
+   "text": "how is that not a red card?! shocking officiating #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 357.6,
+   "external_id": "tw_sim_m_001_00258",
+   "source": "twitter_sim",
+   "author": "@kop_matchday21",
+   "text": "RT @10208: the ref just ruined this match, I'm fuming 😡 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 357.7,
+   "external_id": "tw_sim_m_001_00175",
+   "source": "twitter_sim",
+   "author": "@tiki_1020",
+   "text": "RT @ultra196: absolute robbery by the referee, disgraceful #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 358.9,
+   "external_id": "tw_sim_m_001_00239",
+   "source": "twitter_sim",
+   "author": "@tiki_1060",
+   "text": "VAR strikes again... this is why fans hate it #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 359.3,
+   "external_id": "tw_sim_m_001_00211",
+   "source": "twitter_sim",
+   "author": "@vamos_keeper22",
+   "text": "screaming at my TV, terrible terrible call #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 359.8,
+   "external_id": "tw_sim_m_001_00256",
+   "source": "twitter_sim",
+   "author": "@torcida_vamos35",
+   "text": "screaming at my TV, terrible terrible call #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 361.2,
+   "external_id": "tw_sim_m_001_00264",
+   "source": "twitter_sim",
+   "author": "@10_tiki18",
+   "text": "screaming at my TV, terrible terrible call #BrazilArgentina",
+   "country": "GB"
+  },
+  {
+   "t_offset": 362.7,
+   "external_id": "tw_sim_m_001_00254",
+   "source": "twitter_sim",
+   "author": "@fan_fan52",
+   "text": "how is that not a red card?! shocking officiating #WorldCup2026",
+   "country": "JP"
+  },
+  {
+   "t_offset": 364.0,
+   "external_id": "tw_sim_m_001_00212",
+   "source": "twitter_sim",
+   "author": "@gol_gol10",
+   "text": "VAR strikes again... this is why fans hate it #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 365.2,
+   "external_id": "tw_sim_m_001_00189",
+   "source": "twitter_sim",
+   "author": "@ultra_keeper40",
+   "text": "VAR strikes again... this is why fans hate it #WorldCup2026",
+   "country": "DE"
+  },
+  {
+   "t_offset": 366.1,
+   "external_id": "tw_sim_m_001_00232",
+   "source": "twitter_sim",
+   "author": "@fan_1087",
+   "text": "VAR strikes again... this is why fans hate it #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 366.5,
+   "external_id": "tw_sim_m_001_00251",
+   "source": "twitter_sim",
+   "author": "@kop_torcida27",
+   "text": "screaming at my TV, terrible terrible call #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 366.9,
+   "external_id": "tw_sim_m_001_00231",
+   "source": "twitter_sim",
+   "author": "@torcida_casa88",
+   "text": "screaming at my TV, terrible terrible call #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 368.3,
+   "external_id": "tw_sim_m_001_00206",
+   "source": "twitter_sim",
+   "author": "@footy_torcida25",
+   "text": "the ref just ruined this match, I'm fuming 😡 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 368.3,
+   "external_id": "tw_sim_m_001_00252",
+   "source": "twitter_sim",
+   "author": "@matchday_matchday74",
+   "text": "how is that not a red card?! shocking officiating #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 368.9,
+   "external_id": "tw_sim_m_001_00247",
+   "source": "twitter_sim",
+   "author": "@vamos_casa11",
+   "text": "VAR strikes again... this is why fans hate it #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 369.7,
+   "external_id": "tw_sim_m_001_00173",
+   "source": "twitter_sim",
+   "author": "@10_matchday93",
+   "text": "the ref just ruined this match, I'm fuming 😡 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 369.7,
+   "external_id": "tw_sim_m_001_00217",
+   "source": "twitter_sim",
+   "author": "@gol_footy90",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 371.5,
+   "external_id": "tw_sim_m_001_00204",
+   "source": "twitter_sim",
+   "author": "@kop_932",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 372.3,
+   "external_id": "tw_sim_m_001_00174",
+   "source": "twitter_sim",
+   "author": "@vamos_casa68",
+   "text": "VAR took 4 minutes for THAT decision??? scandal #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 372.5,
+   "external_id": "tw_sim_m_001_00259",
+   "source": "twitter_sim",
+   "author": "@gol_981",
+   "text": "NO WAY that's not a penalty?? VAR is a joke #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 372.9,
+   "external_id": "tw_sim_m_001_00184",
+   "source": "twitter_sim",
+   "author": "@matchday_gol2",
+   "text": "screaming at my TV, terrible terrible call #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 373.8,
+   "external_id": "tw_sim_m_001_00221",
+   "source": "twitter_sim",
+   "author": "@gol_ultra56",
+   "text": "screaming at my TV, terrible terrible call #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 376.6,
+   "external_id": "tw_sim_m_001_00225",
+   "source": "twitter_sim",
+   "author": "@10_ultra4",
+   "text": "RT @10460: NO WAY that's not a penalty?? VAR is a joke #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 376.7,
+   "external_id": "tw_sim_m_001_00213",
+   "source": "twitter_sim",
+   "author": "@kop_footy28",
+   "text": "the ref just ruined this match, I'm fuming 😡 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 377.3,
+   "external_id": "tw_sim_m_001_00180",
+   "source": "twitter_sim",
+   "author": "@elclasico_elclasico18",
+   "text": "VAR strikes again... this is why fans hate it #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 377.4,
+   "external_id": "tw_sim_m_001_00191",
+   "source": "twitter_sim",
+   "author": "@vamos_torcida98",
+   "text": "VAR strikes again... this is why fans hate it #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 377.7,
+   "external_id": "tw_sim_m_001_00207",
+   "source": "twitter_sim",
+   "author": "@hincha_tiki37",
+   "text": "absolute robbery by the referee, disgraceful #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 379.6,
+   "external_id": "tw_sim_m_001_00263",
+   "source": "twitter_sim",
+   "author": "@kop_1079",
+   "text": "how is that not a red card?! shocking officiating #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 380.8,
+   "external_id": "tw_sim_m_001_00346",
+   "source": "twitter_sim",
+   "author": "@fan_ultra33",
+   "text": "great save!! heart attack material #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 383.2,
+   "external_id": "tw_sim_m_001_00302",
+   "source": "twitter_sim",
+   "author": "@gol_957",
+   "text": "possession stats crazy for Brazil rn #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 386.1,
+   "external_id": "tw_sim_m_001_00288",
+   "source": "twitter_sim",
+   "author": "@tiki_ultra6",
+   "text": "we need to press higher, too passive #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 388.7,
+   "external_id": "tw_sim_m_001_00286",
+   "source": "twitter_sim",
+   "author": "@kop_ultra2",
+   "text": "half chances everywhere, one goal changes this #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 395.0,
+   "external_id": "tw_sim_m_001_00333",
+   "source": "twitter_sim",
+   "author": "@9_matchday53",
+   "text": "great save!! heart attack material #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 395.1,
+   "external_id": "tw_sim_m_001_00334",
+   "source": "twitter_sim",
+   "author": "@kop_tiki92",
+   "text": "someone mark Raphinha PLEASE #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 396.4,
+   "external_id": "tw_sim_m_001_00293",
+   "source": "twitter_sim",
+   "author": "@gol_hincha74",
+   "text": "we need to press higher, too passive #BrazilArgentina",
+   "country": "ES"
+  },
+  {
+   "t_offset": 397.3,
+   "external_id": "tw_sim_m_001_00287",
+   "source": "twitter_sim",
+   "author": "@fan_elclasico10",
+   "text": "someone mark Rodrygo PLEASE #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 397.7,
+   "external_id": "tw_sim_m_001_00352",
+   "source": "twitter_sim",
+   "author": "@tiki_ultra56",
+   "text": "half chances everywhere, one goal changes this #Argentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 400.6,
+   "external_id": "tw_sim_m_001_00304",
+   "source": "twitter_sim",
+   "author": "@fan_fan44",
+   "text": "RT @casa910: this ref is letting a lot go #BrazilArgentina",
+   "country": "DE"
+  },
+  {
+   "t_offset": 405.0,
+   "external_id": "tw_sim_m_001_00332",
+   "source": "twitter_sim",
+   "author": "@keeper_ultra61",
+   "text": "someone mark Raphinha PLEASE #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 407.2,
+   "external_id": "tw_sim_m_001_00308",
+   "source": "twitter_sim",
+   "author": "@9_vamos63",
+   "text": "midfield battle is intense #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 408.4,
+   "external_id": "tw_sim_m_001_00306",
+   "source": "twitter_sim",
+   "author": "@elclasico_matchday39",
+   "text": "someone mark Rodrygo PLEASE #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 409.8,
+   "external_id": "tw_sim_m_001_00359",
+   "source": "twitter_sim",
+   "author": "@9_torcida59",
+   "text": "midfield battle is intense #WorldCup2026",
+   "country": "NG"
+  },
+  {
+   "t_offset": 417.4,
+   "external_id": "tw_sim_m_001_00282",
+   "source": "twitter_sim",
+   "author": "@9_tiki41",
+   "text": "we need to press higher, too passive #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 419.4,
+   "external_id": "tw_sim_m_001_00301",
+   "source": "twitter_sim",
+   "author": "@fan_tiki58",
+   "text": "possession stats crazy for Brazil rn #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 421.4,
+   "external_id": "tw_sim_m_001_00314",
+   "source": "twitter_sim",
+   "author": "@tiki_elclasico67",
+   "text": "midfield battle is intense #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 429.7,
+   "external_id": "tw_sim_m_001_00297",
+   "source": "twitter_sim",
+   "author": "@ultra_taka10",
+   "text": "we need to press higher, too passive #Argentina",
+   "country": "FR"
+  },
+  {
+   "t_offset": 430.1,
+   "external_id": "tw_sim_m_001_00276",
+   "source": "twitter_sim",
+   "author": "@elclasico_fan74",
+   "text": "possession stats crazy for Brazil rn #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 430.5,
+   "external_id": "tw_sim_m_001_00335",
+   "source": "twitter_sim",
+   "author": "@elclasico_torcida98",
+   "text": "we need to press higher, too passive #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 439.2,
+   "external_id": "tw_sim_m_001_00320",
+   "source": "twitter_sim",
+   "author": "@footy_casa25",
+   "text": "RT @9139: half chances everywhere, one goal changes this #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 442.4,
+   "external_id": "tw_sim_m_001_00355",
+   "source": "twitter_sim",
+   "author": "@keeper_fan64",
+   "text": "Enzo with a great run! so close #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 443.0,
+   "external_id": "tw_sim_m_001_00324",
+   "source": "twitter_sim",
+   "author": "@footy_vamos17",
+   "text": "half chances everywhere, one goal changes this #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 446.5,
+   "external_id": "tw_sim_m_001_00307",
+   "source": "twitter_sim",
+   "author": "@matchday_vamos26",
+   "text": "we need to press higher, too passive #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 451.4,
+   "external_id": "tw_sim_m_001_00275",
+   "source": "twitter_sim",
+   "author": "@taka_920",
+   "text": "RT @footy251: Vinicius with a great run! so close #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 456.2,
+   "external_id": "tw_sim_m_001_00274",
+   "source": "twitter_sim",
+   "author": "@casa_taka21",
+   "text": "great save!! heart attack material #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 457.1,
+   "external_id": "tw_sim_m_001_00317",
+   "source": "twitter_sim",
+   "author": "@hincha_gol96",
+   "text": "Endrick is everywhere today, what a game so far #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 463.7,
+   "external_id": "tw_sim_m_001_00312",
+   "source": "twitter_sim",
+   "author": "@kop_ultra97",
+   "text": "half chances everywhere, one goal changes this #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 464.1,
+   "external_id": "tw_sim_m_001_00331",
+   "source": "twitter_sim",
+   "author": "@casa_tiki84",
+   "text": "this ref is letting a lot go #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 467.6,
+   "external_id": "tw_sim_m_001_00348",
+   "source": "twitter_sim",
+   "author": "@casa_tiki46",
+   "text": "Messi is everywhere today, what a game so far #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 468.8,
+   "external_id": "tw_sim_m_001_00299",
+   "source": "twitter_sim",
+   "author": "@matchday_kop23",
+   "text": "Lautaro with a great run! so close #Argentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 471.5,
+   "external_id": "tw_sim_m_001_00271",
+   "source": "twitter_sim",
+   "author": "@gol_hincha12",
+   "text": "this ref is letting a lot go #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 474.2,
+   "external_id": "tw_sim_m_001_00328",
+   "source": "twitter_sim",
+   "author": "@matchday_torcida20",
+   "text": "this ref is letting a lot go #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 480.6,
+   "external_id": "tw_sim_m_001_00340",
+   "source": "twitter_sim",
+   "author": "@torcida_footy76",
+   "text": "Endrick is everywhere today, what a game so far #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 483.1,
+   "external_id": "tw_sim_m_001_00279",
+   "source": "twitter_sim",
+   "author": "@footy_tiki1",
+   "text": "RT @taka652: Rodrygo is everywhere today, what a game so far #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 484.4,
+   "external_id": "tw_sim_m_001_00277",
+   "source": "twitter_sim",
+   "author": "@9_fan60",
+   "text": "we need to press higher, too passive #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 484.6,
+   "external_id": "tw_sim_m_001_00298",
+   "source": "twitter_sim",
+   "author": "@10_vamos84",
+   "text": "this ref is letting a lot go #WorldCup2026",
+   "country": "JP"
+  },
+  {
+   "t_offset": 486.3,
+   "external_id": "tw_sim_m_001_00351",
+   "source": "twitter_sim",
+   "author": "@10_keeper6",
+   "text": "we need to press higher, too passive #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 487.2,
+   "external_id": "tw_sim_m_001_00291",
+   "source": "twitter_sim",
+   "author": "@taka_vamos70",
+   "text": "half chances everywhere, one goal changes this #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 495.9,
+   "external_id": "tw_sim_m_001_00311",
+   "source": "twitter_sim",
+   "author": "@vamos_hincha61",
+   "text": "half chances everywhere, one goal changes this #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 503.1,
+   "external_id": "tw_sim_m_001_00310",
+   "source": "twitter_sim",
+   "author": "@fan_taka70",
+   "text": "Raphinha is everywhere today, what a game so far #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 504.9,
+   "external_id": "tw_sim_m_001_00290",
+   "source": "twitter_sim",
+   "author": "@gol_fan36",
+   "text": "this ref is letting a lot go #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 505.2,
+   "external_id": "tw_sim_m_001_00356",
+   "source": "twitter_sim",
+   "author": "@footy_fan78",
+   "text": "Endrick is everywhere today, what a game so far #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 505.7,
+   "external_id": "tw_sim_m_001_00313",
+   "source": "twitter_sim",
+   "author": "@10_torcida81",
+   "text": "we need to press higher, too passive #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 506.8,
+   "external_id": "tw_sim_m_001_00283",
+   "source": "twitter_sim",
+   "author": "@tiki_1016",
+   "text": "RT @ultra169: we need to press higher, too passive #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 508.3,
+   "external_id": "tw_sim_m_001_00315",
+   "source": "twitter_sim",
+   "author": "@ultra_ultra73",
+   "text": "someone mark Messi PLEASE #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 513.1,
+   "external_id": "tw_sim_m_001_00318",
+   "source": "twitter_sim",
+   "author": "@elclasico_vamos90",
+   "text": "Raphinha is everywhere today, what a game so far #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 521.3,
+   "external_id": "tw_sim_m_001_00341",
+   "source": "twitter_sim",
+   "author": "@gol_ultra84",
+   "text": "someone mark Vinicius PLEASE #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 523.2,
+   "external_id": "tw_sim_m_001_00327",
+   "source": "twitter_sim",
+   "author": "@ultra_vamos9",
+   "text": "half chances everywhere, one goal changes this #Argentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 523.2,
+   "external_id": "tw_sim_m_001_00344",
+   "source": "twitter_sim",
+   "author": "@elclasico_torcida46",
+   "text": "midfield battle is intense #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 524.8,
+   "external_id": "tw_sim_m_001_00273",
+   "source": "twitter_sim",
+   "author": "@footy_tiki55",
+   "text": "we need to press higher, too passive #WorldCup2026",
+   "country": "DE"
+  },
+  {
+   "t_offset": 524.8,
+   "external_id": "tw_sim_m_001_00329",
+   "source": "twitter_sim",
+   "author": "@vamos_matchday34",
+   "text": "someone mark Vinicius PLEASE #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 530.1,
+   "external_id": "tw_sim_m_001_00284",
+   "source": "twitter_sim",
+   "author": "@matchday_gol28",
+   "text": "great save!! heart attack material #WorldCup2026",
+   "country": "MX"
+  },
+  {
+   "t_offset": 534.4,
+   "external_id": "tw_sim_m_001_00323",
+   "source": "twitter_sim",
+   "author": "@torcida_hincha83",
+   "text": "RT @gol167: midfield battle is intense #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 536.8,
+   "external_id": "tw_sim_m_001_00358",
+   "source": "twitter_sim",
+   "author": "@matchday_taka90",
+   "text": "RT @hincha3: possession stats crazy for Brazil rn #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 546.3,
+   "external_id": "tw_sim_m_001_00305",
+   "source": "twitter_sim",
+   "author": "@10_casa7",
+   "text": "Enzo is everywhere today, what a game so far #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 548.5,
+   "external_id": "tw_sim_m_001_00296",
+   "source": "twitter_sim",
+   "author": "@kop_tiki92",
+   "text": "Endrick is everywhere today, what a game so far #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 560.4,
+   "external_id": "tw_sim_m_001_00347",
+   "source": "twitter_sim",
+   "author": "@matchday_taka87",
+   "text": "RT @casa896: this ref is letting a lot go #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 561.3,
+   "external_id": "tw_sim_m_001_00325",
+   "source": "twitter_sim",
+   "author": "@elclasico_1049",
+   "text": "Messi with a great run! so close #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 561.7,
+   "external_id": "tw_sim_m_001_00350",
+   "source": "twitter_sim",
+   "author": "@keeper_casa79",
+   "text": "we need to press higher, too passive #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 565.3,
+   "external_id": "tw_sim_m_001_00353",
+   "source": "twitter_sim",
+   "author": "@gol_footy83",
+   "text": "someone mark Raphinha PLEASE #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 569.5,
+   "external_id": "tw_sim_m_001_00338",
+   "source": "twitter_sim",
+   "author": "@matchday_casa9",
+   "text": "Alvarez with a great run! so close #WorldCup2026",
+   "country": "AR"
+  },
+  {
+   "t_offset": 571.8,
+   "external_id": "tw_sim_m_001_00319",
+   "source": "twitter_sim",
+   "author": "@fan_torcida57",
+   "text": "great save!! heart attack material #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 574.7,
+   "external_id": "tw_sim_m_001_00343",
+   "source": "twitter_sim",
+   "author": "@kop_1014",
+   "text": "someone mark Lautaro PLEASE #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 576.2,
+   "external_id": "tw_sim_m_001_00295",
+   "source": "twitter_sim",
+   "author": "@fan_gol30",
+   "text": "great save!! heart attack material #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 577.0,
+   "external_id": "tw_sim_m_001_00345",
+   "source": "twitter_sim",
+   "author": "@vamos_tiki31",
+   "text": "half chances everywhere, one goal changes this #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 579.3,
+   "external_id": "tw_sim_m_001_00281",
+   "source": "twitter_sim",
+   "author": "@fan_ultra65",
+   "text": "half chances everywhere, one goal changes this #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 584.1,
+   "external_id": "tw_sim_m_001_00300",
+   "source": "twitter_sim",
+   "author": "@hincha_ultra64",
+   "text": "we need to press higher, too passive #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 585.1,
+   "external_id": "tw_sim_m_001_00303",
+   "source": "twitter_sim",
+   "author": "@hincha_casa58",
+   "text": "possession stats crazy for Brazil rn #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 592.5,
+   "external_id": "tw_sim_m_001_00280",
+   "source": "twitter_sim",
+   "author": "@vamos_gol19",
+   "text": "midfield battle is intense #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 596.6,
+   "external_id": "tw_sim_m_001_00336",
+   "source": "twitter_sim",
+   "author": "@10_955",
+   "text": "great save!! heart attack material #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 598.3,
+   "external_id": "tw_sim_m_001_00316",
+   "source": "twitter_sim",
+   "author": "@vamos_gol23",
+   "text": "this ref is letting a lot go #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 598.8,
+   "external_id": "tw_sim_m_001_00292",
+   "source": "twitter_sim",
+   "author": "@hincha_footy36",
+   "text": "someone mark Raphinha PLEASE #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 610.6,
+   "external_id": "tw_sim_m_001_00322",
+   "source": "twitter_sim",
+   "author": "@casa_vamos76",
+   "text": "Messi is everywhere today, what a game so far #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 610.7,
+   "external_id": "tw_sim_m_001_00339",
+   "source": "twitter_sim",
+   "author": "@kop_tiki63",
+   "text": "great save!! heart attack material #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 610.9,
+   "external_id": "tw_sim_m_001_00360",
+   "source": "twitter_sim",
+   "author": "@keeper_kop64",
+   "text": "RT @ultra791: midfield battle is intense #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 614.1,
+   "external_id": "tw_sim_m_001_00285",
+   "source": "twitter_sim",
+   "author": "@matchday_elclasico23",
+   "text": "Vinicius with a great run! so close #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 614.1,
+   "external_id": "tw_sim_m_001_00342",
+   "source": "twitter_sim",
+   "author": "@vamos_kop27",
+   "text": "someone mark Vinicius PLEASE #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 617.0,
+   "external_id": "tw_sim_m_001_00294",
+   "source": "twitter_sim",
+   "author": "@taka_footy91",
+   "text": "Rodrygo with a great run! so close #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 618.4,
+   "external_id": "tw_sim_m_001_00326",
+   "source": "twitter_sim",
+   "author": "@9_ultra1",
+   "text": "great save!! heart attack material #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 622.5,
+   "external_id": "tw_sim_m_001_00278",
+   "source": "twitter_sim",
+   "author": "@matchday_hincha60",
+   "text": "RT @torcida299: half chances everywhere, one goal changes this #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 625.1,
+   "external_id": "tw_sim_m_001_00321",
+   "source": "twitter_sim",
+   "author": "@torcida_elclasico48",
+   "text": "Vinicius with a great run! so close #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 630.5,
+   "external_id": "tw_sim_m_001_00349",
+   "source": "twitter_sim",
+   "author": "@9_vamos54",
+   "text": "RT @9986: possession stats crazy for Brazil rn #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 630.6,
+   "external_id": "tw_sim_m_001_00309",
+   "source": "twitter_sim",
+   "author": "@keeper_gol34",
+   "text": "we need to press higher, too passive #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 633.9,
+   "external_id": "tw_sim_m_001_00330",
+   "source": "twitter_sim",
+   "author": "@vamos_taka65",
+   "text": "Vinicius with a great run! so close #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 638.9,
+   "external_id": "tw_sim_m_001_00272",
+   "source": "twitter_sim",
+   "author": "@vamos_taka67",
+   "text": "RT @kop719: this ref is letting a lot go #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 641.6,
+   "external_id": "tw_sim_m_001_00354",
+   "source": "twitter_sim",
+   "author": "@elclasico_gol65",
+   "text": "RT @vamos329: great save!! heart attack material #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 643.8,
+   "external_id": "tw_sim_m_001_00289",
+   "source": "twitter_sim",
+   "author": "@casa_elclasico36",
+   "text": "RT @10177: someone mark Endrick PLEASE #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 649.7,
+   "external_id": "tw_sim_m_001_00357",
+   "source": "twitter_sim",
+   "author": "@hincha_keeper43",
+   "text": "great save!! heart attack material #WorldCup2026",
+   "country": "AR"
+  },
+  {
+   "t_offset": 650.3,
+   "external_id": "tw_sim_m_001_00337",
+   "source": "twitter_sim",
+   "author": "@tiki_torcida3",
+   "text": "half chances everywhere, one goal changes this #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 660.0,
+   "external_id": "tw_sim_m_001_00462",
+   "source": "twitter_sim",
+   "author": "@footy_matchday29",
+   "text": "GOOOOOOOAL!!!! Raphinha!!!! 🔥🔥🔥 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 660.3,
+   "external_id": "tw_sim_m_001_00361",
+   "source": "twitter_sim",
+   "author": "@casa_kop14",
+   "text": "Enzo SIUUUU 🔥 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 660.3,
+   "external_id": "tw_sim_m_001_00382",
+   "source": "twitter_sim",
+   "author": "@taka_torcida53",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇦🇷 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 661.4,
+   "external_id": "tw_sim_m_001_00474",
+   "source": "twitter_sim",
+   "author": "@vamos_kop89",
+   "text": "that finish from Rodrygo was pure class 😍 #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 662.1,
+   "external_id": "tw_sim_m_001_00535",
+   "source": "twitter_sim",
+   "author": "@matchday_footy37",
+   "text": "Messi SIUUUU 🔥 #Argentina",
+   "country": "DE"
+  },
+  {
+   "t_offset": 662.2,
+   "external_id": "tw_sim_m_001_00410",
+   "source": "twitter_sim",
+   "author": "@taka_952",
+   "text": "I'M SHAKING, Vinicius you beauty!!! #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 662.9,
+   "external_id": "tw_sim_m_001_00498",
+   "source": "twitter_sim",
+   "author": "@casa_keeper96",
+   "text": "I'M SHAKING, Rodrygo you beauty!!! #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 663.2,
+   "external_id": "tw_sim_m_001_00517",
+   "source": "twitter_sim",
+   "author": "@torcida_fan97",
+   "text": "Rodrygo SIUUUU 🔥 #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 663.7,
+   "external_id": "tw_sim_m_001_00527",
+   "source": "twitter_sim",
+   "author": "@9_tiki92",
+   "text": "WHAT A GOAL BY Raphinha!! unbelievable scenes 🇺🇸 #WorldCup2026",
+   "country": "US"
+  },
+  {
+   "t_offset": 663.8,
+   "external_id": "tw_sim_m_001_00408",
+   "source": "twitter_sim",
+   "author": "@matchday_gol23",
+   "text": "GOOOOOOOAL!!!! Vinicius!!!! 🔥🔥🔥 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 663.8,
+   "external_id": "tw_sim_m_001_00453",
+   "source": "twitter_sim",
+   "author": "@tiki_ultra13",
+   "text": "crying actual tears of joy right now 😭 🇯🇵 #BrazilvsArgentina",
+   "country": "JP"
+  },
+  {
+   "t_offset": 664.3,
+   "external_id": "tw_sim_m_001_00516",
+   "source": "twitter_sim",
+   "author": "@gol_ultra50",
+   "text": "RT @footy483: crying actual tears of joy right now 😭 🇦🇷 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 664.7,
+   "external_id": "tw_sim_m_001_00533",
+   "source": "twitter_sim",
+   "author": "@gol_tiki69",
+   "text": "WHAT A GOAL BY Endrick!! unbelievable scenes 🇬🇧 #Argentina",
+   "country": "GB"
+  },
+  {
+   "t_offset": 664.8,
+   "external_id": "tw_sim_m_001_00496",
+   "source": "twitter_sim",
+   "author": "@torcida_gol24",
+   "text": "crying actual tears of joy right now 😭 🇦🇷 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 664.9,
+   "external_id": "tw_sim_m_001_00376",
+   "source": "twitter_sim",
+   "author": "@10_ultra27",
+   "text": "WHAT A GOAL BY Vinicius!! unbelievable scenes 🇧🇷 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 665.4,
+   "external_id": "tw_sim_m_001_00448",
+   "source": "twitter_sim",
+   "author": "@ultra_kop63",
+   "text": "RT @kop719: goal of the tournament, no debate. Vinicius!! #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 665.8,
+   "external_id": "tw_sim_m_001_00458",
+   "source": "twitter_sim",
+   "author": "@casa_1096",
+   "text": "that finish from Enzo was pure class 😍 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 666.2,
+   "external_id": "tw_sim_m_001_00521",
+   "source": "twitter_sim",
+   "author": "@hincha_hincha71",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇬🇧 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 666.3,
+   "external_id": "tw_sim_m_001_00459",
+   "source": "twitter_sim",
+   "author": "@casa_965",
+   "text": "Lautaro SIUUUU 🔥 #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 666.7,
+   "external_id": "tw_sim_m_001_00537",
+   "source": "twitter_sim",
+   "author": "@hincha_vamos24",
+   "text": "Rodrygo SIUUUU 🔥 #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 666.8,
+   "external_id": "tw_sim_m_001_00492",
+   "source": "twitter_sim",
+   "author": "@casa_971",
+   "text": "WHAT A GOAL BY Raphinha!! unbelievable scenes 🇧🇷 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 667.1,
+   "external_id": "tw_sim_m_001_00503",
+   "source": "twitter_sim",
+   "author": "@tiki_taka72",
+   "text": "that finish from Messi was pure class 😍 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 667.2,
+   "external_id": "tw_sim_m_001_00418",
+   "source": "twitter_sim",
+   "author": "@taka_tiki64",
+   "text": "GOOOOOOOAL!!!! Endrick!!!! 🔥🔥🔥 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 668.1,
+   "external_id": "tw_sim_m_001_00387",
+   "source": "twitter_sim",
+   "author": "@ultra_casa83",
+   "text": "Enzo SIUUUU 🔥 #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 668.1,
+   "external_id": "tw_sim_m_001_00470",
+   "source": "twitter_sim",
+   "author": "@hincha_hincha10",
+   "text": "my neighbours definitely heard me scream #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 668.1,
+   "external_id": "tw_sim_m_001_00500",
+   "source": "twitter_sim",
+   "author": "@torcida_gol14",
+   "text": "goal of the tournament, no debate. Lautaro!! #Argentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 668.2,
+   "external_id": "tw_sim_m_001_00530",
+   "source": "twitter_sim",
+   "author": "@9_taka29",
+   "text": "Alvarez SIUUUU 🔥 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 668.9,
+   "external_id": "tw_sim_m_001_00469",
+   "source": "twitter_sim",
+   "author": "@10_kop98",
+   "text": "GOOOOOOOAL!!!! Endrick!!!! 🔥🔥🔥 #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 668.9,
+   "external_id": "tw_sim_m_001_00497",
+   "source": "twitter_sim",
+   "author": "@matchday_tiki12",
+   "text": "I'M SHAKING, Messi you beauty!!! #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 669.1,
+   "external_id": "tw_sim_m_001_00480",
+   "source": "twitter_sim",
+   "author": "@10_hincha74",
+   "text": "crying actual tears of joy right now 😭 🇮🇳 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 669.2,
+   "external_id": "tw_sim_m_001_00481",
+   "source": "twitter_sim",
+   "author": "@torcida_kop40",
+   "text": "crying actual tears of joy right now 😭 🇮🇹 #BrazilvsArgentina",
+   "country": "IT"
+  },
+  {
+   "t_offset": 669.2,
+   "external_id": "tw_sim_m_001_00511",
+   "source": "twitter_sim",
+   "author": "@ultra_kop27",
+   "text": "crying actual tears of joy right now 😭 🇧🇷 #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 669.5,
+   "external_id": "tw_sim_m_001_00522",
+   "source": "twitter_sim",
+   "author": "@10_tiki70",
+   "text": "goal of the tournament, no debate. Messi!! #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 669.6,
+   "external_id": "tw_sim_m_001_00391",
+   "source": "twitter_sim",
+   "author": "@taka_hincha6",
+   "text": "RT @vamos238: Alvarez SIUUUU 🔥 #WorldCup2026",
+   "country": "AR"
+  },
+  {
+   "t_offset": 669.8,
+   "external_id": "tw_sim_m_001_00426",
+   "source": "twitter_sim",
+   "author": "@taka_taka72",
+   "text": "Raphinha SIUUUU 🔥 #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 669.8,
+   "external_id": "tw_sim_m_001_00438",
+   "source": "twitter_sim",
+   "author": "@hincha_elclasico37",
+   "text": "my neighbours definitely heard me scream #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 670.0,
+   "external_id": "tw_sim_m_001_00398",
+   "source": "twitter_sim",
+   "author": "@vamos_vamos22",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇪🇸 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 671.0,
+   "external_id": "tw_sim_m_001_00431",
+   "source": "twitter_sim",
+   "author": "@ultra_fan61",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇧🇷 #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 671.1,
+   "external_id": "tw_sim_m_001_00531",
+   "source": "twitter_sim",
+   "author": "@taka_gol5",
+   "text": "that finish from Enzo was pure class 😍 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 671.2,
+   "external_id": "tw_sim_m_001_00396",
+   "source": "twitter_sim",
+   "author": "@vamos_vamos62",
+   "text": "that finish from Vinicius was pure class 😍 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 671.6,
+   "external_id": "tw_sim_m_001_00514",
+   "source": "twitter_sim",
+   "author": "@ultra_footy80",
+   "text": "Raphinha SIUUUU 🔥 #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 672.0,
+   "external_id": "tw_sim_m_001_00417",
+   "source": "twitter_sim",
+   "author": "@taka_kop14",
+   "text": "that finish from Lautaro was pure class 😍 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 672.3,
+   "external_id": "tw_sim_m_001_00404",
+   "source": "twitter_sim",
+   "author": "@10_taka79",
+   "text": "I'M SHAKING, Messi you beauty!!! #Brazil",
+   "country": "JP"
+  },
+  {
+   "t_offset": 672.6,
+   "external_id": "tw_sim_m_001_00397",
+   "source": "twitter_sim",
+   "author": "@gol_kop8",
+   "text": "RT @casa138: GOOOOOOOAL!!!! Endrick!!!! 🔥🔥🔥 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 672.9,
+   "external_id": "tw_sim_m_001_00463",
+   "source": "twitter_sim",
+   "author": "@kop_ultra5",
+   "text": "crying actual tears of joy right now 😭 🇧🇷 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 673.2,
+   "external_id": "tw_sim_m_001_00399",
+   "source": "twitter_sim",
+   "author": "@tiki_keeper77",
+   "text": "I'M SHAKING, Rodrygo you beauty!!! #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 673.6,
+   "external_id": "tw_sim_m_001_00412",
+   "source": "twitter_sim",
+   "author": "@fan_matchday44",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇳🇬 #BrazilvsArgentina",
+   "country": "NG"
+  },
+  {
+   "t_offset": 673.6,
+   "external_id": "tw_sim_m_001_00467",
+   "source": "twitter_sim",
+   "author": "@kop_tiki65",
+   "text": "my neighbours definitely heard me scream #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 674.0,
+   "external_id": "tw_sim_m_001_00449",
+   "source": "twitter_sim",
+   "author": "@gol_vamos91",
+   "text": "GOOOOOOOAL!!!! Alvarez!!!! 🔥🔥🔥 #Brazil",
+   "country": "FR"
+  },
+  {
+   "t_offset": 674.8,
+   "external_id": "tw_sim_m_001_00433",
+   "source": "twitter_sim",
+   "author": "@taka_tiki61",
+   "text": "I'M SHAKING, Rodrygo you beauty!!! #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 674.8,
+   "external_id": "tw_sim_m_001_00478",
+   "source": "twitter_sim",
+   "author": "@taka_taka81",
+   "text": "Lautaro SIUUUU 🔥 #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 675.0,
+   "external_id": "tw_sim_m_001_00367",
+   "source": "twitter_sim",
+   "author": "@9_hincha66",
+   "text": "RT @hincha761: goal of the tournament, no debate. Vinicius!! #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 675.3,
+   "external_id": "tw_sim_m_001_00403",
+   "source": "twitter_sim",
+   "author": "@footy_984",
+   "text": "RT @footy592: THE WHOLE BAR JUST EXPLODED 🇬🇧 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 676.0,
+   "external_id": "tw_sim_m_001_00430",
+   "source": "twitter_sim",
+   "author": "@keeper_1022",
+   "text": "Lautaro SIUUUU 🔥 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 676.0,
+   "external_id": "tw_sim_m_001_00471",
+   "source": "twitter_sim",
+   "author": "@tiki_taka77",
+   "text": "WHAT A GOAL BY Vinicius!! unbelievable scenes 🇧🇷 #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 676.2,
+   "external_id": "tw_sim_m_001_00441",
+   "source": "twitter_sim",
+   "author": "@tiki_1040",
+   "text": "that finish from Messi was pure class 😍 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 676.5,
+   "external_id": "tw_sim_m_001_00405",
+   "source": "twitter_sim",
+   "author": "@taka_vamos33",
+   "text": "my neighbours definitely heard me scream #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 676.8,
+   "external_id": "tw_sim_m_001_00508",
+   "source": "twitter_sim",
+   "author": "@ultra_matchday91",
+   "text": "crying actual tears of joy right now 😭 🇧🇷 #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 677.1,
+   "external_id": "tw_sim_m_001_00385",
+   "source": "twitter_sim",
+   "author": "@matchday_kop73",
+   "text": "goal of the tournament, no debate. Rodrygo!! #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 677.3,
+   "external_id": "tw_sim_m_001_00529",
+   "source": "twitter_sim",
+   "author": "@10_kop11",
+   "text": "WHAT A GOAL BY Vinicius!! unbelievable scenes 🇮🇳 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 678.1,
+   "external_id": "tw_sim_m_001_00380",
+   "source": "twitter_sim",
+   "author": "@casa_hincha18",
+   "text": "my neighbours definitely heard me scream #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 678.1,
+   "external_id": "tw_sim_m_001_00479",
+   "source": "twitter_sim",
+   "author": "@footy_elclasico29",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇪🇸 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 678.5,
+   "external_id": "tw_sim_m_001_00524",
+   "source": "twitter_sim",
+   "author": "@fan_torcida18",
+   "text": "my neighbours definitely heard me scream #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 679.1,
+   "external_id": "tw_sim_m_001_00483",
+   "source": "twitter_sim",
+   "author": "@casa_footy98",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇯🇵 #BrazilvsArgentina",
+   "country": "JP"
+  },
+  {
+   "t_offset": 679.4,
+   "external_id": "tw_sim_m_001_00491",
+   "source": "twitter_sim",
+   "author": "@casa_ultra12",
+   "text": "RT @tiki709: that finish from Endrick was pure class 😍 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 680.3,
+   "external_id": "tw_sim_m_001_00460",
+   "source": "twitter_sim",
+   "author": "@taka_1098",
+   "text": "goal of the tournament, no debate. Endrick!! #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 681.3,
+   "external_id": "tw_sim_m_001_00428",
+   "source": "twitter_sim",
+   "author": "@kop_casa82",
+   "text": "Enzo SIUUUU 🔥 #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 682.8,
+   "external_id": "tw_sim_m_001_00493",
+   "source": "twitter_sim",
+   "author": "@matchday_matchday94",
+   "text": "I'M SHAKING, Rodrygo you beauty!!! #BrazilvsArgentina",
+   "country": "FR"
+  },
+  {
+   "t_offset": 683.0,
+   "external_id": "tw_sim_m_001_00528",
+   "source": "twitter_sim",
+   "author": "@taka_1020",
+   "text": "I'M SHAKING, Rodrygo you beauty!!! #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 683.2,
+   "external_id": "tw_sim_m_001_00362",
+   "source": "twitter_sim",
+   "author": "@hincha_elclasico51",
+   "text": "crying actual tears of joy right now 😭 🇦🇷 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 683.4,
+   "external_id": "tw_sim_m_001_00379",
+   "source": "twitter_sim",
+   "author": "@ultra_matchday88",
+   "text": "RT @fan367: WHAT A GOAL BY Vinicius!! unbelievable scenes 🇧🇷 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 684.0,
+   "external_id": "tw_sim_m_001_00465",
+   "source": "twitter_sim",
+   "author": "@ultra_matchday5",
+   "text": "I'M SHAKING, Enzo you beauty!!! #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 684.5,
+   "external_id": "tw_sim_m_001_00486",
+   "source": "twitter_sim",
+   "author": "@tiki_keeper32",
+   "text": "RT @keeper888: that finish from Alvarez was pure class 😍 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 684.7,
+   "external_id": "tw_sim_m_001_00415",
+   "source": "twitter_sim",
+   "author": "@tiki_fan71",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇧🇷 #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 685.2,
+   "external_id": "tw_sim_m_001_00402",
+   "source": "twitter_sim",
+   "author": "@ultra_1018",
+   "text": "Alvarez SIUUUU 🔥 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 685.7,
+   "external_id": "tw_sim_m_001_00487",
+   "source": "twitter_sim",
+   "author": "@gol_ultra58",
+   "text": "my neighbours definitely heard me scream #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 685.8,
+   "external_id": "tw_sim_m_001_00437",
+   "source": "twitter_sim",
+   "author": "@10_932",
+   "text": "GOOOOOOOAL!!!! Rodrygo!!!! 🔥🔥🔥 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 685.9,
+   "external_id": "tw_sim_m_001_00424",
+   "source": "twitter_sim",
+   "author": "@vamos_kop81",
+   "text": "I'M SHAKING, Rodrygo you beauty!!! #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 686.3,
+   "external_id": "tw_sim_m_001_00450",
+   "source": "twitter_sim",
+   "author": "@keeper_elclasico77",
+   "text": "that finish from Endrick was pure class 😍 #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 686.4,
+   "external_id": "tw_sim_m_001_00489",
+   "source": "twitter_sim",
+   "author": "@kop_keeper83",
+   "text": "my neighbours definitely heard me scream #WorldCup2026",
+   "country": "DE"
+  },
+  {
+   "t_offset": 686.4,
+   "external_id": "tw_sim_m_001_00539",
+   "source": "twitter_sim",
+   "author": "@ultra_gol22",
+   "text": "goal of the tournament, no debate. Alvarez!! #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 686.9,
+   "external_id": "tw_sim_m_001_00370",
+   "source": "twitter_sim",
+   "author": "@elclasico_kop21",
+   "text": "crying actual tears of joy right now 😭 🇬🇧 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 687.1,
+   "external_id": "tw_sim_m_001_00490",
+   "source": "twitter_sim",
+   "author": "@kop_953",
+   "text": "I'M SHAKING, Messi you beauty!!! #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 687.3,
+   "external_id": "tw_sim_m_001_00440",
+   "source": "twitter_sim",
+   "author": "@casa_ultra37",
+   "text": "RT @gol993: that finish from Enzo was pure class 😍 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 687.4,
+   "external_id": "tw_sim_m_001_00488",
+   "source": "twitter_sim",
+   "author": "@gol_torcida38",
+   "text": "crying actual tears of joy right now 😭 🇲🇽 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 687.6,
+   "external_id": "tw_sim_m_001_00414",
+   "source": "twitter_sim",
+   "author": "@hincha_hincha41",
+   "text": "Messi SIUUUU 🔥 #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 687.6,
+   "external_id": "tw_sim_m_001_00464",
+   "source": "twitter_sim",
+   "author": "@matchday_fan74",
+   "text": "goal of the tournament, no debate. Raphinha!! #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 687.8,
+   "external_id": "tw_sim_m_001_00540",
+   "source": "twitter_sim",
+   "author": "@vamos_elclasico19",
+   "text": "crying actual tears of joy right now 😭 🇦🇷 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 688.0,
+   "external_id": "tw_sim_m_001_00434",
+   "source": "twitter_sim",
+   "author": "@10_matchday45",
+   "text": "crying actual tears of joy right now 😭 🇩🇪 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 688.9,
+   "external_id": "tw_sim_m_001_00435",
+   "source": "twitter_sim",
+   "author": "@matchday_footy1",
+   "text": "Vinicius SIUUUU 🔥 #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 689.1,
+   "external_id": "tw_sim_m_001_00536",
+   "source": "twitter_sim",
+   "author": "@elclasico_footy95",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇧🇷 #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 689.3,
+   "external_id": "tw_sim_m_001_00520",
+   "source": "twitter_sim",
+   "author": "@taka_kop66",
+   "text": "goal of the tournament, no debate. Vinicius!! #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 689.9,
+   "external_id": "tw_sim_m_001_00495",
+   "source": "twitter_sim",
+   "author": "@keeper_1057",
+   "text": "Messi SIUUUU 🔥 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 690.1,
+   "external_id": "tw_sim_m_001_00390",
+   "source": "twitter_sim",
+   "author": "@casa_kop58",
+   "text": "crying actual tears of joy right now 😭 🇧🇷 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 690.5,
+   "external_id": "tw_sim_m_001_00407",
+   "source": "twitter_sim",
+   "author": "@vamos_1012",
+   "text": "my neighbours definitely heard me scream #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 690.5,
+   "external_id": "tw_sim_m_001_00477",
+   "source": "twitter_sim",
+   "author": "@keeper_footy6",
+   "text": "Lautaro SIUUUU 🔥 #Argentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 691.0,
+   "external_id": "tw_sim_m_001_00425",
+   "source": "twitter_sim",
+   "author": "@9_ultra89",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇦🇷 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 691.4,
+   "external_id": "tw_sim_m_001_00436",
+   "source": "twitter_sim",
+   "author": "@matchday_footy99",
+   "text": "RT @vamos970: Lautaro SIUUUU 🔥 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 691.4,
+   "external_id": "tw_sim_m_001_00454",
+   "source": "twitter_sim",
+   "author": "@ultra_gol74",
+   "text": "I'M SHAKING, Rodrygo you beauty!!! #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 691.5,
+   "external_id": "tw_sim_m_001_00510",
+   "source": "twitter_sim",
+   "author": "@footy_vamos65",
+   "text": "GOOOOOOOAL!!!! Raphinha!!!! 🔥🔥🔥 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 692.2,
+   "external_id": "tw_sim_m_001_00373",
+   "source": "twitter_sim",
+   "author": "@vamos_footy15",
+   "text": "that finish from Rodrygo was pure class 😍 #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 692.3,
+   "external_id": "tw_sim_m_001_00377",
+   "source": "twitter_sim",
+   "author": "@gol_casa33",
+   "text": "RT @tiki39: WHAT A GOAL BY Enzo!! unbelievable scenes 🇦🇷 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 692.4,
+   "external_id": "tw_sim_m_001_00375",
+   "source": "twitter_sim",
+   "author": "@torcida_tiki66",
+   "text": "crying actual tears of joy right now 😭 🇧🇷 #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 692.9,
+   "external_id": "tw_sim_m_001_00422",
+   "source": "twitter_sim",
+   "author": "@10_taka47",
+   "text": "goal of the tournament, no debate. Endrick!! #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 692.9,
+   "external_id": "tw_sim_m_001_00432",
+   "source": "twitter_sim",
+   "author": "@9_matchday30",
+   "text": "RT @kop87: crying actual tears of joy right now 😭 🇧🇷 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 693.0,
+   "external_id": "tw_sim_m_001_00372",
+   "source": "twitter_sim",
+   "author": "@casa_1070",
+   "text": "crying actual tears of joy right now 😭 🇧🇷 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 693.4,
+   "external_id": "tw_sim_m_001_00427",
+   "source": "twitter_sim",
+   "author": "@torcida_casa37",
+   "text": "WHAT A GOAL BY Endrick!! unbelievable scenes 🇫🇷 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 693.5,
+   "external_id": "tw_sim_m_001_00378",
+   "source": "twitter_sim",
+   "author": "@10_tiki3",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇦🇷 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 693.6,
+   "external_id": "tw_sim_m_001_00515",
+   "source": "twitter_sim",
+   "author": "@matchday_hincha22",
+   "text": "crying actual tears of joy right now 😭 🇧🇷 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 693.8,
+   "external_id": "tw_sim_m_001_00502",
+   "source": "twitter_sim",
+   "author": "@matchday_torcida1",
+   "text": "Enzo SIUUUU 🔥 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 694.0,
+   "external_id": "tw_sim_m_001_00386",
+   "source": "twitter_sim",
+   "author": "@10_elclasico47",
+   "text": "goal of the tournament, no debate. Vinicius!! #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 694.1,
+   "external_id": "tw_sim_m_001_00532",
+   "source": "twitter_sim",
+   "author": "@elclasico_keeper67",
+   "text": "Messi SIUUUU 🔥 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 694.3,
+   "external_id": "tw_sim_m_001_00501",
+   "source": "twitter_sim",
+   "author": "@taka_kop79",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇪🇸 #Brazil",
+   "country": "ES"
+  },
+  {
+   "t_offset": 694.7,
+   "external_id": "tw_sim_m_001_00499",
+   "source": "twitter_sim",
+   "author": "@fan_matchday61",
+   "text": "goal of the tournament, no debate. Lautaro!! #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 695.0,
+   "external_id": "tw_sim_m_001_00371",
+   "source": "twitter_sim",
+   "author": "@matchday_vamos74",
+   "text": "RT @tiki612: Raphinha SIUUUU 🔥 #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 695.1,
+   "external_id": "tw_sim_m_001_00447",
+   "source": "twitter_sim",
+   "author": "@kop_taka99",
+   "text": "GOOOOOOOAL!!!! Rodrygo!!!! 🔥🔥🔥 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 695.2,
+   "external_id": "tw_sim_m_001_00411",
+   "source": "twitter_sim",
+   "author": "@taka_taka36",
+   "text": "WHAT A GOAL BY Messi!! unbelievable scenes 🇦🇷 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 695.4,
+   "external_id": "tw_sim_m_001_00389",
+   "source": "twitter_sim",
+   "author": "@matchday_kop60",
+   "text": "I'M SHAKING, Enzo you beauty!!! #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 695.4,
+   "external_id": "tw_sim_m_001_00400",
+   "source": "twitter_sim",
+   "author": "@ultra_casa61",
+   "text": "RT @10847: I'M SHAKING, Endrick you beauty!!! #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 696.4,
+   "external_id": "tw_sim_m_001_00388",
+   "source": "twitter_sim",
+   "author": "@footy_999",
+   "text": "WHAT A GOAL BY Raphinha!! unbelievable scenes 🇮🇳 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 698.0,
+   "external_id": "tw_sim_m_001_00461",
+   "source": "twitter_sim",
+   "author": "@keeper_keeper51",
+   "text": "my neighbours definitely heard me scream #Argentina",
+   "country": "FR"
+  },
+  {
+   "t_offset": 698.3,
+   "external_id": "tw_sim_m_001_00446",
+   "source": "twitter_sim",
+   "author": "@footy_casa36",
+   "text": "that finish from Vinicius was pure class 😍 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 698.4,
+   "external_id": "tw_sim_m_001_00409",
+   "source": "twitter_sim",
+   "author": "@hincha_casa87",
+   "text": "crying actual tears of joy right now 😭 🇧🇷 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 698.5,
+   "external_id": "tw_sim_m_001_00455",
+   "source": "twitter_sim",
+   "author": "@taka_hincha78",
+   "text": "crying actual tears of joy right now 😭 🇧🇷 #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 698.7,
+   "external_id": "tw_sim_m_001_00506",
+   "source": "twitter_sim",
+   "author": "@gol_matchday73",
+   "text": "crying actual tears of joy right now 😭 🇦🇷 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 698.9,
+   "external_id": "tw_sim_m_001_00439",
+   "source": "twitter_sim",
+   "author": "@matchday_ultra82",
+   "text": "my neighbours definitely heard me scream #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 699.0,
+   "external_id": "tw_sim_m_001_00365",
+   "source": "twitter_sim",
+   "author": "@10_matchday55",
+   "text": "goal of the tournament, no debate. Messi!! #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 699.2,
+   "external_id": "tw_sim_m_001_00394",
+   "source": "twitter_sim",
+   "author": "@taka_vamos62",
+   "text": "that finish from Enzo was pure class 😍 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 699.3,
+   "external_id": "tw_sim_m_001_00472",
+   "source": "twitter_sim",
+   "author": "@kop_fan15",
+   "text": "RT @hincha205: I'M SHAKING, Enzo you beauty!!! #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 699.3,
+   "external_id": "tw_sim_m_001_00476",
+   "source": "twitter_sim",
+   "author": "@9_hincha49",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇧🇷 #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 700.0,
+   "external_id": "tw_sim_m_001_00445",
+   "source": "twitter_sim",
+   "author": "@ultra_elclasico62",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇧🇷 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 700.1,
+   "external_id": "tw_sim_m_001_00374",
+   "source": "twitter_sim",
+   "author": "@ultra_933",
+   "text": "GOOOOOOOAL!!!! Rodrygo!!!! 🔥🔥🔥 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 700.1,
+   "external_id": "tw_sim_m_001_00392",
+   "source": "twitter_sim",
+   "author": "@gol_tiki14",
+   "text": "my neighbours definitely heard me scream #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 700.9,
+   "external_id": "tw_sim_m_001_00526",
+   "source": "twitter_sim",
+   "author": "@9_kop38",
+   "text": "my neighbours definitely heard me scream #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 701.2,
+   "external_id": "tw_sim_m_001_00505",
+   "source": "twitter_sim",
+   "author": "@vamos_vamos5",
+   "text": "I'M SHAKING, Vinicius you beauty!!! #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 701.3,
+   "external_id": "tw_sim_m_001_00482",
+   "source": "twitter_sim",
+   "author": "@kop_footy98",
+   "text": "RT @ultra189: I'M SHAKING, Alvarez you beauty!!! #WorldCup2026",
+   "country": "IN"
+  },
+  {
+   "t_offset": 701.6,
+   "external_id": "tw_sim_m_001_00523",
+   "source": "twitter_sim",
+   "author": "@ultra_keeper23",
+   "text": "Vinicius SIUUUU 🔥 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 701.9,
+   "external_id": "tw_sim_m_001_00421",
+   "source": "twitter_sim",
+   "author": "@taka_elclasico24",
+   "text": "GOOOOOOOAL!!!! Messi!!!! 🔥🔥🔥 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 701.9,
+   "external_id": "tw_sim_m_001_00468",
+   "source": "twitter_sim",
+   "author": "@10_matchday51",
+   "text": "Endrick SIUUUU 🔥 #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 701.9,
+   "external_id": "tw_sim_m_001_00475",
+   "source": "twitter_sim",
+   "author": "@elclasico_gol60",
+   "text": "RT @torcida809: THE WHOLE BAR JUST EXPLODED 🇧🇷 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 702.2,
+   "external_id": "tw_sim_m_001_00393",
+   "source": "twitter_sim",
+   "author": "@9_taka76",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇦🇷 #Argentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 703.1,
+   "external_id": "tw_sim_m_001_00456",
+   "source": "twitter_sim",
+   "author": "@taka_1048",
+   "text": "Rodrygo SIUUUU 🔥 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 703.5,
+   "external_id": "tw_sim_m_001_00507",
+   "source": "twitter_sim",
+   "author": "@taka_fan20",
+   "text": "that finish from Vinicius was pure class 😍 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 703.5,
+   "external_id": "tw_sim_m_001_00512",
+   "source": "twitter_sim",
+   "author": "@fan_tiki60",
+   "text": "GOOOOOOOAL!!!! Messi!!!! 🔥🔥🔥 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 703.8,
+   "external_id": "tw_sim_m_001_00466",
+   "source": "twitter_sim",
+   "author": "@10_ultra99",
+   "text": "GOOOOOOOAL!!!! Messi!!!! 🔥🔥🔥 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 704.2,
+   "external_id": "tw_sim_m_001_00364",
+   "source": "twitter_sim",
+   "author": "@taka_kop91",
+   "text": "that finish from Alvarez was pure class 😍 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 704.4,
+   "external_id": "tw_sim_m_001_00473",
+   "source": "twitter_sim",
+   "author": "@matchday_keeper61",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇧🇷 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 704.6,
+   "external_id": "tw_sim_m_001_00369",
+   "source": "twitter_sim",
+   "author": "@torcida_torcida38",
+   "text": "that finish from Endrick was pure class 😍 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 704.8,
+   "external_id": "tw_sim_m_001_00381",
+   "source": "twitter_sim",
+   "author": "@kop_ultra6",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇪🇸 #WorldCup2026",
+   "country": "ES"
+  },
+  {
+   "t_offset": 705.9,
+   "external_id": "tw_sim_m_001_00518",
+   "source": "twitter_sim",
+   "author": "@keeper_vamos30",
+   "text": "Messi SIUUUU 🔥 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 706.1,
+   "external_id": "tw_sim_m_001_00494",
+   "source": "twitter_sim",
+   "author": "@elclasico_footy59",
+   "text": "WHAT A GOAL BY Rodrygo!! unbelievable scenes 🇧🇷 #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 706.5,
+   "external_id": "tw_sim_m_001_00443",
+   "source": "twitter_sim",
+   "author": "@9_footy16",
+   "text": "I'M SHAKING, Endrick you beauty!!! #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 706.6,
+   "external_id": "tw_sim_m_001_00452",
+   "source": "twitter_sim",
+   "author": "@hincha_tiki93",
+   "text": "GOOOOOOOAL!!!! Alvarez!!!! 🔥🔥🔥 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 706.7,
+   "external_id": "tw_sim_m_001_00534",
+   "source": "twitter_sim",
+   "author": "@matchday_matchday22",
+   "text": "goal of the tournament, no debate. Enzo!! #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 707.1,
+   "external_id": "tw_sim_m_001_00368",
+   "source": "twitter_sim",
+   "author": "@tiki_gol2",
+   "text": "my neighbours definitely heard me scream #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 707.1,
+   "external_id": "tw_sim_m_001_00442",
+   "source": "twitter_sim",
+   "author": "@kop_gol35",
+   "text": "Lautaro SIUUUU 🔥 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 707.7,
+   "external_id": "tw_sim_m_001_00457",
+   "source": "twitter_sim",
+   "author": "@fan_torcida67",
+   "text": "crying actual tears of joy right now 😭 🇧🇷 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 708.0,
+   "external_id": "tw_sim_m_001_00420",
+   "source": "twitter_sim",
+   "author": "@casa_keeper16",
+   "text": "crying actual tears of joy right now 😭 🇦🇷 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 708.0,
+   "external_id": "tw_sim_m_001_00538",
+   "source": "twitter_sim",
+   "author": "@9_hincha85",
+   "text": "I'M SHAKING, Rodrygo you beauty!!! #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 708.4,
+   "external_id": "tw_sim_m_001_00504",
+   "source": "twitter_sim",
+   "author": "@tiki_footy15",
+   "text": "THE WHOLE BAR JUST EXPLODED 🇧🇷 #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 708.5,
+   "external_id": "tw_sim_m_001_00366",
+   "source": "twitter_sim",
+   "author": "@casa_matchday88",
+   "text": "RT @gol205: my neighbours definitely heard me scream #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 708.5,
+   "external_id": "tw_sim_m_001_00429",
+   "source": "twitter_sim",
+   "author": "@tiki_matchday91",
+   "text": "WHAT A GOAL BY Endrick!! unbelievable scenes 🇧🇷 #BrazilArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 710.8,
+   "external_id": "tw_sim_m_001_00485",
+   "source": "twitter_sim",
+   "author": "@torcida_hincha5",
+   "text": "I'M SHAKING, Lautaro you beauty!!! #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 711.3,
+   "external_id": "tw_sim_m_001_00423",
+   "source": "twitter_sim",
+   "author": "@elclasico_hincha72",
+   "text": "I'M SHAKING, Rodrygo you beauty!!! #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 711.5,
+   "external_id": "tw_sim_m_001_00509",
+   "source": "twitter_sim",
+   "author": "@keeper_matchday28",
+   "text": "my neighbours definitely heard me scream #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 713.2,
+   "external_id": "tw_sim_m_001_00395",
+   "source": "twitter_sim",
+   "author": "@elclasico_torcida20",
+   "text": "Rodrygo SIUUUU 🔥 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 713.2,
+   "external_id": "tw_sim_m_001_00525",
+   "source": "twitter_sim",
+   "author": "@keeper_torcida27",
+   "text": "Rodrygo SIUUUU 🔥 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 713.4,
+   "external_id": "tw_sim_m_001_00513",
+   "source": "twitter_sim",
+   "author": "@torcida_tiki26",
+   "text": "GOOOOOOOAL!!!! Raphinha!!!! 🔥🔥🔥 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 713.9,
+   "external_id": "tw_sim_m_001_00419",
+   "source": "twitter_sim",
+   "author": "@kop_gol68",
+   "text": "I'M SHAKING, Enzo you beauty!!! #Argentina",
+   "country": "IT"
+  },
+  {
+   "t_offset": 714.1,
+   "external_id": "tw_sim_m_001_00401",
+   "source": "twitter_sim",
+   "author": "@footy_1067",
+   "text": "WHAT A GOAL BY Messi!! unbelievable scenes 🇦🇷 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 714.3,
+   "external_id": "tw_sim_m_001_00383",
+   "source": "twitter_sim",
+   "author": "@casa_gol97",
+   "text": "that finish from Rodrygo was pure class 😍 #Argentina",
+   "country": "IN"
+  },
+  {
+   "t_offset": 714.9,
+   "external_id": "tw_sim_m_001_00451",
+   "source": "twitter_sim",
+   "author": "@taka_keeper1",
+   "text": "crying actual tears of joy right now 😭 🇦🇷 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 715.9,
+   "external_id": "tw_sim_m_001_00384",
+   "source": "twitter_sim",
+   "author": "@kop_hincha13",
+   "text": "RT @vamos975: WHAT A GOAL BY Raphinha!! unbelievable scenes 🇳🇬 #WorldCup2026",
+   "country": "NG"
+  },
+  {
+   "t_offset": 715.9,
+   "external_id": "tw_sim_m_001_00416",
+   "source": "twitter_sim",
+   "author": "@torcida_vamos95",
+   "text": "that finish from Lautaro was pure class 😍 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 716.8,
+   "external_id": "tw_sim_m_001_00413",
+   "source": "twitter_sim",
+   "author": "@tiki_keeper88",
+   "text": "my neighbours definitely heard me scream #Argentina",
+   "country": "DE"
+  },
+  {
+   "t_offset": 716.8,
+   "external_id": "tw_sim_m_001_00519",
+   "source": "twitter_sim",
+   "author": "@tiki_tiki59",
+   "text": "goal of the tournament, no debate. Raphinha!! #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 717.8,
+   "external_id": "tw_sim_m_001_00363",
+   "source": "twitter_sim",
+   "author": "@matchday_tiki92",
+   "text": "my neighbours definitely heard me scream #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 718.5,
+   "external_id": "tw_sim_m_001_00444",
+   "source": "twitter_sim",
+   "author": "@keeper_ultra67",
+   "text": "Enzo SIUUUU 🔥 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 719.2,
+   "external_id": "tw_sim_m_001_00484",
+   "source": "twitter_sim",
+   "author": "@vamos_kop65",
+   "text": "that finish from Alvarez was pure class 😍 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 719.3,
+   "external_id": "tw_sim_m_001_00406",
+   "source": "twitter_sim",
+   "author": "@casa_ultra28",
+   "text": "I'M SHAKING, Enzo you beauty!!! #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 750.2,
+   "external_id": "tw_sim_m_001_00562",
+   "source": "twitter_sim",
+   "author": "@elclasico_keeper53",
+   "text": "heading home hoarse and happy 🇮🇹 #Brazil",
+   "country": "IT"
+  },
+  {
+   "t_offset": 750.3,
+   "external_id": "tw_sim_m_001_00544",
+   "source": "twitter_sim",
+   "author": "@matchday_elclasico25",
+   "text": "RT @keeper360: Full time. What a match. Football is beautiful #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 750.7,
+   "external_id": "tw_sim_m_001_00593",
+   "source": "twitter_sim",
+   "author": "@hincha_elclasico26",
+   "text": "RT @gol623: proud of this team regardless of the result #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 750.7,
+   "external_id": "tw_sim_m_001_00594",
+   "source": "twitter_sim",
+   "author": "@vamos_tiki78",
+   "text": "heading home hoarse and happy 🇦🇷 #BrazilArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 751.0,
+   "external_id": "tw_sim_m_001_00545",
+   "source": "twitter_sim",
+   "author": "@ultra_fan78",
+   "text": "that result changes the whole group, wow #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 751.1,
+   "external_id": "tw_sim_m_001_00557",
+   "source": "twitter_sim",
+   "author": "@gol_matchday13",
+   "text": "RT @kop15: proud of this team regardless of the result #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 751.7,
+   "external_id": "tw_sim_m_001_00556",
+   "source": "twitter_sim",
+   "author": "@kop_hincha10",
+   "text": "gutted... we go again next match 😭 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 751.9,
+   "external_id": "tw_sim_m_001_00555",
+   "source": "twitter_sim",
+   "author": "@footy_gol44",
+   "text": "proud of this team regardless of the result #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 751.9,
+   "external_id": "tw_sim_m_001_00582",
+   "source": "twitter_sim",
+   "author": "@matchday_keeper80",
+   "text": "that result changes the whole group, wow #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 752.2,
+   "external_id": "tw_sim_m_001_00569",
+   "source": "twitter_sim",
+   "author": "@casa_948",
+   "text": "proud of this team regardless of the result #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 753.3,
+   "external_id": "tw_sim_m_001_00571",
+   "source": "twitter_sim",
+   "author": "@casa_casa74",
+   "text": "gutted... we go again next match 😭 #WorldCup2026",
+   "country": "AR"
+  },
+  {
+   "t_offset": 753.9,
+   "external_id": "tw_sim_m_001_00546",
+   "source": "twitter_sim",
+   "author": "@fan_keeper36",
+   "text": "Full time. What a match. Football is beautiful #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 754.1,
+   "external_id": "tw_sim_m_001_00570",
+   "source": "twitter_sim",
+   "author": "@gol_elclasico18",
+   "text": "WE WON!! never a doubt 🇦🇷 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 754.8,
+   "external_id": "tw_sim_m_001_00566",
+   "source": "twitter_sim",
+   "author": "@keeper_gol14",
+   "text": "gutted... we go again next match 😭 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 755.2,
+   "external_id": "tw_sim_m_001_00560",
+   "source": "twitter_sim",
+   "author": "@casa_keeper32",
+   "text": "gutted... we go again next match 😭 #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 755.3,
+   "external_id": "tw_sim_m_001_00580",
+   "source": "twitter_sim",
+   "author": "@ultra_vamos95",
+   "text": "that result changes the whole group, wow #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 756.8,
+   "external_id": "tw_sim_m_001_00588",
+   "source": "twitter_sim",
+   "author": "@casa_casa92",
+   "text": "Full time. What a match. Football is beautiful #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 757.2,
+   "external_id": "tw_sim_m_001_00563",
+   "source": "twitter_sim",
+   "author": "@fan_matchday45",
+   "text": "that result changes the whole group, wow #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 757.2,
+   "external_id": "tw_sim_m_001_00575",
+   "source": "twitter_sim",
+   "author": "@matchday_hincha83",
+   "text": "heading home hoarse and happy 🇦🇷 #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 757.8,
+   "external_id": "tw_sim_m_001_00590",
+   "source": "twitter_sim",
+   "author": "@keeper_casa69",
+   "text": "heading home hoarse and happy 🇧🇷 #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 758.3,
+   "external_id": "tw_sim_m_001_00584",
+   "source": "twitter_sim",
+   "author": "@matchday_1088",
+   "text": "gutted... we go again next match 😭 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 759.0,
+   "external_id": "tw_sim_m_001_00591",
+   "source": "twitter_sim",
+   "author": "@tiki_matchday61",
+   "text": "proud of this team regardless of the result #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 759.2,
+   "external_id": "tw_sim_m_001_00596",
+   "source": "twitter_sim",
+   "author": "@keeper_matchday21",
+   "text": "gutted... we go again next match 😭 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 760.0,
+   "external_id": "tw_sim_m_001_00548",
+   "source": "twitter_sim",
+   "author": "@vamos_ultra19",
+   "text": "RT @torcida625: gutted... we go again next match 😭 #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 760.0,
+   "external_id": "tw_sim_m_001_00578",
+   "source": "twitter_sim",
+   "author": "@fan_tiki95",
+   "text": "WE WON!! never a doubt 🇧🇷 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 761.0,
+   "external_id": "tw_sim_m_001_00583",
+   "source": "twitter_sim",
+   "author": "@fan_ultra22",
+   "text": "RT @9920: gutted... we go again next match 😭 #Brazil",
+   "country": "AR"
+  },
+  {
+   "t_offset": 762.6,
+   "external_id": "tw_sim_m_001_00564",
+   "source": "twitter_sim",
+   "author": "@hincha_keeper99",
+   "text": "Full time. What a match. Football is beautiful #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 762.8,
+   "external_id": "tw_sim_m_001_00559",
+   "source": "twitter_sim",
+   "author": "@torcida_gol76",
+   "text": "heading home hoarse and happy 🇯🇵 #Argentina",
+   "country": "JP"
+  },
+  {
+   "t_offset": 763.7,
+   "external_id": "tw_sim_m_001_00558",
+   "source": "twitter_sim",
+   "author": "@hincha_fan26",
+   "text": "Full time. What a match. Football is beautiful #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 765.9,
+   "external_id": "tw_sim_m_001_00541",
+   "source": "twitter_sim",
+   "author": "@gol_ultra69",
+   "text": "proud of this team regardless of the result #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 766.1,
+   "external_id": "tw_sim_m_001_00552",
+   "source": "twitter_sim",
+   "author": "@tiki_fan59",
+   "text": "Full time. What a match. Football is beautiful #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 766.1,
+   "external_id": "tw_sim_m_001_00589",
+   "source": "twitter_sim",
+   "author": "@tiki_kop57",
+   "text": "heading home hoarse and happy 🇧🇷 #BrazilvsArgentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 766.2,
+   "external_id": "tw_sim_m_001_00549",
+   "source": "twitter_sim",
+   "author": "@elclasico_keeper3",
+   "text": "RT @fan73: proud of this team regardless of the result #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 766.2,
+   "external_id": "tw_sim_m_001_00585",
+   "source": "twitter_sim",
+   "author": "@torcida_fan3",
+   "text": "proud of this team regardless of the result #Brazil",
+   "country": "BR"
+  },
+  {
+   "t_offset": 768.2,
+   "external_id": "tw_sim_m_001_00595",
+   "source": "twitter_sim",
+   "author": "@matchday_taka45",
+   "text": "heading home hoarse and happy 🇫🇷 #Brazil",
+   "country": "FR"
+  },
+  {
+   "t_offset": 768.8,
+   "external_id": "tw_sim_m_001_00565",
+   "source": "twitter_sim",
+   "author": "@vamos_vamos23",
+   "text": "gutted... we go again next match 😭 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 769.1,
+   "external_id": "tw_sim_m_001_00542",
+   "source": "twitter_sim",
+   "author": "@9_keeper99",
+   "text": "WE WON!! never a doubt 🇯🇵 #WorldCup2026",
+   "country": "JP"
+  },
+  {
+   "t_offset": 770.0,
+   "external_id": "tw_sim_m_001_00587",
+   "source": "twitter_sim",
+   "author": "@matchday_casa34",
+   "text": "proud of this team regardless of the result #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 770.3,
+   "external_id": "tw_sim_m_001_00543",
+   "source": "twitter_sim",
+   "author": "@tiki_footy87",
+   "text": "that result changes the whole group, wow #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 770.7,
+   "external_id": "tw_sim_m_001_00554",
+   "source": "twitter_sim",
+   "author": "@hincha_vamos50",
+   "text": "heading home hoarse and happy 🇦🇷 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 771.2,
+   "external_id": "tw_sim_m_001_00551",
+   "source": "twitter_sim",
+   "author": "@vamos_ultra73",
+   "text": "heading home hoarse and happy 🇳🇬 #BrazilArgentina",
+   "country": "NG"
+  },
+  {
+   "t_offset": 772.2,
+   "external_id": "tw_sim_m_001_00567",
+   "source": "twitter_sim",
+   "author": "@tiki_1026",
+   "text": "RT @hincha739: proud of this team regardless of the result #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 772.4,
+   "external_id": "tw_sim_m_001_00568",
+   "source": "twitter_sim",
+   "author": "@torcida_929",
+   "text": "gutted... we go again next match 😭 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 772.7,
+   "external_id": "tw_sim_m_001_00598",
+   "source": "twitter_sim",
+   "author": "@kop_torcida24",
+   "text": "heading home hoarse and happy 🇧🇷 #WorldCup2026",
+   "country": null
+  },
+  {
+   "t_offset": 772.8,
+   "external_id": "tw_sim_m_001_00553",
+   "source": "twitter_sim",
+   "author": "@9_ultra81",
+   "text": "RT @9677: gutted... we go again next match 😭 #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 773.1,
+   "external_id": "tw_sim_m_001_00547",
+   "source": "twitter_sim",
+   "author": "@gol_950",
+   "text": "WE WON!! never a doubt 🇦🇷 #BrazilvsArgentina",
+   "country": "AR"
+  },
+  {
+   "t_offset": 773.2,
+   "external_id": "tw_sim_m_001_00577",
+   "source": "twitter_sim",
+   "author": "@fan_989",
+   "text": "heading home hoarse and happy 🇯🇵 #Brazil",
+   "country": "JP"
+  },
+  {
+   "t_offset": 773.7,
+   "external_id": "tw_sim_m_001_00600",
+   "source": "twitter_sim",
+   "author": "@matchday_1023",
+   "text": "heading home hoarse and happy 🇧🇷 #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 774.2,
+   "external_id": "tw_sim_m_001_00597",
+   "source": "twitter_sim",
+   "author": "@tiki_fan76",
+   "text": "RT @torcida311: that result changes the whole group, wow #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 775.0,
+   "external_id": "tw_sim_m_001_00599",
+   "source": "twitter_sim",
+   "author": "@keeper_hincha4",
+   "text": "Full time. What a match. Football is beautiful #WorldCup2026",
+   "country": "BR"
+  },
+  {
+   "t_offset": 776.2,
+   "external_id": "tw_sim_m_001_00573",
+   "source": "twitter_sim",
+   "author": "@kop_footy54",
+   "text": "that result changes the whole group, wow #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 776.2,
+   "external_id": "tw_sim_m_001_00586",
+   "source": "twitter_sim",
+   "author": "@tiki_vamos76",
+   "text": "proud of this team regardless of the result #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 776.9,
+   "external_id": "tw_sim_m_001_00550",
+   "source": "twitter_sim",
+   "author": "@9_footy66",
+   "text": "Full time. What a match. Football is beautiful #Brazil",
+   "country": null
+  },
+  {
+   "t_offset": 776.9,
+   "external_id": "tw_sim_m_001_00592",
+   "source": "twitter_sim",
+   "author": "@kop_ultra40",
+   "text": "WE WON!! never a doubt 🇮🇹 #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 777.8,
+   "external_id": "tw_sim_m_001_00561",
+   "source": "twitter_sim",
+   "author": "@vamos_fan1",
+   "text": "heading home hoarse and happy 🇧🇷 #Argentina",
+   "country": "BR"
+  },
+  {
+   "t_offset": 778.0,
+   "external_id": "tw_sim_m_001_00579",
+   "source": "twitter_sim",
+   "author": "@gol_taka47",
+   "text": "Full time. What a match. Football is beautiful #BrazilArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 778.2,
+   "external_id": "tw_sim_m_001_00581",
+   "source": "twitter_sim",
+   "author": "@10_elclasico7",
+   "text": "heading home hoarse and happy 🇦🇷 #BrazilvsArgentina",
+   "country": null
+  },
+  {
+   "t_offset": 779.1,
+   "external_id": "tw_sim_m_001_00572",
+   "source": "twitter_sim",
+   "author": "@footy_1095",
+   "text": "gutted... we go again next match 😭 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 779.4,
+   "external_id": "tw_sim_m_001_00574",
+   "source": "twitter_sim",
+   "author": "@ultra_keeper64",
+   "text": "RT @9491: heading home hoarse and happy 🇧🇷 #Argentina",
+   "country": null
+  },
+  {
+   "t_offset": 780.0,
+   "external_id": "tw_sim_m_001_00576",
+   "source": "twitter_sim",
+   "author": "@footy_keeper60",
+   "text": "gutted... we go again next match 😭 #Brazil",
+   "country": null
+  }
+ ]
+}
