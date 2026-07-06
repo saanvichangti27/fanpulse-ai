@@ -1,0 +1,126 @@
+{
+  "theme_archetype": {
+    "primary_archetype": "5 (Luxury) mixed with 4 (Swiss & High-Contrast)",
+    "mode": "dark",
+    "description": "Ultra-premium, cinematic dark editorial. Reconciles the high energy of live football with an elite, analytical luxury brand feel. Employs deep midnight navy, generous whitespace, and sharp metallic silver/chrome accents."
+  },
+  "colors": {
+    "background": {
+      "base": "#050914",
+      "surface": "rgba(255, 255, 255, 0.02)",
+      "surface_elevated": "rgba(255, 255, 255, 0.05)",
+      "glass": "rgba(5, 9, 20, 0.7)"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#94A3B8",
+      "tertiary": "#64748B",
+      "metallic": "linear-gradient(135deg, #E2E8F0 0%, #94A3B8 100%)"
+    },
+    "border": {
+      "subtle": "rgba(255, 255, 255, 0.08)",
+      "focus": "rgba(255, 255, 255, 0.25)"
+    },
+    "accents": {
+      "primary": "#E2E8F0",
+      "chrome_highlight": "#F8FAFC",
+      "pulse": "rgba(226, 232, 240, 0.15)"
+    },
+    "heatmap_segments": {
+      "superfans": "#FACC15",
+      "traveling_ultras": "#EF4444",
+      "casual_streamers": "#60A5FA",
+      "deal_seekers": "#A78BFA",
+      "lapsed_fans": "#9CA3AF"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "headings": "PP Neue Machina, Cabinet Grotesk, sans-serif",
+      "body": "JetBrains Mono, IBM Plex Mono, monospace"
+    },
+    "scales": {
+      "h1": "text-5xl md:text-6xl tracking-tighter leading-none font-black",
+      "h2": "text-3xl md:text-4xl tracking-tight leading-tight",
+      "h3": "text-xl md:text-2xl tracking-tight",
+      "body": "text-base leading-relaxed tracking-wide",
+      "overline": "text-xs tracking-[0.2em] uppercase text-secondary"
+    },
+    "rules": [
+      "Headings must use tight letter spacing (tracking-tighter).",
+      "Never use Inter or generic sans for headings.",
+      "Data points, numbers, and stats MUST use the monospace font.",
+      "Overlines/labels must be uppercase, tiny, and widely spaced."
+    ]
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "Tailwind standard, utilizing generous p-12, p-16, p-24 for macro layout, tight gap-4, gap-6 for micro data grids.",
+    "grid_system": "Bento Grid Protocol. Asymmetrical. Mode A (Tetris Grid) for Landing. Mode B (Control Room) for Dashboard views.",
+    "alignment": "Optical alignment. Left-align text blocks. Never center everything.",
+    "borders": "Expose the skeleton. Use border-white/5 or border-white/10 to create technical grid lines."
+  },
+  "components_strategy": {
+    "cards": "Avoid default Shadcn rounded cards. Use Crystal Glassmorphism: bg-white/5 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]. Zero or very small border radius (rounded-none or rounded-sm) for a sharp, editorial feel.",
+    "buttons": "Flat metallic or transparent with sharp borders. Hover states must increase brightness and text contrast.",
+    "charts": "Recharts with customized tooltips (glassmorphism). Use monochromatic lines or specific segment colors. Hide axis lines, keep grid lines very subtle (white/5).",
+    "forms_inputs": "Shadcn components heavily customized: bg-transparent, border-b only or sharp rectangular borders. No focus rings—use bottom border highlights instead.",
+    "navigation": "Sticky glass header (backdrop-blur-xl bg-[#050914]/70 border-b border-white/10). Hidden hamburger on desktop—full links visible."
+  },
+  "animations_and_interactions": {
+    "scroll_reveals": "Framer Motion. Staggered fade-up and slight scale-in (0.98 to 1).",
+    "hover_states": "Interactive elements must have distinct hover states. Slight lift (-translate-y-1) for cards. High-contrast text on hover.",
+    "custom_cursor": "Implement a custom cursor: a subtle silver ring (mix-blend-difference) that expands when hovering over interactive elements.",
+    "page_transitions": "Smooth fade out/in between the 4 main views."
+  },
+  "the_3d_element": {
+    "library": "@react-three/fiber and @react-three/drei",
+    "concept": "A premium, rotating 3D football dominating the hero section.",
+    "material": "Dark glossy or metallic material. High roughness for pentagons, high metalness for hexagons.",
+    "lighting": "Dynamic directional lights (e.g., cold blue from one side, stark white from the other) to create dramatic rim lighting against the dark midnight navy background.",
+    "interaction": "Reacts slightly to mouse position/scroll."
+  },
+  "pages_breakdown": {
+    "landing": {
+      "structure": "Nav + Hero with 3D football + Feature preview strips (Live Pulse, Moments, Strategies, ROI).",
+      "visuals": "Massive PP Neue Machina typography contrasting with technical monospace sub-labels."
+    },
+    "heatmap": {
+      "structure": "Elongated world/country heatmap + fan segmentation stats panel.",
+      "data_vis": "Custom grid or Recharts scatter/treemap for the heatmap, colored by the 5 segments. Highlight dominant emotion."
+    },
+    "strategies": {
+      "structure": "Filter panel (Location, 15 Marketing Sectors) + List of AI-recommended strategies.",
+      "cards": "Glassmorphism recommendation cards detailing Segment, Channel, Timing, Copy A/B, ROI multipliers, Confidence badges."
+    },
+    "matches": {
+      "structure": "Match schedule sidebar + Ticket Demand & Match Stats main panel.",
+      "components": "0-100 Ticket Demand gauge, Recharts sentiment timeline, Moments list (Goal, Red Card, VAR, Full-Time)."
+    }
+  },
+  "media_urls": {
+    "background_texture": {
+      "url": "https://images.unsplash.com/photo-1634648852208-fc7e55a15751?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxzaWx2ZXIlMjBsdXh1cnklMjBwcmVtaXVtJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzgzMDU4OTM0fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Silver luxury premium abstract wavy texture. Use with high transparency (opacity-10) and mix-blend-overlay for a premium metallic grain effect."
+    },
+    "hero_stadium_bg": {
+      "url": "https://images.pexels.com/photos/35898730/pexels-photo-35898730.jpeg",
+      "description": "Aerial view of a night football match. Use in the hero section masked with a heavy midnight navy gradient overlay (e.g., from-[#050914]/95 to-transparent) to set the mood behind the 3D football."
+    },
+    "metallic_accent": {
+      "url": "https://images.pexels.com/photos/3591962/pexels-photo-3591962.jpeg",
+      "description": "Striking abstract metallic curves. Use for card backgrounds on the Strategies page with heavy blur."
+    }
+  },
+  "testing_attributes": {
+    "rules": "All interactive and key informational elements MUST include a data-testid attribute.",
+    "convention": "kebab-case, role-based. e.g., data-testid='hero-get-started-button', data-testid='heatmap-segment-superfans'."
+  },
+  "instructions_to_main_agent": [
+    "Strictly adhere to the dark midnight navy (#050914) and silver/chrome metallic palette.",
+    "Do not use generic fonts. Import and use PP Neue Machina (or Cabinet Grotesk as fallback) for headings and JetBrains Mono for body/data.",
+    "Build the 3D football using @react-three/fiber in a dedicated component.",
+    "Use Framer Motion for scroll reveals and the custom cursor.",
+    "Generate robust mock JSON data to populate the heatmap, strategies, and match stats.",
+    "Apply `data-testid` to all interactive elements for automated testing."
+  ]
+}
