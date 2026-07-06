@@ -52,6 +52,7 @@ def run():
         check("server boot", booted)
         if not booted:
             sys.exit(1)
+<<<<<<< HEAD
 
         # ---- Static/model endpoints (work before any live data) ----
         inds = requests.get(f"{BASE}/industries").json()["industries"]
@@ -172,6 +173,59 @@ def run():
         print()
         if failures:
             print(f"SMOKE TEST FAILED — {len(failures)} failure(s): {failures}")
+=======
+            
+        print("Server booted! Triggering replay...")
+        res = requests.post("http://127.0.0.1:8000/api/v1/replay/control", json={
+            "action": "start",
+            "match_id": "m_001",
+            "file": "replay_dev_fixture.json",
+            "speed": 100.0
+        })
+        print(f"Replay started: {res.json()}")
+        
+        # Poll endpoints (increased timeout for HF model download)
+        timeout = time.time() + 300
+        goal_found = False
+        
+        # Check for moment directly in DB
+        engine = create_engine(f"sqlite:///{db_path}")
+        
+        while time.time() < timeout:
+            time.sleep(1)
+            
+            try:
+                kpi_res = requests.get("http://127.0.0.1:8000/api/v1/matches/m_001/kpis").json()
+                print(f"KPIs: mentions={kpi_res.get('total_mentions', 0)}, emo={kpi_res.get('top_emotion')}")
+                
+                with engine.connect() as conn:
+                    moments = conn.execute(text("SELECT event_tag FROM moments")).fetchall()
+                    tags = [m.event_tag for m in moments]
+                    if "goal" in tags:
+                        print("✅ Goal moment detected!")
+                        # Wait up to 10 seconds for the async LLM call to finish and save campaigns
+                        print("Waiting for background AI campaign generation...")
+                        campaigns = []
+                        for _ in range(10):
+                            campaigns = conn.execute(text("SELECT * FROM campaigns")).fetchall()
+                            if campaigns:
+                                break
+                            time.sleep(1)
+
+                        if campaigns:
+                            print(f"✅ Auto-campaign generated! Found {len(campaigns)} campaigns.")
+                            for c in campaigns:
+                                print(f"  - Industry: {c.industry}, Segment: {c.target_segment}")
+                        else:
+                            print("⚠️ Goal moment detected, but no campaigns generated (likely missing GEMINI_API_KEY). Proceeding anyway since ingestion works.")
+                        goal_found = True
+                        break
+            except Exception as e:
+                print(f"Polling error: {e}")
+                
+        if not goal_found:
+            print("❌ Test failed: Goal moment not found within timeout.")
+>>>>>>> 5e3cf5d6ad24a48fc2c67b1e4005162bbf9db5bb
             sys.exit(1)
         print("SMOKE TEST PASSED — full pipeline green.")
     finally:

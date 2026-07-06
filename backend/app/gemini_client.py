@@ -11,6 +11,7 @@ import logging
 from ..contracts import CampaignBrief, Copy, CopyVariant, ContentIdeaDetail, GEMINI_DEBOUNCE_SECONDS
 from .strategy.playbook import PLAYBOOK
 
+<<<<<<< HEAD
 logger = logging.getLogger(__name__)
 
 _client = None
@@ -92,6 +93,49 @@ _COPY_SCHEMA = {
             "properties": {"headline": {"type": "STRING"}, "body": {"type": "STRING"},
                            "cta": {"type": "STRING"}},
             "required": ["headline", "body", "cta"],
+=======
+def generate_copy(brief: CampaignBrief) -> tuple[Copy, bool]:
+    """Returns (Copy, llm_fallback)"""
+    
+    playbook_entry = PLAYBOOK.get((brief.emotion.value, brief.industry.value))
+    if not playbook_entry:
+        playbook_entry = PLAYBOOK.get(("*", brief.industry.value), PLAYBOOK.get(("*", "*")))
+    
+    template = playbook_entry["template"]
+    
+    prompt = f"""
+    You are a senior performance-marketing copywriter.
+    Generate a short, high-conversion marketing copy based on the following context.
+    Use ONLY the numbers provided; never invent statistics.
+    Output strictly in JSON matching the schema.
+    
+    Context:
+    Industry: {brief.industry.value}
+    Emotion: {brief.emotion.value}
+    Segment: {brief.segment.display_name} (Traits: {', '.join(brief.segment.defining_traits)})
+    Channel: {brief.channel.value}
+    Window: {brief.window_minutes} minutes
+    Trending Topics: {', '.join(brief.top_topics)}
+    Tone Notes: {brief.tone_notes}
+    """
+    
+    response_schema = {
+        "type": "OBJECT",
+        "properties": {
+            "headline": {"type": "STRING", "description": "Max 60 chars"},
+            "body": {"type": "STRING", "description": "Max 140 chars"},
+            "cta": {"type": "STRING", "description": "Max 25 chars"},
+            "hashtags": {"type": "ARRAY", "items": {"type": "STRING"}, "description": "Max 4 hashtags"},
+            "variant_b": {
+                "type": "OBJECT",
+                "properties": {
+                    "headline": {"type": "STRING"},
+                    "body": {"type": "STRING"},
+                    "cta": {"type": "STRING"}
+                },
+                "required": ["headline", "body", "cta"]
+            }
+>>>>>>> 5e3cf5d6ad24a48fc2c67b1e4005162bbf9db5bb
         },
     },
     "required": ["headline", "body", "cta", "hashtags", "variant_b"],
@@ -122,8 +166,23 @@ trending topic/moment where natural. Headline <= 60 chars, body <= 140 chars, CT
 <= 4 hashtags, plus one alternative variant_b."""
 
     try:
+<<<<<<< HEAD
         data = _call_gemini(prompt, _COPY_SCHEMA)
         vb = data.get("variant_b", {})
+=======
+        client = genai.Client()
+        response = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_schema=response_schema,
+                temperature=0.7,
+            ),
+        )
+        data = json.loads(response.text)
+        variant = data.get("variant_b", {})
+>>>>>>> 5e3cf5d6ad24a48fc2c67b1e4005162bbf9db5bb
         copy = Copy(
             headline=data.get("headline", ""), body=data.get("body", ""),
             cta=data.get("cta", ""), hashtags=data.get("hashtags", [])[:4],
