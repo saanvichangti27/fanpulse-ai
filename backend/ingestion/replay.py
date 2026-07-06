@@ -12,7 +12,7 @@ class ReplayController:
     def __init__(self):
         self._running_tasks = {}
 
-    async def _replay_loop(self, match_id: str, file_path: str, speed: float, out_queue: asyncio.Queue):
+    async def _replay_loop(self, key: tuple, match_id: str, file_path: str, speed: float, out_queue: asyncio.Queue):
         logger.info(f"Starting replay for match {match_id} from {file_path} at {speed}x speed.")
         try:
             with open(file_path, "r", encoding="utf-8") as f:
@@ -36,36 +36,45 @@ class ReplayController:
                     await asyncio.sleep(wait_time)
                 
                 # Check for cancellation
-                if match_id not in self._running_tasks:
-                    logger.info(f"Replay for {match_id} stopped.")
+                if key not in self._running_tasks:
+                    logger.info(f"Replay {key} stopped.")
                     break
-                    
-                # Put item in queue (could be message or marker)
+
+                # Inject match_id so markers/messages route to the right match
+                if isinstance(item, dict) and "match_id" not in item:
+                    item = {**item, "match_id": match_id}
                 await out_queue.put(item)
-                
+
         except asyncio.CancelledError:
-            logger.info(f"Replay task cancelled for {match_id}")
+            logger.info(f"Replay task cancelled: {key}")
         except Exception as e:
             logger.error(f"Error during replay: {e}")
         finally:
-            self.stop(match_id)
+            self._running_tasks.pop(key, None)
 
     def start(self, match_id: str, file: str, speed: float, out_queue: asyncio.Queue):
-        if match_id in self._running_tasks:
-            logger.warning(f"Replay for {match_id} is already running.")
+        # Keyed by (match_id, file) so multiple SOURCES can replay concurrently
+        # for the same match (e.g. YouTube capture + simulated Twitter stream).
+        key = (match_id, file)
+        if key in self._running_tasks:
+            logger.warning(f"Replay {key} is already running.")
             return
-            
+
         base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         file_path = os.path.join(base_dir, "data", "replay", file)
         if not os.path.exists(file_path):
             logger.error(f"Replay file not found: {file_path}")
             print(f"ERROR: Replay file not found: {file_path}")
             return
-            
-        task = asyncio.create_task(self._replay_loop(match_id, file_path, speed, out_queue))
-        self._running_tasks[match_id] = task
 
-    def stop(self, match_id: str):
-        task = self._running_tasks.pop(match_id, None)
-        if task and not task.done():
-            task.cancel()
+        task = asyncio.create_task(self._replay_loop(key, match_id, file_path, speed, out_queue))
+        self._running_tasks[key] = task
+
+    def stop(self, match_id: str, file: str | None = None):
+        """Stop one replay (match_id + file) or every replay for the match."""
+        keys = [k for k in list(self._running_tasks)
+                if k[0] == match_id and (file is None or k[1] == file)]
+        for k in keys:
+            task = self._running_tasks.pop(k, None)
+            if task and not task.done():
+                task.cancel()

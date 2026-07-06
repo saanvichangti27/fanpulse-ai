@@ -1,0 +1,106 @@
+industry,emotion,fit,rationale
+food_delivery,joy,0.85,celebration ordering spike; goal moments drive impulse food orders
+food_delivery,surprise,0.75,shock moments keep fans glued to screens and snacking
+food_delivery,anger,0.60,comfort-food consolation angle works on frustration
+food_delivery,sadness,0.65,comfort-food consolation is a proven response to a loss
+food_delivery,fear,0.50,tense matches sustain snacking but no strong trigger
+food_delivery,disgust,0.30,weak association; avoid pushing offers into revulsion
+food_delivery,neutral,0.40,baseline ordering context without emotional lift
+merch_apparel,joy,0.90,wins drive impulse commemorate-the-moment purchases
+merch_apparel,surprise,0.70,upset results create collectible-moment framing
+merch_apparel,anger,0.30,fans do not buy team merch while angry at the team
+merch_apparel,sadness,0.35,weak; loyalty merch possible but conversion drops
+merch_apparel,fear,0.35,tension does not convert to apparel purchases
+merch_apparel,disgust,0.20,worst context for brand-adjacent purchases
+merch_apparel,neutral,0.35,baseline catalog interest only
+beverages,joy,0.85,celebration toasts; strongest consumption trigger
+beverages,surprise,0.70,big moments prompt watch-party consumption
+beverages,anger,0.50,drown-the-frustration angle is moderate
+beverages,sadness,0.45,commiseration consumption exists but is weaker
+beverages,fear,0.55,nervy matches sustain in-match consumption
+beverages,disgust,0.30,weak association
+beverages,neutral,0.40,steady watch-along consumption baseline
+streaming_ott,joy,0.70,highlight replays and next-match tune-in ride the high
+streaming_ott,surprise,0.75,drama drives dont-miss-the-next-one signups
+streaming_ott,anger,0.35,frustrated fans disengage from more football content
+streaming_ott,sadness,0.30,losing fans reduce short-term viewing intent
+streaming_ott,fear,0.60,tension is peak dont-look-away tune-in messaging
+streaming_ott,disgust,0.25,weak
+streaming_ott,neutral,0.45,tune-in reminders work at any time
+content_creator,joy,0.90,celebration reaction content peaks engagement
+content_creator,surprise,0.95,shock moments are the highest-velocity content trigger
+content_creator,anger,0.85,controversy and rant content drives strong engagement
+content_creator,sadness,0.70,emotional aftermath content resonates
+content_creator,fear,0.80,tension narration and live reaction content performs
+content_creator,disgust,0.60,outrage content engages but risks brand safety
+content_creator,neutral,0.40,analysis content baseline
+sportswear_fashion,joy,0.85,victory halo effect on team-adjacent apparel
+sportswear_fashion,surprise,0.65,moment-driven brand attention
+sportswear_fashion,anger,0.30,poor context for aspirational brand messaging
+sportswear_fashion,sadness,0.30,poor context
+sportswear_fashion,fear,0.30,poor context
+sportswear_fashion,disgust,0.20,worst context
+sportswear_fashion,neutral,0.35,baseline brand interest
+betting_igaming,joy,0.60,winners re-engage; requires responsible-ads gating
+betting_igaming,surprise,0.80,odds swings are the category's native trigger; gated
+betting_igaming,anger,0.50,chase-loss risk; ethically gated to soft messaging
+betting_igaming,sadness,0.30,vulnerable context; suppress targeting
+betting_igaming,fear,0.75,in-play tension is native to live odds; gated
+betting_igaming,disgust,0.25,suppress
+betting_igaming,neutral,0.40,pre-match odds baseline; gated
+gaming_esports,joy,0.80,hype converts to play-it-yourself installs
+gaming_esports,surprise,0.80,recreate-the-moment gameplay angle
+gaming_esports,anger,0.55,rage-quit-reality play-the-game distraction angle
+gaming_esports,sadness,0.50,escapism angle is moderate
+gaming_esports,fear,0.50,moderate
+gaming_esports,disgust,0.35,weak
+gaming_esports,neutral,0.40,baseline install prompts
+retail_ecommerce,joy,0.80,flash-sale culture rides celebration moments
+retail_ecommerce,surprise,0.70,moment-driven flash offers
+retail_ecommerce,anger,0.40,retail therapy angle is weak-moderate
+retail_ecommerce,sadness,0.40,retail therapy angle is weak-moderate
+retail_ecommerce,fear,0.35,weak
+retail_ecommerce,disgust,0.25,weak
+retail_ecommerce,neutral,0.35,baseline
+telecom,joy,0.50,broad-reach sponsor visibility at emotional peaks
+telecom,surprise,0.45,moderate attention halo
+telecom,anger,0.25,weak
+telecom,sadness,0.25,weak
+telecom,fear,0.30,weak
+telecom,disgust,0.20,weak
+telecom,neutral,0.35,always-on plan/upsell baseline
+consumer_electronics,joy,0.60,watch-it-bigger upgrade angle after great matches
+consumer_electronics,surprise,0.55,moment quality showcases big-screen value
+consumer_electronics,anger,0.30,weak
+consumer_electronics,sadness,0.30,weak
+consumer_electronics,fear,0.30,weak
+consumer_electronics,disgust,0.20,weak
+consumer_electronics,neutral,0.35,pre-tournament upgrade baseline
+fintech,joy,0.40,celebratory context gives mild brand halo only
+fintech,surprise,0.40,mild
+fintech,anger,0.20,poor context for trust messaging
+fintech,sadness,0.20,poor context
+fintech,fear,0.25,poor context for financial products
+fintech,disgust,0.15,worst context
+fintech,neutral,0.35,baseline acquisition offers
+travel_hospitality,joy,0.80,follow-your-team trips ride qualification euphoria
+travel_hospitality,surprise,0.60,unexpected runs create travel intent
+travel_hospitality,anger,0.30,weak
+travel_hospitality,sadness,0.35,weak
+travel_hospitality,fear,0.30,weak
+travel_hospitality,disgust,0.20,weak
+travel_hospitality,neutral,0.40,baseline fan-trip planning
+pubs_venues,joy,0.85,celebrate-here messaging for the next fixture
+pubs_venues,surprise,0.70,watch-the-drama-together angle
+pubs_venues,anger,0.50,commiserate-together angle is moderate
+pubs_venues,sadness,0.45,commiserate-together angle
+pubs_venues,fear,0.60,tense matches are better in a crowd
+pubs_venues,disgust,0.30,weak
+pubs_venues,neutral,0.40,baseline watch-it-here promotion
+automotive,joy,0.50,sponsor-tier brand halo at peaks
+automotive,surprise,0.45,mild
+automotive,anger,0.25,weak
+automotive,sadness,0.25,weak
+automotive,fear,0.25,weak
+automotive,disgust,0.20,weak
+automotive,neutral,0.35,always-on brand campaigns baseline

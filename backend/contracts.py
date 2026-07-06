@@ -23,6 +23,7 @@ class Source(str, Enum):
     youtube = "youtube"
     news = "news"
     replay = "replay"
+    twitter_sim = "twitter_sim"   # SIMULATED tweet stream (X API has no free tier) — always labeled as such
 
 class Channel(str, Enum):
     push = "push"
@@ -356,19 +357,6 @@ class ContentIdeaCard(BaseModel):
     confidence: float
     llm_fallback: bool
     created_at: str
-
-class Segment(BaseModel):
-    segment_id: SegmentId
-    display_name: str
-    size: int
-    share_pct: float
-    avg_engagement_score: float
-    avg_annual_value_usd: float
-    top_countries: List[str]
-    preferred_channel: Channel
-    churn_risk_pct: float
-    defining_traits: List[str]
-    activity_share_pct: float
 
 class SegmentReport(BaseModel):
     segments: List[Segment]

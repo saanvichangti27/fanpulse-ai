@@ -1,99 +1,99 @@
 import asyncio
 import logging
 import json
+import os
 import uuid
+from collections import deque
 from datetime import datetime, timezone
 from typing import Callable, Awaitable
 
 from sqlalchemy import text
 
 from ..contracts import (
-    MomentEvent, 
-    MOMENT_VOLUME_RATIO, 
-    MOMENT_SENTIMENT_DELTA_PP, 
-    MOMENT_COOLDOWN_SECONDS
+    MomentEvent,
+    MOMENT_VOLUME_RATIO,
+    MOMENT_SENTIMENT_DELTA_PP,
+    MOMENT_COOLDOWN_SECONDS,
 )
 from .nlp import classify_batch
 from .analytics import get_momentum
-from .geo import get_country_from_source
+from .geo import infer_country
 
 logger = logging.getLogger(__name__)
 
-# To hold forced markers from replay
-_forced_markers = {}
+# Forced markers from replay files, queued PER MATCH so rapid-fire markers at
+# high replay speed are never lost (a single slot used to get overwritten).
+_forced_markers: dict[str, deque] = {}
 
-async def _poll_youtube(connector, match_id: str, queue: asyncio.Queue):
-    """Poll YouTube comments every 20s and queue RawMessageIn items."""
+# Set by run_ingestion; the replay router feeds items into this queue.
+INGESTION_QUEUE: asyncio.Queue | None = None
+
+
+async def _poll_youtube(connector, queue: asyncio.Queue):
+    """Poll YouTube LIVE CHAT and enqueue RawMessageIn items. The connector
+    tells us how long to wait (YouTube returns pollingIntervalMillis)."""
     while True:
+        wait_s = 15.0
         try:
-            messages = await connector.poll_comments()
+            messages, wait_s = await connector.poll_live_chat()
             if messages:
-                logger.info(f"Polled {len(messages)} new messages from YouTube")
+                logger.info(f"Polled {len(messages)} new live-chat messages from YouTube")
                 for msg in messages:
                     await queue.put(msg)
         except Exception as e:
             logger.error(f"YouTube poll error: {e}")
-        await asyncio.sleep(20)
+        await asyncio.sleep(max(wait_s, 5.0))
+
 
 async def _process_queue(session_factory, queue: asyncio.Queue):
     batch = []
     while True:
         try:
             item = await asyncio.wait_for(queue.get(), timeout=1.0)
-            
-            # Handle replay markers
+
+            # Replay marker → queue it for the moment loop (never overwrite)
             if isinstance(item, dict) and "marker" in item:
-                _forced_markers["next"] = item["marker"]
+                match_id = item.get("match_id", "m_001")
+                _forced_markers.setdefault(match_id, deque()).append(item["marker"])
                 continue
-                
-            # It's a raw message (either dict from replay or RawMessageIn from reddit)
-            if isinstance(item, dict):
-                # Map replay dict to something nlp can process
-                text_content = item.get("text", "")
-                external_id = item.get("external_id", "")
-                author = item.get("author")
-                country = get_country_from_source(
-                    source=item.get("source", "replay"), 
-                    external_id=external_id, 
-                    author=author, 
-                    raw_country=item.get("country")
-                )
-                
+
+            if isinstance(item, dict):  # replay message item
                 batch.append({
-                    "external_id": external_id,
-                    "match_id": item.get("match_id", "m_001"), # Fallback if not injected
+                    "external_id": item.get("external_id", ""),
+                    "match_id": item.get("match_id", "m_001"),
                     "source": item.get("source", "replay"),
-                    "author": author,
-                    "text": text_content,
-                    "country": country,
-                    "created_at": datetime.now(timezone.utc).isoformat() # We use real time for processing
+                    "author": item.get("author"),
+                    "text": item.get("text", ""),
+                    # explicit country wins; else infer (flag emoji / language)
+                    "country": infer_country(item.get("text"), item.get("author"),
+                                             item.get("country")),
+                    # Wall-clock time so the live analytics windows work during replay
+                    "created_at": datetime.now(timezone.utc).isoformat(),
                 })
-            else:
-                # RawMessageIn object
+            else:  # RawMessageIn from a live connector
                 batch.append({
                     "external_id": item.external_id,
                     "match_id": item.match_id,
-                    "source": item.source,
+                    "source": item.source.value if hasattr(item.source, "value") else item.source,
                     "author": item.author,
                     "text": item.text,
-                    "country": item.country,
-                    "created_at": item.created_at.isoformat()
+                    "country": infer_country(item.text, item.author, item.country),
+                    "created_at": datetime.now(timezone.utc).isoformat(),
                 })
-                
         except asyncio.TimeoutError:
-            pass # Process batch if we have one
-            
+            pass  # fall through and flush whatever we have
+
         if batch:
             try:
                 texts = [b["text"] for b in batch]
-                # Run NLP in thread to avoid blocking asyncio loop
+                # NLP runs in a thread so the event loop stays responsive
                 results = await asyncio.to_thread(classify_batch, texts)
-                
+
                 with session_factory() as session:
                     for b, res in zip(batch, results):
                         sql = text("""
                             INSERT INTO messages (
-                                external_id, match_id, source, author, text, country, 
+                                external_id, match_id, source, author, text, country,
                                 sentiment, sentiment_score, emotion, emotion_score, topics_json, created_at
                             ) VALUES (
                                 :external_id, :match_id, :source, :author, :text, :country,
@@ -102,18 +102,13 @@ async def _process_queue(session_factory, queue: asyncio.Queue):
                             ON CONFLICT(source, external_id) DO NOTHING
                         """)
                         session.execute(sql, {
-                            "external_id": b["external_id"],
-                            "match_id": b["match_id"],
-                            "source": b["source"],
-                            "author": b["author"],
-                            "text": b["text"],
-                            "country": b["country"],
+                            **{k: b[k] for k in ("external_id", "match_id", "source", "author", "text", "country")},
                             "sentiment": res["sentiment"],
                             "sentiment_score": res["sentiment_score"],
                             "emotion": res["emotion"],
                             "emotion_score": res["emotion_score"],
                             "topics_json": json.dumps(res["topics"]),
-                            "created_at": b["created_at"].replace("+00:00", "Z")
+                            "created_at": b["created_at"].replace("+00:00", "Z"),
                         })
                     session.commit()
             except Exception as e:
@@ -121,111 +116,111 @@ async def _process_queue(session_factory, queue: asyncio.Queue):
             finally:
                 batch.clear()
 
-async def _moment_loop(session_factory, match_id: str, on_moment: Callable[[MomentEvent], Awaitable[None]]):
-    last_moment_time = 0
-    
+
+def _classify_tag(momentum: dict) -> str:
+    """Natural (non-forced) moment tag heuristics (contract §E.2)."""
+    if momentum["dominant_emotion"] == "joy" and momentum["sentiment_delta_pp"] > 0:
+        return "goal"
+    if momentum["dominant_emotion"] in ("anger", "disgust"):
+        topics = set(momentum["top_topics"])
+        if "red card" in topics:
+            return "red_card"
+        if topics & {"var", "referee", "penalty"}:
+            return "var_controversy"
+    return "surge_other"
+
+
+async def _moment_loop(session_factory, match_id: str,
+                       on_moment: Callable[[MomentEvent], Awaitable[None]]):
+    """Every 10 s: check the moment rule. Forced replay markers are drained one
+    per tick and bypass both the rule and the cooldown (they are deliberate,
+    hand-tagged demo beats — the cooldown exists to stop alert storms from the
+    detector, not to suppress scripted match events)."""
+    last_moment_time = float("-inf")
+
     while True:
         await asyncio.sleep(10)
-        
         try:
             with session_factory() as session:
                 momentum = get_momentum(session, match_id)
-                if not momentum:
-                    continue
-                    
-                # Check moment rule
-                is_moment = (
-                    momentum["volume_ratio"] >= MOMENT_VOLUME_RATIO and 
-                    abs(momentum["sentiment_delta_pp"]) >= MOMENT_SENTIMENT_DELTA_PP
-                )
-                
-                forced_marker = _forced_markers.pop("next", None)
-                if forced_marker:
-                    is_moment = True
-                    
-                now = asyncio.get_event_loop().time()
-                if is_moment and (now - last_moment_time) >= MOMENT_COOLDOWN_SECONDS:
-                    last_moment_time = now
-                    
-                    # Determine tag
-                    tag = "surge_other"
-                    if forced_marker:
-                        tag = forced_marker
-                    elif momentum["dominant_emotion"] == "joy" and momentum["sentiment_delta_pp"] > 0:
-                        tag = "goal"
-                    elif momentum["dominant_emotion"] in ["anger", "disgust"]:
-                        topics_set = set(momentum["top_topics"])
-                        if topics_set.intersection({"var", "referee", "penalty", "red card"}):
-                            # Default to var_controversy for anger + ref topics
-                            tag = "var_controversy" 
 
-                    moment_id = f"mo_{uuid.uuid4().hex[:8]}"
-                    detected_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
-                    desc = f"Volume spike {momentum['volume_ratio']}x baseline with {momentum['dominant_emotion']} surge ({momentum['sentiment_delta_pp']:+.1f}pp)"
-                    
-                    # Insert moment
-                    sql = text("""
-                        INSERT INTO moments (id, match_id, event_tag, detected_at, momentum_json, description)
-                        VALUES (:id, :match_id, :event_tag, :detected_at, :momentum_json, :description)
-                    """)
-                    session.execute(sql, {
-                        "id": moment_id,
-                        "match_id": match_id,
-                        "event_tag": tag,
-                        "detected_at": detected_at,
-                        "momentum_json": json.dumps(momentum),
-                        "description": desc
-                    })
-                    session.commit()
-                    
-                    # Fire callback
-                    event_dict = {
-                        "moment_id": moment_id,
-                        "match_id": match_id,
-                        "event_tag": tag,
-                        "detected_at": detected_at,
-                        "momentum": momentum,
-                        "description": desc
-                    }
-                    
-                    # Using dict matching MomentEvent so W2 can parse it
-                    try:
-                        # Convert dict to Pydantic if needed
-                        event = MomentEvent(**event_dict)
-                        if asyncio.iscoroutinefunction(on_moment):
-                            await on_moment(event)
-                        else:
-                            await asyncio.to_thread(on_moment, event)
-                    except Exception as e:
-                        logger.error(f"Error in on_moment callback: {e}")
-                        
+                markers = _forced_markers.get(match_id)
+                forced_marker = markers.popleft() if markers else None
+
+                if momentum is None:
+                    if forced_marker:
+                        # Not enough data for a snapshot yet — requeue the marker
+                        markers.appendleft(forced_marker)
+                    continue
+
+                natural = (
+                    momentum["volume_ratio"] >= MOMENT_VOLUME_RATIO
+                    and abs(momentum["sentiment_delta_pp"]) >= MOMENT_SENTIMENT_DELTA_PP
+                )
+                now = asyncio.get_event_loop().time()
+                cooldown_ok = (now - last_moment_time) >= MOMENT_COOLDOWN_SECONDS
+
+                if not (forced_marker or (natural and cooldown_ok)):
+                    continue
+                last_moment_time = now
+
+                tag = forced_marker if forced_marker else _classify_tag(momentum)
+                moment_id = f"mo_{uuid.uuid4().hex[:8]}"
+                detected_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+                desc = (f"Volume spike {momentum['volume_ratio']}x baseline with "
+                        f"{momentum['dominant_emotion']} surge ({momentum['sentiment_delta_pp']:+.1f}pp)")
+
+                session.execute(text("""
+                    INSERT INTO moments (id, match_id, event_tag, detected_at, momentum_json, description)
+                    VALUES (:id, :match_id, :event_tag, :detected_at, :momentum_json, :description)
+                """), {
+                    "id": moment_id, "match_id": match_id, "event_tag": tag,
+                    "detected_at": detected_at,
+                    "momentum_json": json.dumps(momentum), "description": desc,
+                })
+                session.commit()
+                logger.info(f"Moment {moment_id} [{tag}] detected for {match_id}: {desc}")
+
+            # Fire the auto-campaign callback outside the DB session
+            try:
+                event = MomentEvent(**{
+                    "moment_id": moment_id, "match_id": match_id, "event_tag": tag,
+                    "detected_at": detected_at, "momentum": momentum, "description": desc,
+                })
+                if asyncio.iscoroutinefunction(on_moment):
+                    await on_moment(event)
+                else:
+                    await asyncio.to_thread(on_moment, event)
+            except Exception as e:
+                logger.error(f"Error in on_moment callback: {e}")
+
         except asyncio.CancelledError:
             break
         except Exception as e:
             logger.error(f"Moment loop error: {e}")
 
-async def run_ingestion(session_factory, sources: list[str], on_moment: Callable[[MomentEvent], Awaitable[None]]) -> None:
-    queue = asyncio.Queue()
-    tasks = []
-    
-    # Start queue processor
-    tasks.append(asyncio.create_task(_process_queue(session_factory, queue)))
-    
-    # Start moment loop for a default match_id for now (m_001) - in real life this loops active matches
-    tasks.append(asyncio.create_task(_moment_loop(session_factory, "m_001", on_moment)))
-    
-    if "youtube" in sources:
-        from ..ingestion.youtube_connector import YoutubeConnector
-        video_id = os.environ.get("YOUTUBE_VIDEO_ID", "dQw4w9WgXcQ") # Default video for testing
-        yt_conn = YoutubeConnector(video_id=video_id)
-        tasks.append(asyncio.create_task(_poll_youtube(yt_conn, "m_001", queue)))
-        
-    # Replay is managed externally by ReplayController feeding into the queue?
-    # Actually ReplayController needs access to the same queue.
-    # We can expose the queue globally or pass it to ReplayController.
+
+async def run_ingestion(session_factory, sources: list[str],
+                        on_moment: Callable[[MomentEvent], Awaitable[None]]) -> None:
     global INGESTION_QUEUE
+    queue = asyncio.Queue()
     INGESTION_QUEUE = queue
-    
+
+    tasks = [
+        asyncio.create_task(_process_queue(session_factory, queue)),
+        # Demo match. Replay items carry their own match_id; m_001 is the live default.
+        asyncio.create_task(_moment_loop(session_factory, "m_001", on_moment)),
+    ]
+
+    if "youtube" in sources:
+        from .youtube_connector import YoutubeConnector
+        video_id = os.environ.get("YOUTUBE_VIDEO_ID")
+        if not video_id:
+            logger.error("SOURCES includes youtube but YOUTUBE_VIDEO_ID is not set — skipping connector.")
+        else:
+            yt_conn = YoutubeConnector(video_id=video_id, match_id="m_001")
+            tasks.append(asyncio.create_task(_poll_youtube(yt_conn, queue)))
+
     try:
         await asyncio.gather(*tasks)
     except asyncio.CancelledError:
