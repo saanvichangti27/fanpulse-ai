@@ -1,0 +1,28 @@
+{
+  "summary": "Frontend-only smoke + e2e testing of FanPulseAI (4 pages). All critical flows pass: Landing (brand, KPI ticker, hero, 3D WebGL canvas, CTAs), SPA nav with 0 full reloads, Heatmap (22 country cells, 5 segment filters + all, hover panel, segment dimming via opacity, 5 persona cards), Strategies (6 cards, filters, detail switching, copy-variant A/B triggering sonner toasts, iGaming compliance note), Matches (5 match items, default m_2201 Brazil vs Argentina, demand-gauge/sentiment-timeline/moments-list/drivers-chart/trending-panel all rendered, switching match updates panel). Zero console errors, zero page errors — React 19 / @react-three/fiber v9 compatibility confirmed resolved.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Minor: review request references both `segment-filter-all` and `heatmap-segment-all` — only `segment-filter-all` is implemented. Not a bug, but naming is inconsistent with sibling segment testids (`heatmap-segment-{id}`)."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped)", "frontend": "100%"},
+  "seed_data_creation": "None — all mock data from /app/frontend/src/data/mock.js",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Frontend-only app, no backend. All data-testids verified working. Custom cursor uses cursor:none — use force=True on clicks. Clipboard permission needs grant_permissions. Sonner toasts stack (data-sonner-toast).",
+  "verified_flows": [
+    "Landing: brand FanPulseAI in nav, KPI ticker, hero headline 'THE PULSE OF THE PITCH, MONETISED.', WebGL canvas visible, both CTAs present",
+    "SPA nav: Home/Heatmap/Strategies/Matches route correctly with 0 full page loads",
+    "Heatmap: 22 country cells, 5 segment filters + segment-filter-all, superfans filter dims ENG opacity to 0.25 while BRA stays 1.0, hover reveals country/volume/sentiment/emotion/segment in heatmap-hover-panel, all 5 segment-card testids visible",
+    "Strategies: all 6 strategy-card testids, filter-location + filter-industry-all + filter-industry-igaming, strategy-detail updates on click, copy-variant-a and copy-variant-b trigger sonner toasts (stack from 1→2), iGaming compliance note visible in st_005 detail",
+    "Matches: matches-page, all 5 match-items, demand-gauge/sentiment-timeline/moments-list/drivers-chart/trending-panel/match-schedule all visible, default shows Brazil+Argentina + 96/98/94, clicking m_2202 shows England+France",
+    "Zero console errors, zero pageerrors"
+  ]
+}
