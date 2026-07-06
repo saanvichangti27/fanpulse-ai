@@ -17,6 +17,7 @@ from ..contracts import (
 )
 from .nlp import classify_batch
 from .analytics import get_momentum
+from .geo import infer_country
 
 logger = logging.getLogger(__name__)
 
@@ -63,7 +64,9 @@ async def _process_queue(session_factory, queue: asyncio.Queue):
                     "source": item.get("source", "replay"),
                     "author": item.get("author"),
                     "text": item.get("text", ""),
-                    "country": item.get("country"),
+                    # explicit country wins; else infer (flag emoji / language)
+                    "country": infer_country(item.get("text"), item.get("author"),
+                                             item.get("country")),
                     # Wall-clock time so the live analytics windows work during replay
                     "created_at": datetime.now(timezone.utc).isoformat(),
                 })
@@ -74,7 +77,7 @@ async def _process_queue(session_factory, queue: asyncio.Queue):
                     "source": item.source.value if hasattr(item.source, "value") else item.source,
                     "author": item.author,
                     "text": item.text,
-                    "country": item.country,
+                    "country": infer_country(item.text, item.author, item.country),
                     "created_at": datetime.now(timezone.utc).isoformat(),
                 })
         except asyncio.TimeoutError:

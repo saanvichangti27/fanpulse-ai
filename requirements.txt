@@ -24,4 +24,8 @@ transformers
 torch
 
 # YouTube live-chat capture (live + finished streams, no API quota)
-chat-downloader
+yt-dlp
+
+# Emoji-only message handling + country inference heuristics (W1)
+emoji
+langdetect

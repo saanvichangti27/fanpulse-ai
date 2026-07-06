@@ -1,8 +1,26 @@
 import re
 from typing import List, Dict, Any
+
+import emoji as emoji_lib
 from transformers import pipeline
 
 from ..contracts import AROUSAL, Emotion, Sentiment
+
+_ALPHA_RE = re.compile(r"[A-Za-z]")
+
+
+def _prep_for_models(text: str) -> str:
+    """Emoji handling (verified empirically):
+    - messages WITH real words keep their raw emoji — the Twitter-trained
+      models read inline emoji well ('GOOOAL 🔥🔥🔥' → positive 0.90);
+    - (nearly) emoji-ONLY messages get demojized to words, which the models
+      classify far better ('😭😭😭' → sadness instead of neutral).
+    Only the model INPUT is transformed; the stored message stays raw."""
+    if len(_ALPHA_RE.findall(text)) < 4:
+        demojized = emoji_lib.demojize(text, delimiters=(" ", " ")).replace("_", " ").strip()
+        if demojized:
+            return demojized
+    return text
 
 # Watchlist for topics
 WATCHLIST = {"var", "referee", "penalty", "red card", "goal", "messi", "ronaldo", "mbappe", "neymar"}
@@ -61,10 +79,10 @@ def classify_batch(texts: List[str]) -> List[Dict[str, Any]]:
         
     sent_pipe = get_sentiment_pipeline()
     emo_pipe = get_emotion_pipeline()
-    
-    # Run pipelines. We ignore warning about batch_size since we might just pass a list
-    sent_results = sent_pipe(texts, batch_size=16)
-    emo_results = emo_pipe(texts, batch_size=16)
+
+    model_texts = [_prep_for_models(t) if t.strip() else "..." for t in texts]
+    sent_results = sent_pipe(model_texts, batch_size=16)
+    emo_results = emo_pipe(model_texts, batch_size=16)
     
     results = []
     for i, text in enumerate(texts):
