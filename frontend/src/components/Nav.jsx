@@ -8,18 +8,20 @@ export default function Nav() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="sticky top-0 z-40 backdrop-blur-xl bg-[#050914]/70 border-b border-white/10"
+      className="sticky top-0 z-40 backdrop-blur-xl bg-[#060a17]/70 border-b border-white/10"
       data-testid="site-nav"
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group" data-testid="brand-logo">
-          <div className="w-8 h-8 relative">
-            <div className="absolute inset-0 rounded-full border border-white/30 group-hover:border-white/70 transition" />
-            <div className="absolute inset-[6px] rounded-full bg-white/80 group-hover:bg-white transition" />
+          <div className="relative w-9 h-9">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#a3e635] via-[#22c55e] to-[#3b82f6] blur-md opacity-70 group-hover:opacity-100 transition" />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#a3e635] to-[#22c55e] flex items-center justify-center">
+              <div className="w-2 h-2 rounded-full bg-[#060a17]" />
+            </div>
           </div>
           <div className="leading-tight">
-            <div className="display text-[15px] text-white tracking-tight">{BRAND.name}</div>
-            <div className="overline">{BRAND.version} — signal engine</div>
+            <div className="display text-[16px] text-white tracking-tight">{BRAND.name}</div>
+            <div className="overline text-[9px]">Signal engine</div>
           </div>
         </Link>
 
@@ -31,23 +33,32 @@ export default function Nav() {
               end={l.path === "/"}
               data-testid={`nav-${l.label.toLowerCase()}`}
               className={({ isActive }) =>
-                `group flex items-baseline gap-2 text-[13px] tracking-wide transition ${
-                  isActive ? "text-white" : "text-white/50 hover:text-white"
+                `relative text-[14px] font-medium tracking-tight transition ${
+                  isActive ? "text-white" : "text-white/55 hover:text-white"
                 }`
               }
             >
-              <span className="overline">{l.code}</span>
-              <span>{l.label}</span>
+              {({ isActive }) => (
+                <>
+                  {l.label}
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-[#a3e635] to-[#22c55e]"
+                    />
+                  )}
+                </>
+              )}
             </NavLink>
           ))}
         </nav>
 
         <Link
-          to="/matches"
+          to="/heatmap"
           data-testid="nav-cta"
-          className="hidden md:inline-flex items-center gap-2 border border-white/20 hover:border-white/70 text-white text-[12px] tracking-[0.2em] uppercase px-4 py-2 transition"
+          className="hidden md:inline-flex items-center gap-2 text-[13px] font-semibold tracking-tight px-5 py-2.5 rounded-full bg-gradient-to-r from-[#a3e635] to-[#22c55e] text-[#052e16] hover:brightness-110 transition"
         >
-          Open Console <span className="text-white/50">→</span>
+          Get Started <span>→</span>
         </Link>
       </div>
     </motion.header>

@@ -1,59 +1,61 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, Icosahedron, Sphere } from "@react-three/drei";
-import { Suspense, useMemo, useRef } from "react";
+import { Environment } from "@react-three/drei";
+import { Suspense, useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
+
+function PentagonPatch({ position }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    if (!ref.current) return;
+    const p = new THREE.Vector3(...position).multiplyScalar(2);
+    ref.current.lookAt(p);
+  }, [position]);
+  return (
+    <mesh ref={ref} position={position}>
+      <circleGeometry args={[0.34, 5]} />
+      <meshStandardMaterial color="#0a0a0a" roughness={0.55} metalness={0.05} />
+    </mesh>
+  );
+}
 
 function Football() {
   const group = useRef(null);
   useFrame((state, dt) => {
     if (!group.current) return;
-    group.current.rotation.y += dt * 0.35;
-    group.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.4) * 0.18;
+    group.current.rotation.y += dt * 0.28;
+    group.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.35) * 0.14;
   });
 
-  // Position hex/pentagon dots on an icosahedron for a football-panel look
-  const points = useMemo(() => {
-    const geom = new THREE.IcosahedronGeometry(1.02, 1);
-    const pos = geom.attributes.position;
-    const list = [];
-    const seen = new Set();
+  // 12 icosahedron vertices — these are the pentagon centres of a truncated icosahedron
+  const patchPositions = useMemo(() => {
+    const g = new THREE.IcosahedronGeometry(1, 0);
+    const pos = g.attributes.position;
+    const seen = new Map();
     for (let i = 0; i < pos.count; i++) {
-      const v = new THREE.Vector3().fromBufferAttribute(pos, i).normalize().multiplyScalar(1.02);
-      const key = `${v.x.toFixed(2)}|${v.y.toFixed(2)}|${v.z.toFixed(2)}`;
-      if (!seen.has(key)) {
-        seen.add(key);
-        list.push(v);
-      }
+      const v = new THREE.Vector3().fromBufferAttribute(pos, i).normalize();
+      const key = `${v.x.toFixed(3)}|${v.y.toFixed(3)}|${v.z.toFixed(3)}`;
+      if (!seen.has(key)) seen.set(key, v.clone().multiplyScalar(1.008));
     }
-    return list;
+    return Array.from(seen.values()).map((v) => v.toArray());
   }, []);
 
   return (
     <group ref={group}>
-      {/* Core dark ball */}
-      <Sphere args={[1, 96, 96]}>
-        <meshStandardMaterial color="#0b1226" metalness={0.85} roughness={0.28} envMapIntensity={0.85} />
-      </Sphere>
+      {/* White outer ball */}
+      <mesh>
+        <sphereGeometry args={[1, 96, 96]} />
+        <meshStandardMaterial color="#f8fafc" roughness={0.35} metalness={0.05} />
+      </mesh>
 
-      {/* Chrome panel accents */}
-      {points.map((p, i) => (
-        <mesh key={i} position={p.toArray()}>
-          <Icosahedron args={[0.075, 0]}>
-            <meshStandardMaterial
-              color="#f1f5f9"
-              metalness={1}
-              roughness={0.15}
-              emissive="#e2e8f0"
-              emissiveIntensity={0.08}
-            />
-          </Icosahedron>
-        </mesh>
+      {/* Black pentagon patches (12) */}
+      {patchPositions.map((p, i) => (
+        <PentagonPatch key={i} position={p} />
       ))}
 
-      {/* Faint outer wireframe halo */}
+      {/* Soft rim halo */}
       <mesh>
-        <icosahedronGeometry args={[1.28, 1]} />
-        <meshBasicMaterial color="#e2e8f0" wireframe transparent opacity={0.06} />
+        <sphereGeometry args={[1.18, 48, 48]} />
+        <meshBasicMaterial color="#a3e635" transparent opacity={0.05} side={THREE.BackSide} />
       </mesh>
     </group>
   );
@@ -67,15 +69,14 @@ export default function Football3D() {
         dpr={[1, 1.6]}
         gl={{ antialias: true, alpha: true }}
       >
-        {/* Rim + key lighting */}
-        <ambientLight intensity={0.15} />
-        <directionalLight position={[5, 4, 3]} intensity={1.4} color="#ffffff" />
-        <directionalLight position={[-4, -1, -3]} intensity={1.1} color="#8fb4ff" />
-        <pointLight position={[0, -3, 2]} intensity={0.4} color="#e2e8f0" />
+        <ambientLight intensity={0.55} />
+        <directionalLight position={[5, 4, 3]} intensity={1.6} color="#ffffff" />
+        <directionalLight position={[-4, -1, -3]} intensity={0.8} color="#a3e635" />
+        <pointLight position={[0, -3, 2]} intensity={0.5} color="#3b82f6" />
 
         <Suspense fallback={null}>
           <Football />
-          <Environment preset="studio" />
+          <Environment preset="city" />
         </Suspense>
       </Canvas>
     </div>
