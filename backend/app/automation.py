@@ -7,11 +7,22 @@ import logging
 from ..contracts import MomentEvent, Industry
 from .db import SessionLocal
 from .routers.campaigns import build_campaign_card
+from . import match_state
 
 logger = logging.getLogger(__name__)
 
 
 def on_moment(moment: MomentEvent):
+    # Match state (score/clock/status + auto-reforecast) updates on EVERY
+    # moment, independent of whether auto-campaigns are configured.
+    db = SessionLocal()
+    try:
+        match_state.apply_moment(db, moment)
+    except Exception as e:
+        logger.error(f"Match-state update failed for {moment.moment_id}: {e}")
+    finally:
+        db.close()
+
     industries_str = os.getenv("AUTO_CAMPAIGN_INDUSTRIES", "")
     if not industries_str:
         return

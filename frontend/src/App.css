@@ -1,0 +1,2 @@
+/* Component-scoped app styles (kept minimal; primary styles in index.css) */
+.App { min-height: 100vh; background: var(--bg-base); }

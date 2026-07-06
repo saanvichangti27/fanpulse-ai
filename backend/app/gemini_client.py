@@ -66,6 +66,21 @@ def _fill(s, brief: CampaignBrief):
 
 def _template_copy(brief: CampaignBrief) -> Copy:
     template = _playbook_entry(brief.emotion.value, brief.industry.value)["template"]
+    if "headline" not in template and "hook" in template:
+        # Content-creator playbook entries use the ContentIdea shape
+        # (format/hook/concept) — map them onto the campaign Copy shape.
+        fmt = template.get("format", "Short-form video")
+        return Copy(
+            headline=_fill(template.get("hook", ""), brief),
+            body=_fill(template.get("concept", ""), brief),
+            cta="Copy hook",
+            hashtags=[_fill(h, brief) for h in template.get("hashtags", [])],
+            variant_b=CopyVariant(
+                headline=f"{fmt} — alternative cut",
+                body=_fill(template.get("concept", ""), brief),
+                cta="Copy hook",
+            ),
+        )
     vb = template.get("variant_b", {})
     return Copy(
         headline=_fill(template.get("headline", ""), brief),

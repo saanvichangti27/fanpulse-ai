@@ -41,6 +41,9 @@ htmlcov/
 # -------------------------
 # Node.js & Frontend (W3)
 # -------------------------
+# frontend/ is LOCKED to the emergent-ui branch content; the lockfile is a
+# local install artifact (the branch ships none) and must never be committed.
+frontend/yarn.lock
 node_modules/
 dist/
 build/

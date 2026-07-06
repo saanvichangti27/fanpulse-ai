@@ -18,6 +18,10 @@ class Match(Base):
     rivalry_flag = Column(Integer, default=0)
     host_involved = Column(Integer, default=0)
     status = Column(String, nullable=False, default='upcoming')
+    # Live match state, driven by replay-engine moments (app/match_state.py)
+    home_score = Column(Integer, default=0)
+    away_score = Column(Integer, default=0)
+    clock_started_at = Column(String)  # wall-clock ISO ts of the kickoff moment
 
 class Message(Base):
     __tablename__ = 'messages'
