@@ -35,9 +35,15 @@ def run():
         print(f"Deleted old database at {db_path}")
 
     print("Booting FastAPI server (NLP models take ~30-60s to load)...")
+    env = os.environ.copy()
+    # The server auto-starts the dev-fixture replay (REPLAY_AUTOSTART); run it
+    # fast so the gate's 120s window sees the whole story. The manual
+    # /replay/control start below is then a no-op duplicate (same key).
+    env["REPLAY_SPEED"] = "60"
+    env["REPLAY_TIME_SCALE"] = "405"  # 6.75 x 60 — keeps match minutes honest
     process = subprocess.Popen(
         [sys.executable, "-m", "uvicorn", "backend.app.main:app", "--port", "8000", "--host", "127.0.0.1"],
-        env=os.environ.copy(),
+        env=env,
     )
     try:
         booted = False
@@ -165,6 +171,22 @@ def run():
             "match_id": "m_001", "platform": "instagram", "creator_niche": "football_reactions"})
         check("content/generate: 200", ci.status_code == 200,
               f"fallback={ci.json().get('llm_fallback') if ci.status_code == 200 else ci.text[:80]}")
+
+        # UI bootstrap (the locked emergent-ui frontend's single data source)
+        boot = requests.get(f"{BASE}/ui/bootstrap").json()
+        ui_keys = {"brand", "nav_links", "kpi_ticker", "features", "fan_segments",
+                   "countries", "industries", "locations", "strategies", "matches",
+                   "sentiment_timeline", "moments", "trending"}
+        check("ui/bootstrap: all datasets present", ui_keys <= set(boot.keys()),
+              f"missing={ui_keys - set(boot.keys())}")
+        check("ui/bootstrap: strategies non-empty (UI indexes STRATEGIES[0])",
+              len(boot["strategies"]) > 0)
+        check("ui/bootstrap: live match state (score/minute from replay moments)",
+              any(m["score"]["home"] + m["score"]["away"] > 0 or m["status"] != "upcoming"
+                  for m in boot["matches"]))
+        check("ui/bootstrap: strategy copy present",
+              all(s["copy"]["headline"] for s in boot["strategies"]),
+              f"headlines={[s['copy']['headline'][:20] for s in boot['strategies'][:3]]}")
 
         health = requests.get(f"{BASE}/health").json()
         check("health: ingestion_alive is real", health["ingestion_alive"] is True)
