@@ -46,9 +46,12 @@ FAN_COUNTRIES = {"home_pool": None, "away_pool": None,
                  "neutral": ["US", "GB", "IN", "MX", "DE", "FR", "JP", "NG", "ES", "IT"]}
 TEAM_COUNTRY = {"Brazil": "BR", "Argentina": "AR", "France": "FR", "England": "GB",
                 "Spain": "ES", "Germany": "DE", "USA": "US", "Mexico": "MX",
-                "Japan": "JP", "South Korea": "KR", "Senegal": "SN", "Morocco": "MA"}
+                "Japan": "JP", "South Korea": "KR", "Senegal": "SN", "Morocco": "MA",
+                "Egypt": "EG", "Switzerland": "CH", "Colombia": "CO",
+                "Norway": "NO", "Belgium": "BE", "Paraguay": "PY"}
 FLAGS = {"BR": "🇧🇷", "AR": "🇦🇷", "FR": "🇫🇷", "GB": "🇬🇧", "ES": "🇪🇸", "DE": "🇩🇪",
-         "US": "🇺🇸", "MX": "🇲🇽", "IN": "🇮🇳", "JP": "🇯🇵", "NG": "🇳🇬", "IT": "🇮🇹"}
+         "US": "🇺🇸", "MX": "🇲🇽", "IN": "🇮🇳", "JP": "🇯🇵", "NG": "🇳🇬", "IT": "🇮🇹",
+         "EG": "🇪🇬", "CH": "🇨🇭", "CO": "🇨🇴", "NO": "🇳🇴", "BE": "🇧🇪", "PY": "🇵🇾"}
 
 # Template banks per phase. Slots: {home} {away} {player} {tag} {flag}
 T_PRE = [

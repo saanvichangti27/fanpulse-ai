@@ -68,3 +68,70 @@ exports.SENTIMENT_TIMELINE = data.sentiment_timeline;
 exports.MOMENTS = data.moments;
 exports.TRENDING = data.trending;
 exports.LIVE_FEED = data.live_feed;
+
+/* ---- Live updates (no reload) -----------------------------------------
+ * The UI reads the exports above on every React render (webpack compiles the
+ * named ESM imports of this CJS module into live property accesses). So:
+ * poll the bootstrap in the background, swap the exports when the payload
+ * actually changed, and notify subscribers. integration/live-app.js wraps the
+ * locked <App/> (via the "@/App$" alias) in a useSyncExternalStore
+ * subscription, re-rendering the tree so every page picks up fresh data —
+ * feed, strategies, scores, clock — with no reload and no remount. */
+var POLL_MS = 4000;
+var _version = 1;
+var _lastJson = JSON.stringify(data);
+var _subscribers = [];
+var _inFlight = false;
+
+function _apply(fresh) {
+  data = fresh;
+  exports.BRAND = fresh.brand;
+  exports.NAV_LINKS = fresh.nav_links;
+  exports.KPI_TICKER = fresh.kpi_ticker;
+  exports.FEATURES = fresh.features;
+  exports.FAN_SEGMENTS = fresh.fan_segments;
+  exports.COUNTRIES = fresh.countries;
+  exports.INDUSTRIES = fresh.industries;
+  exports.LOCATIONS = fresh.locations;
+  exports.STRATEGIES = fresh.strategies;
+  exports.MATCHES = fresh.matches;
+  exports.SENTIMENT_TIMELINE = fresh.sentiment_timeline;
+  exports.MOMENTS = fresh.moments;
+  exports.TRENDING = fresh.trending;
+  exports.LIVE_FEED = fresh.live_feed;
+}
+
+function _poll() {
+  if (_inFlight) return;
+  _inFlight = true;
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", API_BASE + "/api/v1/ui/bootstrap", true);
+  xhr.onloadend = function () {
+    _inFlight = false;
+    if (xhr.status !== 200) return; // transient backend hiccup: keep last data
+    try {
+      var body = xhr.responseText;
+      if (body === _lastJson) return;
+      _lastJson = body;
+      _apply(JSON.parse(body));
+      _version += 1;
+      for (var i = 0; i < _subscribers.length; i++) _subscribers[i]();
+    } catch (e) {
+      console.warn("[FanPulse] live update skipped:", e.message);
+    }
+  };
+  xhr.send(null);
+}
+
+if (typeof window !== "undefined") {
+  setInterval(_poll, POLL_MS);
+}
+
+exports.subscribe = function (fn) {
+  _subscribers.push(fn);
+  return function () {
+    var i = _subscribers.indexOf(fn);
+    if (i >= 0) _subscribers.splice(i, 1);
+  };
+};
+exports.getVersion = function () { return _version; };
