@@ -2,7 +2,7 @@
  "meta": {
   "match_id": "m_001",
   "captured_at": "2026-07-06T23:59:13.618233Z",
-  "description": "Real YouTube live-chat capture of https://www.youtube.com/watch?v=JyP6Hzt7y84 (331 messages) | markers added: kickoff@60s, goal@700s, full_time@9400s",
+  "description": "Real YouTube live-chat capture of https://www.youtube.com/watch?v=JyP6Hzt7y84 (331 messages)",
   "video_id": "JyP6Hzt7y84"
  },
  "items": [
@@ -21,10 +21,6 @@
    "author": "@4anas_____7",
    "text": "cr7",
    "country": null
-  },
-  {
-   "t_offset": 60,
-   "marker": "kickoff"
   },
   {
    "t_offset": 62.17,
@@ -449,10 +445,6 @@
    "author": "@Btl10000",
    "text": "Spain",
    "country": null
-  },
-  {
-   "t_offset": 700,
-   "marker": "goal"
   },
   {
    "t_offset": 702.88,
@@ -2653,10 +2645,6 @@
    "author": "@Sementara-j2m",
    "text": "kalk nengok siadan langsung di jala live",
    "country": null
-  },
-  {
-   "t_offset": 9400,
-   "marker": "full_time"
   },
   {
    "t_offset": 9477.56,

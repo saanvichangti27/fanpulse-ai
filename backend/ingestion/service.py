@@ -25,6 +25,16 @@ logger = logging.getLogger(__name__)
 # high replay speed are never lost (a single slot used to get overwritten).
 _forced_markers: dict[str, deque] = {}
 
+# Auto-kickoff (stream modes): match_ids that have already been auto-kicked so
+# the one-time "flip to LIVE on first real ingestion" fires at most once.
+_auto_kicked: set[str] = set()
+
+# Flip a still-"upcoming" match to LIVE the first time ingestion produces a real
+# momentum snapshot. For captured/live YouTube streams (which carry no scripted
+# kickoff marker) this makes the match come alive on its own. OFF by default so
+# the synthetic demo — which has its own scripted kickoff marker — is untouched.
+AUTO_KICKOFF = os.getenv("AUTO_KICKOFF", "false").lower() == "true"
+
 # Set by run_ingestion; the replay router feeds items into this queue.
 INGESTION_QUEUE: asyncio.Queue | None = None
 
@@ -152,6 +162,21 @@ async def _moment_loop(session_factory, match_id: str,
                         # Not enough data for a snapshot yet — requeue the marker
                         markers.appendleft(forced_marker)
                     continue
+
+                # Auto-kickoff: the first tick with real momentum on a match that
+                # is still "upcoming" synthesizes a kickoff, routed through the
+                # normal forced-marker path below. Skipped if a real marker is
+                # already firing this tick or the match is already live/finished
+                # (so a scripted kickoff marker always wins). Fires at most once.
+                if (AUTO_KICKOFF and forced_marker is None
+                        and match_id not in _auto_kicked):
+                    row = session.execute(
+                        text("SELECT status FROM matches WHERE id = :m"),
+                        {"m": match_id},
+                    ).fetchone()
+                    if row and row.status == "upcoming":
+                        _auto_kicked.add(match_id)
+                        forced_marker = "kickoff"
 
                 natural = (
                     momentum["volume_ratio"] >= MOMENT_VOLUME_RATIO
