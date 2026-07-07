@@ -83,4 +83,4 @@ Notes:
 - The very first page load can take a few seconds while the initial strategy
   cards are generated; after that, everything updates live every few seconds.
 - Restarting the backend replays the match story from kickoff — every run is a
-  fresh, reproducible demo.
+  fresh, reproducible demo
