@@ -137,40 +137,21 @@ export default function Strategies() {
                 ))}
               </select>
             </div>
-            <div className="flex-1">
+            <div className="md:w-64">
               <div className="overline mb-2">Marketing sector</div>
-              <div className="flex flex-wrap gap-1.5">
-                <button
-                  data-testid="filter-industry-all"
-                  onClick={() => setIndustry("all")}
-                  className={`text-[11px] font-semibold tracking-tight px-3 py-1.5 rounded-full border transition ${
-                    industry === "all"
-                      ? "border-white text-[#060a17] bg-white"
-                      : "border-white/15 text-white/70 hover:text-white hover:border-white/40"
-                  }`}
-                >
-                  All
-                </button>
-                {INDUSTRIES.map((ind) => {
-                  const active = industry === ind.id;
-                  return (
-                    <button
-                      key={ind.id}
-                      data-testid={`filter-industry-${ind.id}`}
-                      onClick={() => setIndustry(ind.id)}
-                      className="text-[11px] font-semibold tracking-tight px-3 py-1.5 rounded-full border transition flex items-center gap-1.5"
-                      style={{
-                        borderColor: active ? industryColor(ind.id) : "rgba(255,255,255,0.15)",
-                        background: active ? `${industryColor(ind.id)}22` : "transparent",
-                        color: active ? industryColor(ind.id) : "rgba(255,255,255,0.7)",
-                      }}
-                    >
-                      <IndustryIcon id={ind.id} size={12} />
-                      {ind.label}
-                    </button>
-                  );
-                })}
-              </div>
+              <select
+                data-testid="filter-industry"
+                value={industry}
+                onChange={(e) => setIndustry(e.target.value)}
+                className="w-full bg-transparent border-b border-white/20 text-white text-[14px] py-2 outline-none focus:border-[#a3e635]"
+              >
+                <option value="all" className="bg-[#0c1226]">All sectors</option>
+                {INDUSTRIES.map((ind) => (
+                  <option key={ind.id} value={ind.id} className="bg-[#0c1226]">
+                    {ind.label}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
         </Reveal>

@@ -1,13 +1,10 @@
 import { useState } from "react";
-import { Bell, Instagram, Youtube, Mail } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import GlassCard from "@/components/GlassCard";
 import WorldHeatmap from "@/components/WorldHeatmap";
 import SegmentDistribution from "@/components/SegmentDistribution";
-import MetricBars from "@/components/MetricBars";
+import PersonaRadar from "@/components/PersonaRadar";
 import { FAN_SEGMENTS } from "@/data/mock";
-
-const CHANNEL_ICON = { push: Bell, instagram: Instagram, youtube: Youtube, email: Mail };
 
 export default function Heatmap() {
   const [activeSegment, setActiveSegment] = useState("all");
@@ -16,7 +13,6 @@ export default function Heatmap() {
   return (
     <div data-testid="heatmap-page" className="relative">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-14">
-        {/* HEADER */}
         <Reveal>
           <div className="section-topline">
             <div className="overline">Global fan emotion</div>
@@ -26,7 +22,6 @@ export default function Heatmap() {
           </div>
         </Reveal>
 
-        {/* FILTERS */}
         <Reveal delay={0.1}>
           <div className="mt-10 flex flex-wrap gap-2" data-testid="heatmap-segment-filters">
             <button
@@ -62,7 +57,6 @@ export default function Heatmap() {
           </div>
         </Reveal>
 
-        {/* MAP */}
         <Reveal delay={0.15}>
           <GlassCard className="mt-8 p-4 md:p-6 rounded-xl overflow-hidden" hover={false}>
             <WorldHeatmap activeSegment={activeSegment} onHover={setHovered} hovered={hovered} />
@@ -83,7 +77,6 @@ export default function Heatmap() {
           </GlassCard>
         </Reveal>
 
-        {/* PERSONAS SECTION */}
         <Reveal delay={0.2}>
           <div className="mt-20 section-topline">
             <div className="overline">Fan segmentation</div>
@@ -91,63 +84,54 @@ export default function Heatmap() {
           </div>
         </Reveal>
 
+        {/* Full-width distribution bar */}
         <Reveal delay={0.24}>
-          <div className="mt-8 max-w-2xl">
+          <div className="mt-8 w-full">
             <SegmentDistribution />
           </div>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
-          {FAN_SEGMENTS.map((s, i) => {
-            const Chan = CHANNEL_ICON[s.channel];
-            return (
-              <Reveal key={s.id} delay={0.05 * i}>
-                <GlassCard
-                  className="p-5 h-full flex flex-col rounded-xl relative overflow-hidden"
-                  data-testid={`segment-card-${s.id}`}
-                >
-                  <div className="absolute top-0 left-0 right-0 h-1" style={{ background: s.color }} />
-                  <div className="pt-2">
-                    <span
-                      className="w-9 h-9 rounded-lg flex items-center justify-center"
-                      style={{ background: `${s.color}22`, border: `1px solid ${s.color}55` }}
-                    >
-                      {Chan && <Chan size={16} style={{ color: s.color }} />}
-                    </span>
-                  </div>
-                  <div className="display text-white text-xl mt-4 leading-tight">{s.name}</div>
-                  <div className="text-[11px] text-white/50 mt-1">{s.size.toLocaleString()} fans</div>
+        {/* Persona cards */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
+          {FAN_SEGMENTS.map((s, i) => (
+            <Reveal key={s.id} delay={0.05 * i}>
+              <GlassCard
+                className="p-5 h-full flex flex-col rounded-xl relative overflow-hidden"
+                data-testid={`segment-card-${s.id}`}
+              >
+                <div className="absolute top-0 left-0 right-0 h-1" style={{ background: s.color }} />
 
-                  <div className="mt-4">
-                    <MetricBars
-                      engagement={s.engagement}
-                      value={s.annual_value}
-                      churn={s.churn}
-                      color={s.color}
-                    />
+                <div className="pt-2 flex items-start justify-between">
+                  <div>
+                    <div className="overline uppercase" style={{ color: s.color, letterSpacing: "0.24em" }}>
+                      {s.id}
+                    </div>
+                    <div className="display text-white text-2xl mt-2 leading-tight">{s.name}</div>
                   </div>
+                  <div className="text-right">
+                    <div className="overline">Share</div>
+                    <div className="display text-[#a3e635] text-xl mt-1 tabular-nums">
+                      {(s.share * 100).toFixed(1)}%
+                    </div>
+                  </div>
+                </div>
 
-                  <div className="mt-4 grid grid-cols-2 gap-x-3 gap-y-1.5 text-[12px]">
-                    <div className="text-white/50">Ann. value</div>
-                    <div className="text-white font-semibold text-right">${s.annual_value}</div>
-                    <div className="text-white/50">Channel</div>
-                    <div className="text-white font-semibold text-right capitalize">{s.channel}</div>
-                  </div>
+                {/* Radar graph */}
+                <div className="mt-3">
+                  <PersonaRadar segment={s} color={s.color} />
+                </div>
 
-                  <div className="mt-4">
-                    <div className="overline">Traits</div>
-                    <ul className="mt-2 space-y-1">
-                      {s.traits.slice(0, 2).map((t) => (
-                        <li key={t} className="text-[12px] text-white/70 flex gap-2">
-                          <span style={{ color: s.color }}>›</span>{t}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </GlassCard>
-              </Reveal>
-            );
-          })}
+                <div className="mt-3 grid grid-cols-2 gap-x-3 gap-y-1.5 text-[12px] border-t border-white/5 pt-3">
+                  <div className="text-white/50">Fans</div>
+                  <div className="text-white font-semibold text-right tabular-nums">{s.size.toLocaleString()}</div>
+                  <div className="text-white/50">Ann. value</div>
+                  <div className="text-white font-semibold text-right">${s.annual_value}</div>
+                  <div className="text-white/50">Channel</div>
+                  <div className="text-white font-semibold text-right capitalize">{s.channel}</div>
+                </div>
+              </GlassCard>
+            </Reveal>
+          ))}
         </div>
       </div>
     </div>
