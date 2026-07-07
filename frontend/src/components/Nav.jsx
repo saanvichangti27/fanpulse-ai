@@ -1,6 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import { NAV_LINKS, BRAND } from "@/data/mock";
 import { motion } from "framer-motion";
+import logo from "../logo.png";
 
 export default function Nav() {
   return (
@@ -14,7 +15,7 @@ export default function Nav() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 group" data-testid="brand-logo">
           <div className="relative w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-transparent">
-            <img src="logo.png" alt="FanPulseAI Logo" className="w-full h-full object-contain" />
+            <img src={logo} alt="FanPulseAI Logo" className="w-full h-full object-cover" />
           </div>
           <span className="display text-white text-[17px] tracking-tight">{BRAND.name}</span>
         </Link>
@@ -27,8 +28,7 @@ export default function Nav() {
               end={l.path === "/"}
               data-testid={`nav-${l.label.toLowerCase()}`}
               className={({ isActive }) =>
-                `relative text-[14px] font-medium tracking-tight transition ${
-                  isActive ? "text-white" : "text-white/55 hover:text-white"
+                `relative text-[14px] font-medium tracking-tight transition ${isActive ? "text-white" : "text-white/55 hover:text-white"
                 }`
               }
             >

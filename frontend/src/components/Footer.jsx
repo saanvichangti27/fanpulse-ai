@@ -3,15 +3,11 @@ import { BRAND } from "@/data/mock";
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 mt-24" data-testid="site-footer">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-10 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-
-        <div className="flex flex-col md:items-end gap-2">
-
-          <div className="flex gap-6 text-[13px] text-white/70">
-            <span>Heatmap</span>
-            <span>Strategies</span>
-            <span>Matches</span>
-          </div>
+      <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-10 flex justify-end gap-8">
+        <div className="flex gap-6 text-[13px] text-white/70">
+          <span>Heatmap</span>
+          <span>Strategies</span>
+          <span>Matches</span>
         </div>
       </div>
       <div className="border-t border-white/5">

@@ -123,6 +123,15 @@ export default function Heatmap() {
                   <div className="text-white/50">Channel</div>
                   <div className="text-white font-semibold text-right capitalize">{s.channel}</div>
                 </div>
+
+                <div className="mt-3 border-t border-white/5 pt-3">
+                  <div className="text-white/50 text-[11px] uppercase tracking-wider mb-2">Traits</div>
+                  <ul className="list-disc pl-4 text-white/80 text-[11px] space-y-1">
+                    {s.traits.map(trait => (
+                      <li key={trait}>{trait}</li>
+                    ))}
+                  </ul>
+                </div>
               </GlassCard>
             </Reveal>
           ))}
