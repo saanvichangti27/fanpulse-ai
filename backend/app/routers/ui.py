@@ -367,6 +367,72 @@ def _moments(db: Session) -> list[dict]:
     return out
 
 
+# --------------------------------------------------------------- live feed
+def _relative_time(created_at: str, now: datetime) -> str:
+    dt = datetime.fromisoformat(created_at.replace("Z", "+00:00"))
+    s = max(0, int((now - dt).total_seconds()))
+    if s < 10:
+        return "just now"
+    if s < 60:
+        return f"{s}s"
+    if s < 3600:
+        return f"{s // 60}m"
+    return f"{s // 3600}h"
+
+
+def _initials(name: str) -> str:
+    words = [w for w in name.replace("@", " ").replace("_", " ").split() if w]
+    if not words:
+        return "FA"
+    if len(words) == 1:
+        return words[0][:2].upper()
+    return (words[0][0] + words[1][0]).upper()
+
+
+def _engagement(external_id: str, emotion: str, msg_id: int) -> tuple[int, int, int]:
+    """Synthetic engagement counts for the feed (likes/replies/reposts).
+    Chat messages carry NO real engagement metrics (neither YouTube live chat
+    nor the synthetic fixtures), so — like the rest of the fake replay world —
+    these are generated: seeded per message (reproducible, stable across
+    requests) and scaled by the message's real classified emotion arousal, so
+    high-arousal messages read as more engaged-with."""
+    import random
+    from ...contracts import AROUSAL
+    rng = random.Random(external_id or str(msg_id))
+    likes = int(rng.uniform(30, 600) * (0.4 + AROUSAL.get(emotion, 0.1)))
+    replies = int(likes * rng.uniform(0.05, 0.2))
+    reposts = int(likes * rng.uniform(0.1, 0.35))
+    return likes, replies, reposts
+
+
+def _live_feed(db: Session, limit: int = 10) -> list[dict]:
+    from sqlalchemy import text
+    rows = db.execute(text(
+        "SELECT * FROM messages WHERE match_id = :m ORDER BY id DESC LIMIT :lim"
+    ), {"m": DEMO_MATCH_ID, "lim": limit}).fetchall()
+    now = datetime.now(timezone.utc)
+    out = []
+    for r in rows:
+        author_raw = (r.author or "Fan").strip()
+        display = author_raw.lstrip("@") or "Fan"
+        handle = author_raw if author_raw.startswith("@") else "@" + display.replace(" ", "_").lower()
+        likes, replies, reposts = _engagement(r.external_id, r.emotion, r.id)
+        out.append({
+            "id": r.id,
+            "author": display,
+            "handle": handle,
+            "iso2": COUNTRY_REF.get(r.country, {}).get("flag"),
+            "time": _relative_time(r.created_at, now),
+            "initials": _initials(display),
+            "text": r.text,
+            "sentiment": r.sentiment,
+            "likes": likes,
+            "replies": replies,
+            "reposts": reposts,
+        })
+    return out
+
+
 # --------------------------------------------------------------- trending
 def _trending(db: Session) -> list[dict]:
     return [{"topic": t["label"], "mentions": t["mentions"], "dir": t["trend"]}
@@ -433,6 +499,7 @@ def ui_bootstrap(db: Session = Depends(get_db)):
         "sentiment_timeline": _sentiment_timeline(db),
         "moments": _moments(db),
         "trending": _trending(db),
+        "live_feed": _live_feed(db),
         "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "demo_match_id": DEMO_MATCH_ID,
     }
