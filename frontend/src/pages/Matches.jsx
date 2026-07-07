@@ -8,15 +8,15 @@ import Flag from "@/components/Flag";
 import { MATCHES, SENTIMENT_TIMELINE, TRENDING, LIVE_FEED } from "@/data/mock";
 
 const STATUS_META = {
-  live:     { label: "LIVE",     color: "#a3e635", dotClass: "bg-[#a3e635] pulse-dot" },
+  live: { label: "LIVE", color: "#a3e635", dotClass: "bg-[#a3e635] pulse-dot" },
   upcoming: { label: "UPCOMING", color: "#38bdf8", dotClass: "bg-[#38bdf8]" },
-  finished: { label: "FT",       color: "#94a3b8", dotClass: "bg-white/30" },
+  finished: { label: "FT", color: "#94a3b8", dotClass: "bg-white/30" },
 };
 
 const SENTIMENT_TONE = {
   positive: "#a3e635",
   negative: "#ef4444",
-  neutral:  "#94a3b8",
+  neutral: "#94a3b8",
 };
 
 function Gauge({ value }) {
@@ -61,9 +61,8 @@ function ScheduleItem({ m, active, onClick }) {
     <button
       data-testid={`match-item-${m.id}`}
       onClick={onClick}
-      className={`w-full text-left p-4 rounded-lg border transition ${
-        active ? "border-white/40 bg-white/[0.04]" : "border-white/10 hover:border-white/25"
-      }`}
+      className={`w-full text-left p-4 rounded-lg border transition ${active ? "border-white/40 bg-white/[0.04]" : "border-white/10 hover:border-white/25"
+        }`}
     >
       <div className="flex items-center justify-between">
         <div className="text-[10px] tracking-widest text-white/45 uppercase">{m.tournament_stage}</div>
@@ -170,10 +169,10 @@ export default function Matches() {
     <div data-testid="matches-page" className="relative">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-14">
         <Reveal>
-          <div className="section-topline">
-            <div className="overline">Match console</div>
+          <div >
+
             <h1 className="display text-white text-5xl md:text-6xl mt-3 leading-[0.9]">
-              Matches / Demand
+              Match Demand Prediction
             </h1>
           </div>
         </Reveal>

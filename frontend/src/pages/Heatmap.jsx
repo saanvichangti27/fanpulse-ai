@@ -14,10 +14,10 @@ export default function Heatmap() {
     <div data-testid="heatmap-page" className="relative">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-14">
         <Reveal>
-          <div className="section-topline">
-            <div className="overline">Global fan emotion</div>
+          <div >
+
             <h1 className="display text-white text-5xl md:text-6xl mt-3 leading-[0.9]">
-              World Heatmap / Segmentation
+              Global Fan Emotions
             </h1>
           </div>
         </Reveal>
@@ -27,11 +27,10 @@ export default function Heatmap() {
             <button
               data-testid="segment-filter-all"
               onClick={() => setActiveSegment("all")}
-              className={`text-[11px] font-semibold tracking-[0.16em] uppercase px-4 py-2 rounded-full border transition ${
-                activeSegment === "all"
-                  ? "border-white text-[#060a17] bg-white"
-                  : "border-white/20 text-white/70 hover:text-white hover:border-white/40"
-              }`}
+              className={`text-[11px] font-semibold tracking-[0.16em] uppercase px-4 py-2 rounded-full border transition ${activeSegment === "all"
+                ? "border-white text-[#060a17] bg-white"
+                : "border-white/20 text-white/70 hover:text-white hover:border-white/40"
+                }`}
             >
               All segments
             </button>
@@ -76,11 +75,14 @@ export default function Heatmap() {
             </div>
           </GlassCard>
         </Reveal>
+        <br></br>
+        <br></br>
+        <br></br>
 
         <Reveal delay={0.2}>
-          <div className="mt-20 section-topline">
-            <div className="overline">Fan segmentation</div>
-            <h2 className="display text-white text-3xl md:text-4xl mt-2">The five personas.</h2>
+          <div>
+
+            <h2 className="display text-white text-3xl md:text-4xl mt-2">Fan Segmentation</h2>
           </div>
         </Reveal>
 
@@ -102,17 +104,9 @@ export default function Heatmap() {
                 <div className="absolute top-0 left-0 right-0 h-1" style={{ background: s.color }} />
 
                 <div className="pt-2 flex items-start justify-between">
-                  <div>
-                    <div className="overline uppercase" style={{ color: s.color, letterSpacing: "0.24em" }}>
-                      {s.id}
-                    </div>
-                    <div className="display text-white text-2xl mt-2 leading-tight">{s.name}</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="overline">Share</div>
-                    <div className="display text-[#a3e635] text-xl mt-1 tabular-nums">
-                      {(s.share * 100).toFixed(1)}%
-                    </div>
+                  <div className="display text-white text-2xl mt-2 leading-tight">{s.name}</div>
+                  <div className="display text-[#a3e635] text-xl mt-2 tabular-nums whitespace-nowrap">
+                    {(s.share * 100).toFixed(1)}%
                   </div>
                 </div>
 

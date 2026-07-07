@@ -29,9 +29,8 @@ function StrategyRow({ s, active, onClick }) {
       onClick={onClick}
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`w-full text-left relative rounded-lg bg-white/[0.02] border p-5 transition ${
-        active ? "border-white/40 bg-white/[0.05]" : "border-white/10 hover:border-white/25"
-      }`}
+      className={`w-full text-left relative rounded-lg bg-white/[0.02] border p-5 transition ${active ? "border-white/40 bg-white/[0.05]" : "border-white/10 hover:border-white/25"
+        }`}
     >
       {active && (
         <motion.span
@@ -113,8 +112,8 @@ export default function Strategies() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-14">
         {/* Header */}
         <Reveal>
-          <div className="section-topline">
-            <div className="overline">Recommendation engine</div>
+          <div >
+
             <h1 className="display text-white text-5xl md:text-6xl mt-3 leading-[0.9]">
               Marketing Strategies
             </h1>

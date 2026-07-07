@@ -8,9 +8,9 @@ import { FEATURES, BRAND } from "@/data/mock";
 
 const FEATURE_META = [
   { icon: Activity, color: "#a3e635" },
-  { icon: Zap,      color: "#ec4899" },
-  { icon: Layers,   color: "#38bdf8" },
-  { icon: Ticket,   color: "#f59e0b" },
+  { icon: Zap, color: "#ec4899" },
+  { icon: Layers, color: "#38bdf8" },
+  { icon: Ticket, color: "#f59e0b" },
 ];
 
 const SIGNAL_SOURCES = ["Reddit", "YouTube", "News", "Live Match Feed", "Fan Simulation"];
@@ -40,10 +40,10 @@ export default function Landing() {
         data-testid="hero-section"
       >
         {/* base */}
-        <div 
-          aria-hidden 
-          className="absolute inset-0 bg-[#060a17] bg-cover bg-center" 
-          style={{ backgroundImage: "linear-gradient(rgba(6,10,23,0.7), rgba(6,10,23,0.9)), url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=2070&auto=format&fit=crop')" }} 
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[#060a17] bg-cover bg-center"
+          style={{ backgroundImage: "linear-gradient(rgba(6,10,23,0.7), rgba(6,10,23,0.9)), url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=2070&auto=format&fit=crop')" }}
         />
 
         {/* dot grid */}
@@ -73,12 +73,7 @@ export default function Landing() {
         />
 
         <div className="relative w-full max-w-[1000px] mx-auto px-6 md:px-10 text-center pt-14 pb-16">
-          <Reveal>
-            <div className="overline flex items-center justify-center gap-2 mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#a3e635] pulse-dot" />
-              Real-time fan intelligence
-            </div>
-          </Reveal>
+
 
           <Reveal delay={0.1}>
             <h1 className="display text-white leading-[0.94] text-[52px] md:text-[76px] lg:text-[92px]">
@@ -101,7 +96,7 @@ export default function Landing() {
                 data-testid="hero-get-started-button"
                 className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-[13px] font-semibold bg-white text-[#060a17] hover:bg-[#a3e635] transition"
               >
-                Start building
+                Get Started
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
               </Link>
               <Link
