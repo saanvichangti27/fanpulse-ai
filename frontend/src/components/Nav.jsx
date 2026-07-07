@@ -8,21 +8,17 @@ export default function Nav() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="sticky top-0 z-40 backdrop-blur-xl bg-[#060a17]/70 border-b border-white/10"
+      className="sticky top-0 z-40 backdrop-blur-xl bg-[#060a17]/75 border-b border-white/10"
       data-testid="site-nav"
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group" data-testid="brand-logo">
-          <div className="relative w-9 h-9">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#a3e635] via-[#22c55e] to-[#3b82f6] blur-md opacity-70 group-hover:opacity-100 transition" />
+        <Link to="/" className="flex items-center gap-2.5 group" data-testid="brand-logo">
+          <div className="relative w-8 h-8">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#a3e635] to-[#22c55e] flex items-center justify-center">
-              <div className="w-2 h-2 rounded-full bg-[#060a17]" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[#060a17]" />
             </div>
           </div>
-          <div className="leading-tight">
-            <div className="display text-[16px] text-white tracking-tight">{BRAND.name}</div>
-            <div className="overline text-[9px]">Signal engine</div>
-          </div>
+          <span className="display text-white text-[17px] tracking-tight">{BRAND.name}</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -44,7 +40,7 @@ export default function Nav() {
                   {isActive && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-[#a3e635] to-[#22c55e]"
+                      className="absolute -bottom-2 left-0 right-0 h-[2px] bg-[#a3e635]"
                     />
                   )}
                 </>
