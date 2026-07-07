@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import GlassCard from "@/components/GlassCard";
 import DataGlobe from "@/components/DataGlobe";
 import { FEATURES, BRAND } from "@/data/mock";
+import { Football3D } from "@/components/Football3D";
 
 const FEATURE_META = [
   { icon: Activity, color: "#a3e635" },
@@ -72,46 +73,56 @@ export default function Landing() {
           }}
         />
 
-        <div className="relative w-full max-w-[1000px] mx-auto px-6 md:px-10 text-center pt-14 pb-16">
+        <div className="relative w-full max-w-7xl mx-auto px-6 md:px-10 pt-14 pb-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Column */}
+          <div className="text-left z-10 flex flex-col items-start">
+            
+            {/* Main Text */}
+            <Reveal delay={0.1}>
+              <h1 className="display text-white leading-[0.94] text-[52px] md:text-[76px] lg:text-[84px] xl:text-[92px]">
+                DOMINATE THE MOMENT<br />
+                <span className="hero-gradient">OWN THE GAME.</span>
+              </h1>
+            </Reveal>
 
+            <Reveal delay={0.2}>
+              <p className="text-white/65 mt-8 max-w-xl text-[16px] leading-relaxed">
+                {BRAND.name} listens to the roar of the crowd — every goal, red card and
+                full-time whistle — and hands you the ready-to-deploy marketing play.
+              </p>
+            </Reveal>
+            
+            {/* Buttons placed after the main text */}
+            <Reveal delay={0.3}>
+              <div className="mt-10 flex items-center justify-start gap-4 flex-wrap">
+                <Link
+                  to="/heatmap"
+                  data-testid="hero-get-started-button"
+                  className="group inline-flex items-center gap-2 px-8 py-4 rounded-full text-[14px] font-semibold bg-white text-[#060a17] hover:bg-[#a3e635] transition shadow-[0_0_20px_rgba(163,230,53,0.3)] hover:shadow-[0_0_30px_rgba(163,230,53,0.5)]"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+                </Link>
+                <Link
+                  to="/matches"
+                  data-testid="hero-secondary-cta"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-[14px] font-semibold border border-white/25 text-white/90 hover:border-white/70 hover:bg-white/[0.04] transition"
+                >
+                  Explore matches
+                </Link>
+              </div>
+            </Reveal>
+          </div>
 
-          <Reveal delay={0.1}>
-            <h1 className="display text-white leading-[0.94] text-[52px] md:text-[76px] lg:text-[92px]">
-              Turn every moment<br />
-              into a <span className="hero-gradient">campaign</span>.
-            </h1>
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <p className="text-white/65 mt-8 max-w-xl mx-auto text-[15px] leading-relaxed">
-              {BRAND.name} listens to the roar of the crowd — every goal, red card and
-              full-time whistle — and hands you the ready-to-deploy marketing play.
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.3}>
-            <div className="mt-10 flex items-center justify-center gap-3 flex-wrap">
-              <Link
-                to="/heatmap"
-                data-testid="hero-get-started-button"
-                className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-[13px] font-semibold bg-white text-[#060a17] hover:bg-[#a3e635] transition"
-              >
-                Get Started
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
-              </Link>
-              <Link
-                to="/matches"
-                data-testid="hero-secondary-cta"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-[13px] font-semibold border border-white/25 text-white/90 hover:border-white/70 hover:bg-white/[0.04] transition"
-              >
-                Explore matches
-              </Link>
-            </div>
-          </Reveal>
-
+          {/* Right Column - Football 3D Component */}
           <Reveal delay={0.45}>
-            <div className="mt-16 mx-auto h-[400px] md:h-[500px] w-full max-w-4xl relative">
-              <DataGlobe />
+            <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] z-10 flex items-center justify-center">
+              <Football3D 
+                size={400}
+                speed={1.0}
+                showLighting={true}
+              />
             </div>
           </Reveal>
         </div>
