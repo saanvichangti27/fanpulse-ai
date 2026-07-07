@@ -29,11 +29,13 @@ module.exports = {
   webpack: {
     ...baseWebpack,
     alias: {
-      // "$" = exact match: only the "@/data/mock" request is redirected;
-      // every other "@/..." import keeps resolving into frontend/src.
+      // "$" = exact match: only these requests are redirected; every other
+      // "@/..." import keeps resolving into frontend/src.
       // MUST come before the base "@" prefix alias — webpack applies alias
       // entries in insertion order and stops at the first match.
       "@/data/mock$": liveData,
+      // Wraps the locked <App/> with a live-update subscription (no reload).
+      "@/App$": path.resolve(__dirname, "live-app.js"),
       ...(baseWebpack.alias || {}),
     },
     configure: (webpackConfig, context) => {

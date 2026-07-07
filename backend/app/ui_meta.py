@@ -134,6 +134,9 @@ COUNTRY_REF = {
     "ID": {"code": "IDN", "name": "Indonesia", "flag": "id", "coords": [113.9, -0.8]},
     "TH": {"code": "THA", "name": "Thailand", "flag": "th", "coords": [100.9, 15.9]},
     "VN": {"code": "VIE", "name": "Vietnam", "flag": "vn", "coords": [108.3, 14.1]},
+    "NO": {"code": "NOR", "name": "Norway", "flag": "no", "coords": [8.5, 60.5]},
+    "CH": {"code": "SUI", "name": "Switzerland", "flag": "ch", "coords": [8.2, 46.8]},
+    "PY": {"code": "PAR", "name": "Paraguay", "flag": "py", "coords": [-58.4, -23.4]},
 }
 
 # ------------------------------------------------------------- team lookup
@@ -152,6 +155,12 @@ TEAM_REF = {
     "South Korea": {"short": "KOR", "iso2": "kr", "fan_country": "KR"},
     "Senegal": {"short": "SEN", "iso2": "sn", "fan_country": "SN"},
     "Morocco": {"short": "MAR", "iso2": "ma", "fan_country": "MA"},
+    "Egypt": {"short": "EGY", "iso2": "eg", "fan_country": "EG"},
+    "Switzerland": {"short": "SUI", "iso2": "ch", "fan_country": "CH"},
+    "Colombia": {"short": "COL", "iso2": "co", "fan_country": "CO"},
+    "Norway": {"short": "NOR", "iso2": "no", "fan_country": "NO"},
+    "Belgium": {"short": "BEL", "iso2": "be", "fan_country": "BE"},
+    "Paraguay": {"short": "PAR", "iso2": "py", "fan_country": "PY"},
 }
 
 # Forecast model feature names -> human-readable driver labels.

@@ -46,10 +46,11 @@ def extract_topics(text: str) -> List[str]:
     text_lower = text.lower()
     found_topics = []
 
-    # 0. Hashtags are first-class topics (tweet-style sources)
+    # 0. Hashtags are first-class topics (tweet-style sources) — the "#" is
+    # kept so hashtag topics stay visually distinct downstream (trending UI)
     for tag in re.findall(r"#([a-z0-9_]{3,})", text_lower):
-        if tag not in found_topics:
-            found_topics.append(tag)
+        if f"#{tag}" not in found_topics:
+            found_topics.append(f"#{tag}")
 
     # 1. Watchlist matching
     for term in WATCHLIST:

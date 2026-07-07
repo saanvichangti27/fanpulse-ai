@@ -74,15 +74,26 @@ def _reset_demo_match():
 
 async def _autostart_replay():
     """Kick the fake replay engine automatically (REPLAY_AUTOSTART, default
-    true) so the app is end-to-end alive without a manual /replay/control."""
-    file = os.environ.get("REPLAY_FILE", "replay_dev_fixture.json")
-    speed = float(os.environ.get("REPLAY_SPEED", "1.0"))
+    true) so the app is end-to-end alive without a manual /replay/control.
+
+    REPLAY_FILE accepts a comma-separated list so several streams replay
+    CONCURRENTLY for the demo match (e.g. a YouTube capture + the simulated
+    Twitter stream). Each entry may carry its own speed as "file:speed";
+    entries without one use REPLAY_SPEED. Different-length recordings can be
+    paced to span the same wall-clock time."""
+    files = [f.strip() for f in os.environ.get(
+        "REPLAY_FILE", "replay_dev_fixture.json").split(",") if f.strip()]
+    default_speed = float(os.environ.get("REPLAY_SPEED", "1.0"))
     loop = os.environ.get("REPLAY_LOOP", "false").lower() == "true"
     demo = os.environ.get("DEMO_MATCH_ID", "m_001")
 
     for _ in range(100):  # wait for run_ingestion to publish its queue
         if ingestion_service.INGESTION_QUEUE is not None:
-            replay.replay_ctrl.start(demo, file, speed, ingestion_service.INGESTION_QUEUE, loop=loop)
+            for entry in files:
+                name, _, spd = entry.partition(":")
+                speed = float(spd) if spd else default_speed
+                replay.replay_ctrl.start(demo, name, speed,
+                                         ingestion_service.INGESTION_QUEUE, loop=loop)
             return
         await asyncio.sleep(0.1)
 

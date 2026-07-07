@@ -36,6 +36,11 @@ import {...} from "@/data/mock" ──►  craco.config.js alias             Fas
   so the data must exist by then) and re-exports the identical names/shapes:
   `BRAND, NAV_LINKS, KPI_TICKER, FEATURES, FAN_SEGMENTS, COUNTRIES, INDUSTRIES,
   LOCATIONS, STRATEGIES, MATCHES, SENTIMENT_TIMELINE, MOMENTS, TRENDING`.
+- **Live updates (no reload):** `live-data.js` re-polls the bootstrap every 4 s
+  (skipping unchanged payloads) and `integration/live-app.js` — aliased over
+  `"@/App$"` — wraps the locked `<App/>` in a `useSyncExternalStore`
+  subscription, re-rendering the tree in place whenever fresh data lands.
+  Feed, strategies, scores, clock and trending all move with the match.
 - Launched via `npx craco start --config ../integration/craco.config.js`
   (wrapped in `scripts/run_frontend.*`). Running plain `yarn start` inside
   `frontend/` still uses the bundled mock module — the friend's app remains fully
@@ -56,9 +61,8 @@ scripts\run_frontend.ps1       # or ./scripts/run_frontend.sh
 
 The first-ever page load can take ~10 s: the backend generates the initial
 strategy cards (one real Gemini call; the rest use the playbook fallback until the
-debounce clears). Subsequent loads are instant. **The page shows a snapshot per
-load** — refresh the browser to see the story advance (the locked UI has no
-polling; see §5).
+debounce clears). Subsequent loads are instant, and the app **updates itself every ~4 s**
+(no refresh needed) as the replay/moments advance.
 
 Backend env knobs (see `backend/.env.example`): `DEMO_MATCH_ID`, `REPLAY_AUTOSTART`,
 `REPLAY_FILE`, `REPLAY_SPEED`, `REPLAY_LOOP`, `REPLAY_RESET_ON_START`,
@@ -132,7 +136,6 @@ Per instruction, nothing was added to the UI for these; listed for a later call:
    (mentions, sentiment, excitement, live-match count, ROI uplift) that appear
    nowhere; wiring `<Ticker/>` into `Layout.jsx` would be a one-line frontend
    change — **not done** (frontend locked).
-3. **No polling/streaming in the UI** — the heatmap header says "poll · 2s" and F.01 says "refreshed every 2 seconds", but the locked app reads data once per page load. Live pulse = manual refresh.
 4. **Strategy card fields served but never rendered:** `variant_b` (A/B copy), `multipliers` breakdown, `window_min`, `ai_generated` flag, `trigger.type`/`moment_id` (only `trigger.desc` shows).
 5. **Match fields served but never rendered:** `drivers` (forecast feature importances), `forecast_trigger`, `venue.capacity`.
 6. **Moment fields not rendered:** `volume`, `emotion` (icon color comes from `type`).
@@ -150,3 +153,10 @@ Per instruction, nothing was added to the UI for these; listed for a later call:
   (`REPLAY_RESET_ON_START=true`) so every demo run is reproducible.
 - The YouTube connector, capture scripts and `SOURCES=youtube` path are untouched
   and off by default — switching to the real ingestion later is config-only.
+
+## 7. Later additions (post-integration)
+
+- **Dynamic updates**: see §1 — the integration layer polls and re-renders; no frontend file was changed for this.
+- **Real WC2026 schedule**: `backend/app/seed.py` seeds the real knockout fixtures around 2026-07-07 (sources: FIFA/Al Jazeera/ESPN, fetched 2026-07-07); the seeder auto-reseeds when the fixture list changes. The demo/replay match is m_001 (Argentina vs Egypt, R16).
+- **Concurrent replay files**: `REPLAY_FILE` accepts a comma-separated list with optional per-file speed (`file:speed`); the simulated Twitter stream (`replay_twitter_sim.json`, regenerated for ARG-EGY) runs alongside the main stream, so trending topics carry real sim hashtags (kept with their `#` by the NLP topic extractor).
+- **`AUTO_KICKOFF=true`** (optional): flips a still-upcoming match to LIVE on first real ingestion — for captured/live streams without a scripted kickoff marker.
