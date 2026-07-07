@@ -445,3 +445,42 @@ export const TRENDING = [
   { topic: "#MatchNight", mentions: 12_800, dir: "down" },
   { topic: "counter attack", mentions: 9_120, dir: "flat" },
 ];
+
+export const LIVE_FEED = [
+  {
+    id: 1, author: "Marcos Ribeiro", handle: "@marcos_r", iso2: "br",
+    time: "just now", initials: "MR",
+    text: "GOOOOL. Neymar. That's the goal we've been waiting for all night. The Maracanã is shaking.",
+    sentiment: "positive", likes: 2124, replies: 187, reposts: 512,
+  },
+  {
+    id: 2, author: "Sofía Herrera", handle: "@sofi_h", iso2: "ar",
+    time: "12s", initials: "SH",
+    text: "How is that not a foul?? Ref robbing us right in front of the away end. VAR check please.",
+    sentiment: "negative", likes: 892, replies: 214, reposts: 88,
+  },
+  {
+    id: 3, author: "Liam Carter", handle: "@liamc_utd", iso2: "gb-eng",
+    time: "34s", initials: "LC",
+    text: "That through-ball was outrageous. Vision of the tournament so far. Rewinding it three times.",
+    sentiment: "positive", likes: 1420, replies: 96, reposts: 214,
+  },
+  {
+    id: 4, author: "Aïcha Bennani", handle: "@aicha_b", iso2: "ma",
+    time: "1m", initials: "AB",
+    text: "Morocco pressing high, tempo is unreal. Ticket touts outside asking 4x face value.",
+    sentiment: "positive", likes: 611, replies: 42, reposts: 133,
+  },
+  {
+    id: 5, author: "Kenji Watanabe", handle: "@kenji_w", iso2: "jp",
+    time: "2m", initials: "KW",
+    text: "Second yellow, off he goes. This changes the whole shape of the match. Momentum shift.",
+    sentiment: "neutral", likes: 388, replies: 28, reposts: 62,
+  },
+  {
+    id: 6, author: "Elena Ruiz", handle: "@elena_r10", iso2: "es",
+    time: "3m", initials: "ER",
+    text: "Full-time coming and the atmosphere is louder than the whistles. Beautiful chaos.",
+    sentiment: "positive", likes: 972, replies: 61, reposts: 189,
+  },
+];

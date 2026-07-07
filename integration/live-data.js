@@ -67,3 +67,4 @@ exports.MATCHES = data.matches;
 exports.SENTIMENT_TIMELINE = data.sentiment_timeline;
 exports.MOMENTS = data.moments;
 exports.TRENDING = data.trending;
+exports.LIVE_FEED = data.live_feed;

@@ -49,7 +49,7 @@ export default function SegmentDistribution() {
                 </span>
               </div>
               <div className="mt-1 text-[10px] text-white/50">
-                {(s.size / 1000).toFixed(1)}k · {Math.round(s.share * 100)}%
+                {(s.size / 1000).toFixed(1)}k
               </div>
             </div>
           </div>
