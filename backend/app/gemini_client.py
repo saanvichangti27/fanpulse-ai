@@ -17,6 +17,10 @@ _client = None
 _last_call_ts = 0.0
 _cache: dict[tuple, dict] = {}
 
+# Model is env-configurable so it can be swapped (e.g. for rate limits) without
+# a code change. Default: Gemini 3.1 Flash-Lite (high free-tier limits, cheap).
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
+
 
 def _get_client():
     global _client
@@ -37,7 +41,7 @@ def _call_gemini(prompt: str, response_schema: dict) -> dict:
 
     from google.genai import types
     response = _get_client().models.generate_content(
-        model="gemini-2.5-flash",
+        model=GEMINI_MODEL,
         contents=prompt,
         config=types.GenerateContentConfig(
             response_mime_type="application/json",
