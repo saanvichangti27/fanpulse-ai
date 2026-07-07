@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Activity, Zap, Layers, Ticket } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import GlassCard from "@/components/GlassCard";
+import DataGlobe from "@/components/DataGlobe";
 import { FEATURES, BRAND } from "@/data/mock";
 
 const FEATURE_META = [
@@ -39,7 +40,11 @@ export default function Landing() {
         data-testid="hero-section"
       >
         {/* base */}
-        <div aria-hidden className="absolute inset-0 bg-[#060a17]" />
+        <div 
+          aria-hidden 
+          className="absolute inset-0 bg-[#060a17] bg-cover bg-center" 
+          style={{ backgroundImage: "linear-gradient(rgba(6,10,23,0.7), rgba(6,10,23,0.9)), url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=2070&auto=format&fit=crop')" }} 
+        />
 
         {/* dot grid */}
         <div
@@ -110,56 +115,10 @@ export default function Landing() {
           </Reveal>
 
           <Reveal delay={0.45}>
-            <div className="mt-16 mx-auto max-w-3xl">
-              <div className="rounded-full border border-white/12 bg-white/[0.03] backdrop-blur px-6 md:px-8 py-3.5 flex items-center justify-between gap-5 overflow-x-auto">
-                <span className="overline whitespace-nowrap shrink-0">Signal sources</span>
-                <div className="w-px h-4 bg-white/15 shrink-0" />
-                {SIGNAL_SOURCES.map((s) => (
-                  <span key={s} className="text-[13px] text-white/65 whitespace-nowrap">{s}</span>
-                ))}
-              </div>
+            <div className="mt-16 mx-auto h-[400px] md:h-[500px] w-full max-w-4xl relative">
+              <DataGlobe />
             </div>
           </Reveal>
-        </div>
-      </section>
-
-      {/* SIGNAL LOOP */}
-      <section className="relative">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-28">
-          <Reveal>
-            <div className="section-topline mb-14">
-              <div className="overline">Modules</div>
-              <h2 className="display text-white text-4xl md:text-5xl mt-2">
-                The signal loop.
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {FEATURES.map((f, i) => {
-              const meta = FEATURE_META[i] || FEATURE_META[0];
-              const Icon = meta.icon;
-              return (
-                <Reveal key={f.code} delay={i * 0.08}>
-                  <GlassCard
-                    className="relative p-6 h-full flex flex-col min-h-[220px] overflow-hidden rounded-xl border border-white/10"
-                    hover
-                  >
-                    <div
-                      className="w-11 h-11 rounded-lg flex items-center justify-center"
-                      style={{ background: `${meta.color}1a`, border: `1px solid ${meta.color}44` }}
-                    >
-                      <Icon size={20} style={{ color: meta.color }} />
-                    </div>
-                    <div className="mt-6">
-                      <div className="display text-white text-xl">{f.title}</div>
-                      <div className="text-[13px] text-white/65 mt-3 leading-relaxed">{f.body}</div>
-                    </div>
-                  </GlassCard>
-                </Reveal>
-              );
-            })}
-          </div>
         </div>
       </section>
     </div>

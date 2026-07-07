@@ -13,10 +13,8 @@ export default function Nav() {
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2.5 group" data-testid="brand-logo">
-          <div className="relative w-8 h-8">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#a3e635] to-[#22c55e] flex items-center justify-center">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#060a17]" />
-            </div>
+          <div className="relative w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-transparent">
+            <img src="logo.png" alt="FanPulseAI Logo" className="w-full h-full object-contain" />
           </div>
           <span className="display text-white text-[17px] tracking-tight">{BRAND.name}</span>
         </Link>
@@ -49,13 +47,6 @@ export default function Nav() {
           ))}
         </nav>
 
-        <Link
-          to="/heatmap"
-          data-testid="nav-cta"
-          className="hidden md:inline-flex items-center gap-2 text-[13px] font-semibold tracking-tight px-5 py-2.5 rounded-full bg-gradient-to-r from-[#a3e635] to-[#22c55e] text-[#052e16] hover:brightness-110 transition"
-        >
-          Get Started <span>→</span>
-        </Link>
       </div>
     </motion.header>
   );
